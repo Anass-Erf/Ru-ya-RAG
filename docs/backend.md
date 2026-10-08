@@ -36,13 +36,13 @@ curl -s http://127.0.0.1:8000/api/interpret \
 ```
 
 Requests accept Arabic `query`, `mode` (default hybrid), `policy` (default reviewed),
-`top_k` (1–20), optional `book_id` and `chapter`. Interpret also accepts `generate`
+`top_k` (1–20), optional `book_id` and `chapter`. Interpret defaults to eight hits and also accepts `generate`
 (default true). Unknown fields and invalid values return 422. Query text is limited
 to 2,000 characters; dense/hybrid additionally rejects queries beyond the actual
 model token budget, without silent truncation. A missing cached model falls back
 to BM25 with an explicit warning; serving never downloads it automatically.
-BM25 does not stem Arabic: `يعسوب` matches while `اليعسوب` may not; hybrid can retrieve
-the latter. Scores are ranking signals, never confidence percentages.
+BM25 handles definite articles and a small explicit form map (for example
+`أسافر` → `سفر`, `الأمواج` → `موج`). This is not a general Arabic stemmer. Scores are ranking signals, never confidence percentages.
 
 Interpret response separates `sources` (verbatim excerpts) from `synthesis` and
 `differences` (model statements, each with checked citations). PDF pages are 1-based
@@ -69,3 +69,7 @@ workers multiply limits. Public deployment needs authentication and shared budge
 Search also limits concurrent work to two calls. Request logs contain only generated
 request IDs, method, status, and elapsed time; disable Uvicorn's separate access log
 as above to avoid logging arbitrary URL/query text. No dream content is persisted.
+
+The current source repair adds `review_scope` to interpretation sources, separate
+`verified_excerpts` counts, matched symbols and generation state. Only explicitly
+reviewed substrings are admitted; full parent status remains visible and unchanged.

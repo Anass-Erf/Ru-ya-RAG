@@ -7,8 +7,9 @@ These texts are not facts, predictions, or definitive religious rulings.
 connect to the FastAPI backend: interpretation, source search, digital library,
 engineering dashboard and project methodology. Light/dark modes, PDF citations,
 source inspection and actual quality metrics are available. The reviewed corpus
-still contains only two AI-assisted source-checked passages; broad interpretation
-quality is not established. Docker packaging remains for Phase 6.
+contains two fully reviewed passages plus six source-reviewed excerpts; broad
+interpretation quality is not established. The [sea-and-ship retrieval repair](docs/source-coverage-fix.md)
+explains the current coverage and how to enable optional generation. Docker packaging remains for Phase 6.
 
 Start the backend and frontend in separate terminals:
 
@@ -77,10 +78,11 @@ recorded as such; it is not represented as human or scholarly validation. See
 .venv/bin/python scripts/build_index.py
 # Optional, explicitly unreviewed-candidate corpus:
 .venv/bin/python scripts/build_index.py --policy experimental
-.venv/bin/python scripts/search.py --index storage/indexes/97578da88bda54f4322ffe55 \
+.venv/bin/python scripts/search.py --index storage/indexes/c497c4f81508fcb20bd75b01 \
   --query 'يعسوب' --mode hybrid
-.venv/bin/python scripts/evaluate.py --index storage/indexes/97578da88bda54f4322ffe55 \
-  --output data/evaluation/retrieval-smoke-report.json
+.venv/bin/python scripts/evaluate.py --index storage/indexes/c497c4f81508fcb20bd75b01 \
+  --dataset data/evaluation/retrieval-expanded-smoke.json \
+  --output data/evaluation/retrieval-expanded-report.json --k 1 4
 ```
 
 The exact index IDs above refer to this workspace's recorded build. On a fresh or

@@ -1,0 +1,101 @@
+{
+  "method_notice": "AI-assisted exact-excerpt review only; parent passages remain unchanged. Not scholarly validation.",
+  "decisions": [
+    {
+      "passage_id": "nabulsi_5c613595f73b95e1751ad278",
+      "source_sha256": "f19ae1359524a3223646b59fdf021239f4d1c792f7392983d8b722db13c68e05",
+      "parent_text_sha256": "aacb256eec62dc205d1ddc7c4e7421a4ac800c1c5f64866a65aa3daca653cdab",
+      "char_start": 0,
+      "char_end": 70,
+      "quote": "- “ سفينة“ هي في المنام نجاة لمن كان في هم أو هول أو مرض أو ضيق أو قحط",
+      "checked_pdf_pages": [
+        619
+      ],
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "method": "assisted_pdf_comparison",
+      "reviewed_at": "2026-10-08T23:04:09.702219+00:00",
+      "scope": "exact_excerpt_and_context",
+      "evidence": "Compared the opening statement and heading on rendered PDF 619. Excerpt stops before the following conditional example. Excludes the later font artifact; only this exact introductory clause is reviewed."
+    },
+    {
+      "passage_id": "nabulsi_5c613595f73b95e1751ad278",
+      "source_sha256": "f19ae1359524a3223646b59fdf021239f4d1c792f7392983d8b722db13c68e05",
+      "parent_text_sha256": "aacb256eec62dc205d1ddc7c4e7421a4ac800c1c5f64866a65aa3daca653cdab",
+      "char_start": 1600,
+      "char_end": 1660,
+      "quote": "- “ ومن رأى“ أنه في سفينة مشحونة بالناس فهو سلامة له في سفره",
+      "checked_pdf_pages": [
+        620
+      ],
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "method": "assisted_pdf_comparison",
+      "reviewed_at": "2026-10-08T23:04:09.702257+00:00",
+      "scope": "exact_excerpt_and_context",
+      "evidence": "Compared the complete isolated paragraph on rendered PDF 620, between the preceding trade paragraph and the following stationary-ship paragraph. Wording and paragraph boundaries agree."
+    },
+    {
+      "passage_id": "nabulsi_d2e68a65ce2e42b3dd73c576",
+      "source_sha256": "f19ae1359524a3223646b59fdf021239f4d1c792f7392983d8b722db13c68e05",
+      "parent_text_sha256": "379dc37d8186d56c523340e225f254f3b2d4f6cacebd382ac4983b8799cd44ed",
+      "char_start": 1834,
+      "char_end": 1919,
+      "quote": "- “ ومن رأى“ أنه قطع بحرا إلى الجانب الآخر فإنه يقطع هما أو خوفا أو هولا ويسلم من\nذلك",
+      "checked_pdf_pages": [
+        84
+      ],
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "method": "assisted_pdf_comparison",
+      "reviewed_at": "2026-10-08T23:04:09.702268+00:00",
+      "scope": "exact_excerpt_and_context",
+      "evidence": "Compared the complete two-line paragraph near the bottom of rendered PDF 84. Preceding swimming paragraph and following submerged-sea paragraph are excluded; the source explicitly describes crossing to the other side."
+    },
+    {
+      "passage_id": "nabulsi_d2e68a65ce2e42b3dd73c576",
+      "source_sha256": "f19ae1359524a3223646b59fdf021239f4d1c792f7392983d8b722db13c68e05",
+      "parent_text_sha256": "379dc37d8186d56c523340e225f254f3b2d4f6cacebd382ac4983b8799cd44ed",
+      "char_start": 4335,
+      "char_end": 4386,
+      "quote": "وإن رآه\nزاخرا تتلاطم أمواجه حصل له في سفره خوف وشدة",
+      "checked_pdf_pages": [
+        87
+      ],
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "method": "assisted_pdf_comparison",
+      "reviewed_at": "2026-10-08T23:04:09.702286+00:00",
+      "scope": "exact_excerpt_and_context",
+      "evidence": "Compared the conditional clause at the bottom of rendered PDF 87 in context. Starts with the explicit condition of a surging sea and clashing waves and ends before the different urination condition. No claim of whole-entry review."
+    },
+    {
+      "passage_id": "nabulsi_ad2eaf3299836c14ccd1d758",
+      "source_sha256": "f19ae1359524a3223646b59fdf021239f4d1c792f7392983d8b722db13c68e05",
+      "parent_text_sha256": "f090a829d416d45ea690f275802089050cf67a61a9e05ef19b7a51bf05143b1d",
+      "char_start": 149,
+      "char_end": 186,
+      "quote": "ومن رأى أنه سافر انتقل من حال إلى حال",
+      "checked_pdf_pages": [
+        637
+      ],
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "method": "assisted_pdf_comparison",
+      "reviewed_at": "2026-10-08T23:04:09.702294+00:00",
+      "scope": "exact_excerpt_and_context",
+      "evidence": "Compared the complete clause in the third line of the سفر entry on rendered PDF 637, including adjacent text. Ends before the separate السفر المساحة discussion. The later split-word artifact is outside this excerpt."
+    },
+    {
+      "passage_id": "nabulsi_142751ac171b30ef4cff84ae",
+      "source_sha256": "f19ae1359524a3223646b59fdf021239f4d1c792f7392983d8b722db13c68e05",
+      "parent_text_sha256": "66770f8d7dd428e6fbeca98920a65f2f4103af003978a8d4c8a8c53c7ff71802",
+      "char_start": 0,
+      "char_end": 40,
+      "quote": "- “ موج الماء“ رؤيته في المنام شدة وعذاب",
+      "checked_pdf_pages": [
+        1171
+      ],
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "method": "assisted_pdf_comparison",
+      "reviewed_at": "2026-10-08T23:04:09.702300+00:00",
+      "scope": "exact_excerpt_and_context",
+      "evidence": "Compared the موج الماء heading and introductory claim on rendered PDF 1171. Stops before the explanatory Quranic citations, whose extracted text has font/spacing artifacts; these citations are not included or corrected."
+    }
+  ]
+}

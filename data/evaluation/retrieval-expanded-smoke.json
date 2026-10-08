@@ -1,0 +1,75 @@
+{
+  "id": "source-excerpts-smoke-2026-10-09",
+  "judgment_status": "assisted_source_review",
+  "limitation": "Eight assistant-authored queries over two complete reviewed passages and six AI-assisted reviewed excerpts. Expanded regression smoke test, not independent human judgments or proof of whole-dream answerability.",
+  "queries": [
+    {
+      "id": "humility_symbol",
+      "query": "رأيت الذل في المنام",
+      "relevant_passage_ids": [
+        "nabulsi_39911c626cb881cbbcf1b457"
+      ],
+      "evidence": "Symbol/description corresponds to the complete source-checked entry; see docs/source-review.md. Labels are assistant-assigned for human review."
+    },
+    {
+      "id": "humility_description",
+      "query": "رأيت في المنام أنني ذليل",
+      "relevant_passage_ids": [
+        "nabulsi_39911c626cb881cbbcf1b457"
+      ],
+      "evidence": "Symbol/description corresponds to the complete source-checked entry; see docs/source-review.md. Labels are assistant-assigned for human review."
+    },
+    {
+      "id": "dragonfly_symbol",
+      "query": "رأيت يعسوب في المنام",
+      "relevant_passage_ids": [
+        "nabulsi_f49a6f9a70b005f2addcd557"
+      ],
+      "evidence": "Symbol/description corresponds to the complete source-checked entry; see docs/source-review.md. Labels are assistant-assigned for human review."
+    },
+    {
+      "id": "dragonfly_description",
+      "query": "حلمت بأنني ملكت كثيرا من اليعاسيب",
+      "relevant_passage_ids": [
+        "nabulsi_f49a6f9a70b005f2addcd557"
+      ],
+      "evidence": "Symbol/description corresponds to the complete source-checked entry; see docs/source-review.md. Labels are assistant-assigned for human review."
+    },
+    {
+      "id": "user_sea_ship_dream",
+      "query": "رأيت في المنام أنني أسافر في سفينة وسط البحر، وكانت الأمواج عالية، لكنني وصلت إلى الشاطئ بسلام.",
+      "relevant_passage_ids": [
+        "nabulsi_5c613595f73b95e1751ad278",
+        "nabulsi_d2e68a65ce2e42b3dd73c576",
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_142751ac171b30ef4cff84ae"
+      ],
+      "evidence": "Relevance only to corresponding symbols/clauses in exact reviewed excerpts; does not validate a complete interpretation. See source-excerpt-reviews-2026-10-09.json."
+    },
+    {
+      "id": "travel_verb",
+      "query": "رأيت أنني أسافر",
+      "relevant_passage_ids": [
+        "nabulsi_ad2eaf3299836c14ccd1d758"
+      ],
+      "evidence": "Relevance only to corresponding symbols/clauses in exact reviewed excerpts; does not validate a complete interpretation. See source-excerpt-reviews-2026-10-09.json."
+    },
+    {
+      "id": "ships_plural",
+      "query": "رأيت السفن في المنام",
+      "relevant_passage_ids": [
+        "nabulsi_5c613595f73b95e1751ad278"
+      ],
+      "evidence": "Relevance only to corresponding symbols/clauses in exact reviewed excerpts; does not validate a complete interpretation. See source-excerpt-reviews-2026-10-09.json."
+    },
+    {
+      "id": "waves_plural",
+      "query": "رأيت الأمواج عالية في البحر",
+      "relevant_passage_ids": [
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "nabulsi_d2e68a65ce2e42b3dd73c576"
+      ],
+      "evidence": "Relevance only to corresponding symbols/clauses in exact reviewed excerpts; does not validate a complete interpretation. See source-excerpt-reviews-2026-10-09.json."
+    }
+  ]
+}

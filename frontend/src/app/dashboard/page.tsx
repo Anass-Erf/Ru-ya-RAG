@@ -75,8 +75,9 @@ export default function DashboardPage() {
             ))}
           </div>
           <Notice>
-            المجموعة المراجعة لا تزال صغيرة ({number(sum('verified_passages'))} نصوص). الاختبار
-            الحالي أولي، ولا يثبت جودة البحث على المكتبة كاملة.
+            المجموعة المراجعة لا تزال صغيرة ({number(sum('verified_passages'))} نصوص كاملة، و
+            {number(data.books.reduce((n, b) => n + b.verified_excerpts, 0))} مقتطفات مراجعة).
+            الاختبار الحالي أولي، ولا يثبت جودة البحث على المكتبة كاملة.
           </Notice>
           <section className="panel">
             <div className="panel-heading">

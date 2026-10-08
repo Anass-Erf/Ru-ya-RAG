@@ -100,7 +100,7 @@ class APITests(unittest.TestCase):
         self.assertEqual(r['status'],'retrieval_only')
 
     def test_unrelated_query_abstains(self):
-        r = self.client.post('/api/interpret', json={'query':'سفر','mode':'bm25'}).json()
+        r = self.client.post('/api/interpret', json={'query':'كلمةمعدومة','mode':'bm25'}).json()
         self.assertEqual(r['status'],'insufficient_sources')
         self.assertFalse(r['sources'])
 
@@ -124,7 +124,7 @@ class APITests(unittest.TestCase):
         settings = Settings(enable_generation=True, deepseek_api_key='test-only',generation_calls_per_minute=1)
         provider = FixtureProvider()
         with TestClient(create_app(settings, provider=provider)) as c:
-            unrelated=c.post('/api/interpret',json={'query':'سفر','mode':'bm25'}).json()
+            unrelated=c.post('/api/interpret',json={'query':'كلمةمعدومة','mode':'bm25'}).json()
             self.assertEqual(unrelated['status'],'insufficient_sources')
             self.assertEqual(provider.calls,0)
             r=c.post('/api/interpret',json={'query':'يعسوب','mode':'bm25'}).json()
@@ -139,6 +139,23 @@ class APITests(unittest.TestCase):
             self.assertEqual(r['status'],'generation_failed')
             self.assertFalse(r['synthesis'])
             self.assertTrue(r['sources'])
+
+    def test_provider_failures_are_not_misreported_as_citation_failures(self):
+        from backend.app.rag.generation.provider import ProviderFailure
+        class FailedProvider:
+            async def generate(self, messages):
+                raise ProviderFailure('provider_insufficient_balance')
+        with TestClient(create_app(Settings(enable_generation=True, deepseek_api_key='fixture-secret'), provider=FailedProvider())) as c:
+            with self.assertLogs('ruya.generation', level='WARNING') as captured:
+                response=c.post('/api/interpret',json={'query':'يعسوب','mode':'bm25'}).json()
+            self.assertEqual(response['generation_issue']['code'],'provider_insufficient_balance')
+            self.assertIn('رصيد',response['generation_issue']['message'])
+            self.assertNotIn('اجتازت فحص',response['generation_issue']['message'])
+            self.assertFalse(response['generation_issue']['retryable'])
+            self.assertTrue(response['sources'])
+            self.assertFalse(response['synthesis'])
+            self.assertNotIn('fixture-secret',str(captured.output))
+            self.assertNotIn('يعسوب',str(captured.output))
 
     def test_grounding_rejects_forged_metadata_and_instructions(self):
         sources=sources_for(self.library.search(SearchRequest(query='يعسوب',mode='bm25')),6000)

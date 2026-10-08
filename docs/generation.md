@@ -9,11 +9,11 @@ configurable (`deepseek-flash`). The implementation follows the current official
 and [JSON mode guide](https://api-docs.deepseek.com/guides/json_mode/).
 
 1. Retrieve from the reviewed index and retain original scores/provenance.
-2. Require an explicit normalized symbol match and verified passage status. This
+2. Require an explicit symbol match (including a small documented Arabic form map) and reviewed source status. This
    conservative heuristic is not a calibrated relevance or answerability model.
    It can reject useful paraphrases, and matching a symbol does not establish that
    every detail of a complex dream is supported.
-3. Deduplicate parent passages and enforce context size. Experimental policy is
+3. Allow at most two excerpts per parent and six sources total; enforce context size. Experimental policy is
    always ineligible, even if some hits happen to be verified.
 4. Put query and excerpts in a JSON data envelope. The system message treats both
    as untrusted data, forbids following embedded instructions, and requests historical
@@ -28,8 +28,7 @@ and [JSON mode guide](https://api-docs.deepseek.com/guides/json_mode/).
 These checks establish mechanical citation validity, not semantic entailment. A
 model could still misrepresent a real quote or evade the small phrase guard. Prompt
 isolation reduces injection risk but cannot eliminate it. No adversarial or human
-faithfulness benchmark has been completed. The current two AI-assisted reviewed
-passages are insufficient for a broadly useful interpretation service. Historical
+faithfulness benchmark has been completed. The current two complete AI-assisted reviewed passages plus six reviewed excerpts are insufficient for a broadly useful interpretation service. Historical
 quotations may themselves contain predictions; they remain clearly labeled source
 statements rather than endorsed facts. All responses include a historical-use
 notice, including retrieval-only responses.
@@ -37,3 +36,11 @@ notice, including retrieval-only responses.
 Tests use explicitly fabricated provider fixtures only to exercise the contract,
 never as corpus data or product answers. No live DeepSeek request was made during
 Phase 4; authentication, account availability and real-model behavior remain untested.
+
+Scoped excerpt reviews are documented in `source-review.md`; an excerpt review never
+promotes the entire parent. See `source-coverage-fix.md` for the latest repair.
+
+Update (2026-10-09): the reported sea-and-ship request was verified live after
+aligning the prompt with the exact validation schema. Three generated claims passed
+source-ID and exact-quote validation. See `generation-diagnostics.md` for the two
+authorized calls and remaining limits; this is not a faithfulness benchmark.

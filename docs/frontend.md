@@ -55,8 +55,8 @@ stored in localStorage. Rendering uses React text nodes, never model-authored HT
 PDF links accept only the three catalog routes, and use physical PDF page numbers.
 
 The chapter filter requires the complete chapter title (matching backend semantics).
-A title can be copied from a search hit. Arabic morphology is not normalized beyond
-the backend's existing rules; use the exact symbol or hybrid search. An empty or
+A title can be copied from a search hit. Arabic form matching uses a small explicit map rather than general stemming;
+use the exact symbol or hybrid search for other forms. An empty or
 filtered-out corpus produces honest empty results. Dashboard counters belong to
 one backend process, and retrieval timing excludes model loading and generation.
 

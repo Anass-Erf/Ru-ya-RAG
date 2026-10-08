@@ -48,3 +48,32 @@ using even these samples in a published application.
 The candidate ingestion run itself stays immutable with zero verified records.
 There is no approved index or corpus-wide accuracy score. Visual inspection of a
 small, deliberately selected sample cannot estimate segmentation precision/recall.
+
+## Targeted excerpt review — 2026-10-09
+
+A reported sea-and-ship dream exposed that the default index contained only the two
+small smoke-test entries above. Relevant longer entries were present but excluded
+because their parents contain extraction defects. Promoting those parents would
+misrepresent source fidelity.
+
+Six exact excerpts were instead compared visually with the local PDF, including
+nearby context. The ledger `data/evaluation/source-excerpt-reviews-2026-10-09.json`
+records parent/source checksums, character offsets, exact quotes, checked pages,
+review scope and observations. No source text was corrected or paraphrased.
+
+| Parent symbol | PDF page | Scope |
+| --- | --- | --- |
+| سفينة | 619 | Introductory clause ending at قحط, before the following conditional example |
+| سفينة | 620 | Complete isolated paragraph about a ship filled with people |
+| بحر | 84 | Complete two-line paragraph about crossing to the other side |
+| بحر | 87 | Conditional clause about a surging sea and clashing waves |
+| سفر | 637 | Clause about travel and transition from one state to another |
+| موج الماء | 1171 | Introductory clause; subsequent citations with extraction artifacts excluded |
+
+This is AI-assisted review of those exact excerpts only. The full parents retain
+`needs_review` or `unreviewed`; the original two complete reviewed passages and all
+candidate runs remain unchanged. An excerpt chunk carries `excerpt_source_review`,
+parent status, original character offsets and actual source rows. Quotes remain
+substrings of the parent text. The API/UI exposes `review_scope=excerpt` and counts
+full-passage reviews separately from six excerpt reviews. These statements are
+historical quotations, not claims about the user's future or advice.

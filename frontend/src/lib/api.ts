@@ -11,6 +11,7 @@ export type Book = {
   pages_extracted: number;
   candidate_passages: number;
   verified_passages: number;
+  verified_excerpts: number;
   reviewed_index_chunks: number;
   experimental_index_chunks: number;
   source_url: string;
@@ -49,6 +50,7 @@ export type SearchResult = {
   score_notice: string;
 };
 export type Source = {
+  review_scope: 'full_passage' | 'excerpt';
   id: string;
   passage_id: string;
   book_title: string;
@@ -75,6 +77,10 @@ export type Interpretation = {
   message: string;
   disclaimer: string;
   evidence_sufficient: boolean;
+  matched_symbols: string[];
+  generation_requested: boolean;
+  generation_available: boolean;
+  coverage_notice: string;
   retrieval: SearchResult;
   sources: Source[];
   synthesis: Claim[];

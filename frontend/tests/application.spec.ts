@@ -7,7 +7,7 @@ test('reviewed interpretation, parent passage, and real PDF citation', async ({
 }) => {
   await page.goto('/');
   await expect(page.locator('html')).toHaveAttribute('dir', 'rtl');
-  await page.getByRole('button', { name: 'يعسوب', exact: true }).click();
+  await page.getByLabel('اكتب رؤياك أو الرمز الذي تبحث عنه').fill('يعسوب');
   await page.getByText('خيارات القراءة', { exact: true }).click();
   await page.getByLabel('طريقة البحث', { exact: true }).selectOption('bm25');
   await page.getByRole('button', { name: 'ابحث عن الشواهد' }).click();
@@ -44,7 +44,7 @@ test('search filters and honest empty results', async ({ page }) => {
 
 test('unrelated dream abstains without synthesis', async ({ page }) => {
   await page.goto('/');
-  await page.getByLabel('اكتب رؤياك أو الرمز الذي تبحث عنه').fill('سفر');
+  await page.getByLabel('اكتب رؤياك أو الرمز الذي تبحث عنه').fill('كلمةمعدومة');
   await page.getByText('خيارات القراءة', { exact: true }).click();
   await page.getByLabel('طريقة البحث', { exact: true }).selectOption('bm25');
   await page.getByRole('button', { name: 'ابحث عن الشواهد' }).click();
@@ -180,7 +180,7 @@ test('clearly labeled test fixture checks synthesis separation and failure recov
     });
   });
   await page.goto('/');
-  await page.getByRole('button', { name: 'يعسوب', exact: true }).click();
+  await page.getByLabel('اكتب رؤياك أو الرمز الذي تبحث عنه').fill('يعسوب');
   await page.getByRole('checkbox').check();
   await expect(page.getByText(/يُرسل النص والشواهد المختارة إلى DeepSeek/)).toBeVisible();
   await page.getByRole('button', { name: 'ابحث عن الشواهد' }).click();
@@ -193,4 +193,28 @@ test('clearly labeled test fixture checks synthesis separation and failure recov
   await expect(page.getByText(/انتهت مهلة التوليد التجريبية/)).toBeVisible();
   await expect(page.locator('.synthesis')).toHaveCount(0);
   await expect(page.getByRole('heading', { name: 'الشواهد الأصلية' })).toBeVisible();
+});
+
+test('reported sea-and-ship dream returns reviewed excerpts with honest scope', async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto('/');
+  await page
+    .getByLabel('اكتب رؤياك أو الرمز الذي تبحث عنه')
+    .fill(
+      'رأيت في المنام أنني أسافر في سفينة وسط البحر، وكانت الأمواج عالية، لكنني وصلت إلى الشاطئ بسلام.',
+    );
+  await page.getByRole('button', { name: 'ابحث عن الشواهد' }).click();
+  await expect(page.getByRole('heading', { name: 'الشواهد الأصلية' })).toBeVisible({
+    timeout: 60000,
+  });
+  await expect(page.getByText('مقتطف مراجع · الأصل غير معتمد بالكامل').first()).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'لا تتوفر شواهد كافية' })).toHaveCount(0);
+  await expect(page.getByText(/الرموز المطابقة:/)).toContainText('سفينة');
+  await expect(page.getByText(/الرموز المطابقة:/)).toContainText('بحر');
+  await expect(page.locator('.synthesis')).toHaveCount(0);
+  expect(
+    await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth),
+  ).toBeTruthy();
 });

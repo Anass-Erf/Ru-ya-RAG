@@ -1,3 +1,4 @@
+from .query import query_terms, symbol_matches
 from collections import Counter
 import math
 import re
@@ -11,13 +12,13 @@ def tokens(text):
 class BM25:
     def __init__(self, chunks, k1=1.5, b=.75):
         self.chunks, self.k1, self.b = chunks, k1, b
-        self.documents = [Counter(tokens(' '.join(filter(None, [c.symbol, c.section, c.text])))) for c in chunks]
+        self.documents = [Counter(t for word in tokens(' '.join(filter(None, [c.symbol, c.section, c.text]))) for t in (query_terms(word) or {word})) for c in chunks]
         self.lengths = [sum(d.values()) for d in self.documents]
         self.average = sum(self.lengths) / max(1, len(chunks))
         self.df = Counter(t for d in self.documents for t in d)
 
     def search(self, query, allowed=None):
-        terms = set(tokens(query)); results = []
+        terms = query_terms(query); results = []
         for i, document in enumerate(self.documents):
             if allowed is not None and i not in allowed:
                 continue
@@ -28,7 +29,7 @@ class BM25:
                     idf = math.log(1 + (len(self.documents) - self.df[term] + .5) / (self.df[term] + .5))
                     score += idf * tf * (self.k1 + 1) / (tf + self.k1 * (1 - self.b + self.b * self.lengths[i] / max(self.average, 1)))
             symbol_terms = tokens(self.chunks[i].symbol or '')
-            exact = bool(symbol_terms) and all(t in terms for t in symbol_terms)
+            exact = symbol_matches(query, self.chunks[i].symbol)
             if exact:
                 score += 2.0  # Explicit, inspectable exact-symbol bonus; not a probability.
             if score > 0:

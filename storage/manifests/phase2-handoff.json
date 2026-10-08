@@ -9,5 +9,7 @@
   "status": "AWAITING_PHASE_3_CONFIRMATION",
   "verified_method": "assisted_pdf_comparison",
   "verified_passages": 2,
-  "warning": "Select this run explicitly. Other immutable run directories are development history, not additional corpus partitions."
+  "warning": "Select this run explicitly. Other immutable run directories are development history, not additional corpus partitions.",
+  "excerpt_reviews": "data/evaluation/source-excerpt-reviews-2026-10-09.json",
+  "excerpt_reviews_sha256": "1d04b05e4455c6c55978e9413a1f9ba2c97d439f19a36d28392e9ab77f543517"
 }

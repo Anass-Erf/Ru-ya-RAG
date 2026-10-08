@@ -57,6 +57,7 @@ export default function LibraryPage() {
                   </div>
                 </div>
                 <p>
+                  {number(b.verified_excerpts)} مقتطفات مراجعة ضمن نصوص غير معتمدة بالكامل ·{' '}
                   {number(b.pages_extracted)} صفحة فُحصت · {number(b.reviewed_index_chunks)} مقاطع
                   في الفهرس المراجع
                 </p>

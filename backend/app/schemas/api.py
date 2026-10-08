@@ -25,6 +25,7 @@ class SearchRequest(Record):
 
 
 class InterpretRequest(SearchRequest):
+    top_k: int = Field(default=8, ge=1, le=20)
     generate: bool = True
 
 
@@ -61,6 +62,7 @@ class Source(Record):
     pdf_url: str
     quote: str
     validation_status: str
+    review_scope: Literal['full_passage', 'excerpt'] = 'full_passage'
 
 
 class Citation(Record):
@@ -89,7 +91,11 @@ class InterpretResponse(Record):
     message: str
     disclaimer: str = DISCLAIMER
     evidence_sufficient: bool
-    evidence_rule: str = 'verified passage + normalized explicit symbol match; heuristic, not confidence'
+    matched_symbols: list[str] = Field(default_factory=list)
+    generation_requested: bool = False
+    generation_available: bool = False
+    coverage_notice: str = 'هذه شواهد مرتبطة برموز منفردة؛ لا تثبت تفسيرا مركبا للرؤيا كاملة.'
+    evidence_rule: str = 'verified passage + explicit symbol/curated Arabic form match; heuristic, not confidence'
     retrieval: SearchResponse
     sources: list[Source]
     # Every model-authored substantive statement must carry checked citations.
@@ -108,6 +114,7 @@ class BookResponse(Record):
     pages_extracted: int
     candidate_passages: int
     verified_passages: int
+    verified_excerpts: int = 0
     reviewed_index_chunks: int
     experimental_index_chunks: int
     source_url: str

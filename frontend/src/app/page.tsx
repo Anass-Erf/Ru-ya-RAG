@@ -113,7 +113,7 @@ export default function InterpretationPage() {
               </p>
               <div className="examples">
                 <span>جرّب رمزا من النصوص المراجعة:</span>
-                {['يعسوب', 'ذل'].map((s) => (
+                {['سفينة', 'البحر', 'الأمواج', 'سفر'].map((s) => (
                   <button
                     key={s}
                     type="button"
@@ -174,7 +174,7 @@ export default function InterpretationPage() {
               <div>
                 <strong>{number(reviewed || 0)}</strong>
                 <span>
-                  نصوص مراجعة
+                  نصوص كاملة مراجعة
                   <br />
                   بمساعدة آلية
                 </span>
@@ -195,7 +195,9 @@ export default function InterpretationPage() {
           )}
           <Notice>
             المجموعة المراجعة محدودة{reviewed !== undefined ? ` (${number(reviewed)} نصوص)` : ''}؛
-            قد لا نجد شاهدا مناسبا لرؤياك. المراجعة الآلية ليست تحقيقا علميا بشريا.
+            قد لا نجد شاهدا مناسبا لرؤياك. تتوفر أيضا{' '}
+            {number(stats.data?.books.reduce((n, b) => n + b.verified_excerpts, 0) || 0)} مقتطفات
+            مراجعة ضمن نصوص لم تُعتمد بالكامل. المراجعة الآلية ليست تحقيقا علميا بشريا.
           </Notice>
         </div>
         <aside className="aside-stack" aria-label="دليل القراءة">
@@ -264,6 +266,18 @@ export default function InterpretationPage() {
               </span>
             </div>
             <p className="muted">{result.message}</p>
+            <Notice>
+              {result.coverage_notice}{' '}
+              {result.matched_symbols?.length > 0 && (
+                <>الرموز المطابقة: {result.matched_symbols.join('، ')}.</>
+              )}
+            </Notice>
+            {!result.generation_available && (
+              <p className="form-note">
+                التلخيص غير مفعّل على الخادم. وجود مفتاح API وحده لا يفعّله؛ يمكن قراءة الشواهد
+                أدناه دون توليد.
+              </p>
+            )}
             <p className="form-note">الطلب: {result.retrieval.query}</p>
             {result.generation_issue && (
               <Notice>{result.generation_issue.message} الشواهد أدناه متاحة للقراءة.</Notice>
@@ -289,7 +303,7 @@ export default function InterpretationPage() {
                   <article key={s.id} className="hit-card">
                     <div className="panel-heading">
                       <h3>{s.book_title}</h3>
-                      <ReviewBadge status={s.validation_status} />
+                      <ReviewBadge status={s.validation_status} scope={s.review_scope} />
                     </div>
                     <p className="muted">
                       {s.author} · {s.symbol}
@@ -307,8 +321,8 @@ export default function InterpretationPage() {
               </section>
             ) : (
               <Empty title="لا تتوفر شواهد كافية">
-                جرّب رمزا محددا أو اطلع على المكتبة لمعرفة النصوص المتاحة. غياب الشاهد لا يحمل معنى
-                تأويليا.
+                المجموعة المراجعة لا تغطي هذا الطلب حاليا؛ لا يعني ذلك غياب النص من الكتب. اطلع على
+                المكتبة لمعرفة التغطية المتاحة. غياب الشاهد لا يحمل معنى تأويليا.
               </Empty>
             )}
             <details className="panel mt-5">

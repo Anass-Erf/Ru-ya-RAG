@@ -4,12 +4,14 @@
 
 The default `reviewed` policy admits only verified passages with adequate Arabic and
 no blocking extraction flags. Current verification is AI-assisted, as recorded in
-Phase 2. It is not human scholarly approval. The corpus currently has only two such
-passages, so the reviewed index is a functional demonstration, not a useful library.
+Phase 2. It is not human scholarly approval. There are two completely reviewed passages plus six explicitly reviewed exact excerpts
+from four additional parents. The excerpt ledger records offsets, checksums and
+PDF review scope; it never promotes the full parent. Coverage remains very limited.
 
 `experimental` is an explicit opt-in for unreviewed candidates that meet the same
-text-quality checks. It does not change validation status. Neither policy admits
-Ibn Sirin, font-corrupt/replacement text, suspect reading order or unnamed sections.
+text-quality checks. It does not change validation status. Neither policy admits Ibn Sirin or automatically admits font-corrupt/replacement
+text, suspect reading order or unnamed sections. A clean, explicitly reviewed excerpt
+can be admitted separately even when another part of its parent contains defects.
 Rejected passage IDs and reasons are saved. Quality heuristics can miss errors;
 experimental results must be checked against PDFs before publication or generation.
 
@@ -36,7 +38,8 @@ parent corpus in the ingestion run; chunking never deletes or replaces it.
   persisted in a FAISS `IndexFlatIP`. Query-only embedding at search time. No silent
   truncation: over-budget query inputs fail explicitly.
 - Lexical: readable Python BM25 with `k1=1.5`, `b=0.75`, Arabic search normalization,
-  symbol/section terms, and an explicit 2-point exact-symbol bonus.
+  symbol/section terms, definite-article handling, a small explicit Arabic form map,
+  and an explicit 2-point symbol-match bonus. This is not general stemming.
 - Hybrid: reciprocal rank fusion, `sum(1 / (60 + rank))`, over up to 50 candidates
   from each retriever. It combines positions rather than incomparable raw scores.
 
@@ -62,8 +65,7 @@ for the local corpus, not an ANN scalability claim.
 
 Open the generated HTML locally to inspect quotes, raw source rows, metadata and
 clickable PDF pages. It is a static real-result inspection report, not the Phase 5
-Next.js application. Generate another query through the CLI; there is no backend
-service yet. HTML escapes all source/query content and makes no external requests.
+Next.js application. Generate another query through the CLI; the FastAPI and Next.js interfaces use the same retrieval implementation. HTML escapes all source/query content and makes no external requests.
 
 Model loading defaults to the pinned local cache. For a fresh machine, use
 `build_index.py --download-model` to explicitly allow downloading the pinned model.

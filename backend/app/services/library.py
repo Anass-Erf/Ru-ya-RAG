@@ -39,6 +39,10 @@ class Library:
                 raise ValueError('Index handoff checksum differs')
             self.indexes[policy] = SearchIndex(directory)
         source_handoff = json.loads((root / 'storage/manifests/phase2-handoff.json').read_text())
+        if source_handoff.get('excerpt_reviews'):
+            checksum = file_sha256(root / source_handoff['excerpt_reviews'])
+            if checksum != source_handoff['excerpt_reviews_sha256'] or any(index.config.get('excerpt_reviews_sha256') != checksum for index in self.indexes.values()):
+                raise ValueError('Excerpt review ledger/index mismatch')
         reviewed = root / source_handoff['reviewed_run']
         candidate = root / source_handoff['candidate_run']
         for path, key in [(reviewed, 'reviewed_manifest_sha256'), (candidate, 'candidate_manifest_sha256')]:
@@ -121,7 +125,9 @@ class Library:
                                         source_available=(self.settings.project_root/'data/raw'/book.filename).exists(),
                                         pages_extracted=report.get('pages_extracted', 0),
                                         candidate_passages=report.get('candidate_passages', 0),
-                                        verified_passages=counts[book.id], reviewed_index_chunks=reviewed_count,
+                                        verified_passages=counts[book.id],
+                                        verified_excerpts=sum(c.book_id == book.id and 'excerpt_source_review' in c.review_flags for c in self.indexes.get('reviewed', []).chunks) if 'reviewed' in self.indexes else 0,
+                                        reviewed_index_chunks=reviewed_count,
                                         experimental_index_chunks=indexed.get('experimental', {}).get(book.id, 0),
                                         source_url=f'/api/books/{book.id}/source'))
         return records
@@ -134,4 +140,4 @@ class Library:
                         last_search_latency_ms=self.last_latency,
                         generation_enabled=self.settings.enable_generation and bool(self.settings.deepseek_api_key.get_secret_value()),
                         experimental_search_enabled=self.settings.allow_experimental_search,
-                        warning='Only two AI-assisted source-verified passages. Smoke evaluation is not a representative benchmark.')
+                        warning='Small AI-assisted reviewed corpus, including scoped excerpts from unreviewed parents. Not a representative benchmark.')

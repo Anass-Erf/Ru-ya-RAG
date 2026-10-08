@@ -1,0 +1,26 @@
+{
+  "repair": "source-coverage-2026-10-09",
+  "phase6": "DEFERRED_BY_USER",
+  "reviewed_index": "storage/indexes/c497c4f81508fcb20bd75b01",
+  "experimental_index": "storage/indexes/521acd36161d93e5d71c6c1a",
+  "full_reviewed_passages": 2,
+  "reviewed_excerpts": 6,
+  "excerpt_ledger": "data/evaluation/source-excerpt-reviews-2026-10-09.json",
+  "active_handoff_sha256": "0512dd45dc84a33a9b65451ad32b15cc3bff46f1e94272cb5725bf119149e19a",
+  "current_openapi_sha256": "b878b34510e42319d831f74c2d6d28e0e803f837d1166a7add2cdf2249e3111e",
+  "tests": {
+    "backend_passed": 56,
+    "backend_seconds": 57.779,
+    "browser_passed": 9,
+    "production_build": "passed",
+    "typescript": "passed",
+    "format": "passed",
+    "live_provider_call": false
+  },
+  "generation": "Enabled in ignored local .env; UI opt-in required; key not included in artifacts.",
+  "limitations": [
+    "Limited source coverage, not whole-dream validation.",
+    "AI-assisted excerpt review; parent status unchanged.",
+    "No live-model faithfulness or scholarly review claim."
+  ]
+}

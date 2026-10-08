@@ -36,7 +36,10 @@ class DeepSeek:
                   'thinking': {'type': 'disabled'}, 'response_format': {'type': 'json_object'}},
             timeout=self.settings.provider_timeout_seconds, follow_redirects=False) as response:
             if response.status_code != 200:
-                code = 'provider_rate_limit' if response.status_code == 429 else 'provider_unavailable'
+                code = {400: 'provider_bad_request', 401: 'provider_authentication',
+                        402: 'provider_insufficient_balance', 403: 'provider_access_denied',
+                        404: 'provider_model_unavailable', 422: 'provider_bad_request',
+                        429: 'provider_rate_limit'}.get(response.status_code, 'provider_unavailable')
                 raise ProviderFailure(code, response.status_code == 429 or response.status_code >= 500)
             body = bytearray()
             async for part in response.aiter_bytes():
@@ -46,6 +49,8 @@ class DeepSeek:
         try:
             choice = json.loads(body)['choices'][0]
             content = choice['message']['content']
+            if choice['finish_reason'] == 'length':
+                raise ProviderFailure('provider_output_truncated')
             if choice['finish_reason'] != 'stop' or not isinstance(content, str) or not content.strip():
                 raise ValueError('Incomplete response')
             return content

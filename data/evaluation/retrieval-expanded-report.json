@@ -1,0 +1,628 @@
+{
+  "dataset_id": "source-excerpts-smoke-2026-10-09",
+  "judgment_status": "assisted_source_review",
+  "limitation": "Eight assistant-authored queries over two complete reviewed passages and six AI-assisted reviewed excerpts. Expanded regression smoke test, not independent human judgments or proof of whole-dream answerability.",
+  "corpus_policy": "reviewed",
+  "corpus_checksum": "a53832406d08a3fa132a9ace69176fff11944edb2f56afad03aae5e7e8e67e2f",
+  "latency_scope": "warm query only; excludes model/index loading",
+  "aggregate": {
+    "bm25": {
+      "query_count": 8,
+      "mean_latency_ms": 0.7245500000863103,
+      "max_latency_ms": 1.6780779988039285,
+      "at_k": {
+        "1": {
+          "recall": 0.84375,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.375,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    "dense": {
+      "query_count": 8,
+      "mean_latency_ms": 172.53454325145867,
+      "max_latency_ms": 261.4612970064627,
+      "at_k": {
+        "1": {
+          "recall": 0.34375,
+          "precision": 0.5,
+          "reciprocal_rank": 0.5
+        },
+        "4": {
+          "recall": 0.5,
+          "precision": 0.25,
+          "reciprocal_rank": 0.5
+        }
+      }
+    },
+    "hybrid": {
+      "query_count": 8,
+      "mean_latency_ms": 147.1757309991517,
+      "max_latency_ms": 227.7730349887861,
+      "at_k": {
+        "1": {
+          "recall": 0.84375,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.375,
+          "reciprocal_rank": 1.0
+        }
+      }
+    }
+  },
+  "queries": [
+    {
+      "id": "humility_symbol",
+      "mode": "bm25",
+      "ranked_passage_ids": [
+        "nabulsi_39911c626cb881cbbcf1b457"
+      ],
+      "latency_ms": 0.7163019909057766,
+      "metrics": {
+        "1": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.25,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "humility_description",
+      "mode": "bm25",
+      "ranked_passage_ids": [
+        "nabulsi_39911c626cb881cbbcf1b457"
+      ],
+      "latency_ms": 0.5875180067960173,
+      "metrics": {
+        "1": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.25,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "dragonfly_symbol",
+      "mode": "bm25",
+      "ranked_passage_ids": [
+        "nabulsi_f49a6f9a70b005f2addcd557"
+      ],
+      "latency_ms": 0.5079190013930202,
+      "metrics": {
+        "1": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.25,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "dragonfly_description",
+      "mode": "bm25",
+      "ranked_passage_ids": [
+        "nabulsi_f49a6f9a70b005f2addcd557"
+      ],
+      "latency_ms": 0.6312810000963509,
+      "metrics": {
+        "1": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.25,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "user_sea_ship_dream",
+      "mode": "bm25",
+      "ranked_passage_ids": [
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_5c613595f73b95e1751ad278",
+        "nabulsi_d2e68a65ce2e42b3dd73c576"
+      ],
+      "latency_ms": 1.6780779988039285,
+      "metrics": {
+        "1": {
+          "recall": 0.25,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "travel_verb",
+      "mode": "bm25",
+      "ranked_passage_ids": [
+        "nabulsi_ad2eaf3299836c14ccd1d758"
+      ],
+      "latency_ms": 0.5191599921090528,
+      "metrics": {
+        "1": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.25,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "ships_plural",
+      "mode": "bm25",
+      "ranked_passage_ids": [
+        "nabulsi_5c613595f73b95e1751ad278"
+      ],
+      "latency_ms": 0.5283369973767549,
+      "metrics": {
+        "1": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.25,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "waves_plural",
+      "mode": "bm25",
+      "ranked_passage_ids": [
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "nabulsi_d2e68a65ce2e42b3dd73c576"
+      ],
+      "latency_ms": 0.6278050132095814,
+      "metrics": {
+        "1": {
+          "recall": 0.5,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "humility_symbol",
+      "mode": "dense",
+      "ranked_passage_ids": [
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "nabulsi_d2e68a65ce2e42b3dd73c576",
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_5c613595f73b95e1751ad278",
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "nabulsi_f49a6f9a70b005f2addcd557"
+      ],
+      "latency_ms": 140.50837799732108,
+      "metrics": {
+        "1": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "4": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "reciprocal_rank": 0.0
+        }
+      }
+    },
+    {
+      "id": "humility_description",
+      "mode": "dense",
+      "ranked_passage_ids": [
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_d2e68a65ce2e42b3dd73c576",
+        "nabulsi_5c613595f73b95e1751ad278",
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "nabulsi_f49a6f9a70b005f2addcd557"
+      ],
+      "latency_ms": 171.0690869949758,
+      "metrics": {
+        "1": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "4": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "reciprocal_rank": 0.0
+        }
+      }
+    },
+    {
+      "id": "dragonfly_symbol",
+      "mode": "dense",
+      "ranked_passage_ids": [
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "nabulsi_d2e68a65ce2e42b3dd73c576",
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_5c613595f73b95e1751ad278",
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "nabulsi_f49a6f9a70b005f2addcd557"
+      ],
+      "latency_ms": 157.2738700051559,
+      "metrics": {
+        "1": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "4": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "reciprocal_rank": 0.0
+        }
+      }
+    },
+    {
+      "id": "dragonfly_description",
+      "mode": "dense",
+      "ranked_passage_ids": [
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_d2e68a65ce2e42b3dd73c576",
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "nabulsi_5c613595f73b95e1751ad278",
+        "nabulsi_f49a6f9a70b005f2addcd557"
+      ],
+      "latency_ms": 158.01470799488015,
+      "metrics": {
+        "1": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "4": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "reciprocal_rank": 0.0
+        }
+      }
+    },
+    {
+      "id": "user_sea_ship_dream",
+      "mode": "dense",
+      "ranked_passage_ids": [
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "nabulsi_5c613595f73b95e1751ad278",
+        "nabulsi_d2e68a65ce2e42b3dd73c576",
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "nabulsi_f49a6f9a70b005f2addcd557"
+      ],
+      "latency_ms": 261.4612970064627,
+      "metrics": {
+        "1": {
+          "recall": 0.25,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "travel_verb",
+      "mode": "dense",
+      "ranked_passage_ids": [
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_5c613595f73b95e1751ad278",
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "nabulsi_d2e68a65ce2e42b3dd73c576",
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "nabulsi_f49a6f9a70b005f2addcd557"
+      ],
+      "latency_ms": 228.29892800655216,
+      "metrics": {
+        "1": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.25,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "ships_plural",
+      "mode": "dense",
+      "ranked_passage_ids": [
+        "nabulsi_5c613595f73b95e1751ad278",
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "nabulsi_d2e68a65ce2e42b3dd73c576",
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "nabulsi_f49a6f9a70b005f2addcd557"
+      ],
+      "latency_ms": 124.7354480001377,
+      "metrics": {
+        "1": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.25,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "waves_plural",
+      "mode": "dense",
+      "ranked_passage_ids": [
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "nabulsi_d2e68a65ce2e42b3dd73c576",
+        "nabulsi_5c613595f73b95e1751ad278",
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "nabulsi_f49a6f9a70b005f2addcd557"
+      ],
+      "latency_ms": 138.91463000618387,
+      "metrics": {
+        "1": {
+          "recall": 0.5,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "humility_symbol",
+      "mode": "hybrid",
+      "ranked_passage_ids": [
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "nabulsi_d2e68a65ce2e42b3dd73c576",
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_5c613595f73b95e1751ad278",
+        "nabulsi_f49a6f9a70b005f2addcd557"
+      ],
+      "latency_ms": 132.75387200701516,
+      "metrics": {
+        "1": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.25,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "humility_description",
+      "mode": "hybrid",
+      "ranked_passage_ids": [
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_d2e68a65ce2e42b3dd73c576",
+        "nabulsi_5c613595f73b95e1751ad278",
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "nabulsi_f49a6f9a70b005f2addcd557"
+      ],
+      "latency_ms": 135.97418999415822,
+      "metrics": {
+        "1": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.25,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "dragonfly_symbol",
+      "mode": "hybrid",
+      "ranked_passage_ids": [
+        "nabulsi_f49a6f9a70b005f2addcd557",
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "nabulsi_d2e68a65ce2e42b3dd73c576",
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_5c613595f73b95e1751ad278",
+        "nabulsi_39911c626cb881cbbcf1b457"
+      ],
+      "latency_ms": 136.6479319985956,
+      "metrics": {
+        "1": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.25,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "dragonfly_description",
+      "mode": "hybrid",
+      "ranked_passage_ids": [
+        "nabulsi_f49a6f9a70b005f2addcd557",
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_d2e68a65ce2e42b3dd73c576",
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "nabulsi_5c613595f73b95e1751ad278"
+      ],
+      "latency_ms": 180.22385399672203,
+      "metrics": {
+        "1": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.25,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "user_sea_ship_dream",
+      "mode": "hybrid",
+      "ranked_passage_ids": [
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "nabulsi_5c613595f73b95e1751ad278",
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_d2e68a65ce2e42b3dd73c576",
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "nabulsi_f49a6f9a70b005f2addcd557"
+      ],
+      "latency_ms": 227.7730349887861,
+      "metrics": {
+        "1": {
+          "recall": 0.25,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "travel_verb",
+      "mode": "hybrid",
+      "ranked_passage_ids": [
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_5c613595f73b95e1751ad278",
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "nabulsi_d2e68a65ce2e42b3dd73c576",
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "nabulsi_f49a6f9a70b005f2addcd557"
+      ],
+      "latency_ms": 114.68615199555643,
+      "metrics": {
+        "1": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.25,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "ships_plural",
+      "mode": "hybrid",
+      "ranked_passage_ids": [
+        "nabulsi_5c613595f73b95e1751ad278",
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "nabulsi_d2e68a65ce2e42b3dd73c576",
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "nabulsi_f49a6f9a70b005f2addcd557"
+      ],
+      "latency_ms": 113.13162800797727,
+      "metrics": {
+        "1": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.25,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "waves_plural",
+      "mode": "hybrid",
+      "ranked_passage_ids": [
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "nabulsi_d2e68a65ce2e42b3dd73c576",
+        "nabulsi_5c613595f73b95e1751ad278",
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "nabulsi_f49a6f9a70b005f2addcd557"
+      ],
+      "latency_ms": 136.21518500440288,
+      "metrics": {
+        "1": {
+          "recall": 0.5,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 1.0
+        }
+      }
+    }
+  ],
+  "dataset_sha256": "39d2286483c7f5bbcdb09e6a5aa62de44ccd8fb00a2f72943a8dee52f83001b0"
+}

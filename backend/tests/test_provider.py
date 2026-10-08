@@ -19,8 +19,10 @@ class ProviderTests(unittest.IsolatedAsyncioTestCase):
             self.assertEqual(await DeepSeek(Settings(deepseek_api_key='fixture-key'),client).generate([]),'{}')
 
     async def test_rate_limits_timeouts_and_bad_responses(self):
-        cases=[(429,{},'provider_rate_limit'),(401,{'secret':'never expose'},'provider_unavailable'),
-               (200,{'choices':[{'finish_reason':'length','message':{'content':'{}'}}]},'provider_invalid_response'),
+        cases=[(429,{},'provider_rate_limit'),(401,{'secret':'never expose'},'provider_authentication'),
+               (402,{},'provider_insufficient_balance'),(400,{},'provider_bad_request'),
+               (404,{},'provider_model_unavailable'),(503,{},'provider_unavailable'),
+               (200,{'choices':[{'finish_reason':'length','message':{'content':'{}'}}]},'provider_output_truncated'),
                (200,{'choices':[]},'provider_invalid_response')]
         for status,body,code in cases:
             async with httpx.AsyncClient(transport=httpx.MockTransport(lambda r:httpx.Response(status,json=body))) as client:

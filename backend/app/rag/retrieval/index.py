@@ -15,6 +15,7 @@ from backend.app.rag.ingestion.models import Page, Passage
 from backend.app.rag.ingestion.pipeline import verify_run, file_sha256, json_text, write_jsonl
 from backend.app.rag.chunking.core import Chunk, chunk_passage, exclusion_reason
 from .lexical import BM25, rrf
+from backend.app.rag.chunking.excerpts import reviewed_excerpts
 
 INDEX_VERSION = 1
 
@@ -60,6 +61,8 @@ def build_index(root: Path, output_root: Path, embedder, policy='reviewed', max_
         else:
             chunks.extend(chunk_passage(p, embedder.tokenizer, rows, max_tokens=max_tokens,
                                         overlap_tokens=overlap, policy=policy))
+    # Explicit excerpt reviews can admit clean spans from an otherwise held-out parent.
+    chunks.extend(reviewed_excerpts(root, passages, rows, embedder.tokenizer, handoff, max_tokens, policy))
     if not chunks:
         raise ValueError('No eligible chunks; refusing empty index')
     if len({c.id for c in chunks}) != len(chunks):
@@ -71,7 +74,8 @@ def build_index(root: Path, output_root: Path, embedder, policy='reviewed', max_
     config = {'index_version': INDEX_VERSION, 'model': embedder.identity, 'corpus_checksum': corpus_hash,
               'policy': policy, 'max_tokens': max_tokens, 'overlap_tokens': overlap,
               'source_manifest_checksum': handoff['reviewed_manifest_sha256'],
-              'implementation': code, 'lexical': {'normalization': 'arabic-NFKC-alef-maqsura-harakat-v1',
+              'excerpt_reviews_sha256': handoff.get('excerpt_reviews_sha256'),
+              'implementation': code, 'lexical': {'normalization': 'arabic-NFKC-clitics-explicit-aliases-v2',
               'k1': 1.5, 'b': .75, 'symbol_bonus': 2.0}, 'rrf_constant': 60,
               'dependencies': {name: importlib.metadata.version(name) for name in ['numpy', 'faiss-cpu', 'sentence-transformers']}}
     version = hashlib.sha256(json_text(config).encode()).hexdigest()[:24]

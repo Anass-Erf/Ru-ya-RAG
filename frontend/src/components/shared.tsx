@@ -93,11 +93,13 @@ export function PdfAnchor({ url, start, end }: { url: string; start: number; end
     </a>
   );
 }
-export function ReviewBadge({ status }: { status: string }) {
+export function ReviewBadge({ status, scope }: { status: string; scope?: string }) {
   return (
     <span className={`badge ${status === 'verified' ? 'verified' : 'pending'}`}>
       {status === 'verified'
-        ? 'مراجعة بمساعدة آلية'
+        ? scope === 'excerpt'
+          ? 'مقتطف مراجع · الأصل غير معتمد بالكامل'
+          : 'مراجعة بمساعدة آلية'
         : status === 'needs_review'
           ? 'يحتاج إلى مراجعة'
           : 'غير مُراجع'}
@@ -155,7 +157,10 @@ export function HitCard({ hit, index }: { hit: Hit; index: number }) {
             {c.book_title} · {c.author}
           </p>
         </div>
-        <ReviewBadge status={c.validation_status} />
+        <ReviewBadge
+          status={c.validation_status}
+          scope={c.review_flags.includes('excerpt_source_review') ? 'excerpt' : 'full_passage'}
+        />
       </div>
       {c.chapter && <p className="chapter-label">{c.chapter}</p>}
       <blockquote>{c.text}</blockquote>

@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-09",
+  "status": "LIVE_SCHEMA_AND_CITATION_VERIFICATION_PASSED",
+  "model": "deepseek-flash",
+  "authorized_live_calls": 2,
+  "initial_diagnostic": {
+    "http_status": 200,
+    "finish_reason": "stop",
+    "validation": "generation_schema_invalid",
+    "prompt_tokens": 1307,
+    "completion_tokens": 510
+  },
+  "revised_prompt_verification": {
+    "http_status": 200,
+    "finish_reason": "stop",
+    "validation": "passed",
+    "claims": 3,
+    "differences": 0,
+    "prompt_tokens": 1757,
+    "completion_tokens": 472
+  },
+  "local_tests_passed": 22,
+  "raw_response_retained": false,
+  "limitations": [
+    "One successful live request is not a general semantic faithfulness benchmark.",
+    "The exact field causing the first schema failure was not retained.",
+    "Corpus coverage remains limited; each new model response is checked independently."
+  ]
+}
