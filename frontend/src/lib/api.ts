@@ -10,7 +10,7 @@ export type Claim = { text: string; citations: Citation[] };
 export type Interpretation = { status: 'retrieval_only' | 'insufficient_sources' | 'generated' | 'generation_failed'; message: string; disclaimer: string; evidence_sufficient: boolean; retrieval: SearchResult; sources: Source[]; synthesis: Claim[]; differences: Claim[]; generation_issue: { code: string; message: string; retryable: boolean } | null; provider_model: string | null };
 export type Stats = { books: Book[]; model_details: { name: string; revision: string; dimension: number; max_seq_length: number }; searches_completed: number; mean_search_latency_ms: number | null; last_search_latency_ms: number | null; generation_enabled: boolean; experimental_search_enabled: boolean; warning: string };
 export type Evaluation = { dataset_id: string; judgment_status: string; limitation: string; corpus_policy: string; aggregate: Record<string, { query_count: number; mean_latency_ms: number; at_k: Record<string, { recall: number; precision: number; reciprocal_rank: number }> }> };
-export type Ingestion = { books: Record<string, { candidate_passages: number; pages_extracted: number; quality_flags?: Record<string, number> }> };
+export type Ingestion = { books: Record<string, { candidate_passages: number; pages_extracted: number; passage_flag_counts: Record<string, number>; structural_warnings: string[] }> };
 export type Passage = Chunk & { id: string; raw_text: string; source_file: string; extraction_method: string; source_ranges: { pdf_page: number; line_start: number; line_end: number }[] };
 const errorLabels: Record<string, string> = {
   corpus_unavailable: 'المجموعة النصية غير جاهزة حاليا. يرجى المحاولة بعد إعداد المصادر.',

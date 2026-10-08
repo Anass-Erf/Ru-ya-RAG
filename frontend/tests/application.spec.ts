@@ -61,7 +61,7 @@ test('real library statuses and dashboard metrics match backend', async ({ page,
 test('offline error and retry; no fabricated books', async ({ page }) => {
   await page.route('**/api/books', route => route.abort());
   await page.goto('/library');
-  await expect(page.getByRole('alert')).toContainText('تعذر الاتصال بالخدمة');
+  await expect(page.locator('.notice[role=alert]')).toContainText('تعذر الاتصال بالخدمة');
   await expect(page.locator('.book-card')).toHaveCount(0);
   await page.unroute('**/api/books');
   await page.getByRole('button', { name: 'إعادة المحاولة' }).click();
