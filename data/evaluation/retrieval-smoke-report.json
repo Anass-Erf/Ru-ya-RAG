@@ -1,0 +1,316 @@
+{
+  "dataset_id": "phase3-two-passage-smoke-v1",
+  "judgment_status": "assisted_source_review",
+  "limitation": "Four assistant-authored queries against only two AI-assisted source-checked passages. Smoke test, not an independently human-judged corpus benchmark. No claim of general retrieval quality.",
+  "corpus_policy": "reviewed",
+  "corpus_checksum": "24e395290afbdea1d9ff4b148e9db67a19ec217bac5283ee3613ab034463f5ed",
+  "latency_scope": "warm query only; excludes model/index loading",
+  "aggregate": {
+    "bm25": {
+      "query_count": 4,
+      "mean_latency_ms": 0.08403799802181311,
+      "max_latency_ms": 0.1599709939910099,
+      "at_k": {
+        "1": {
+          "recall": 0.75,
+          "precision": 0.75,
+          "reciprocal_rank": 0.75
+        },
+        "2": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 0.875
+        }
+      }
+    },
+    "dense": {
+      "query_count": 4,
+      "mean_latency_ms": 44.37029299879214,
+      "max_latency_ms": 49.20369599130936,
+      "at_k": {
+        "1": {
+          "recall": 0.5,
+          "precision": 0.5,
+          "reciprocal_rank": 0.5
+        },
+        "2": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 0.75
+        }
+      }
+    },
+    "hybrid": {
+      "query_count": 4,
+      "mean_latency_ms": 46.132924249832286,
+      "max_latency_ms": 53.81360399769619,
+      "at_k": {
+        "1": {
+          "recall": 0.5,
+          "precision": 0.5,
+          "reciprocal_rank": 0.5
+        },
+        "2": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 0.75
+        }
+      }
+    }
+  },
+  "queries": [
+    {
+      "id": "humility_symbol",
+      "mode": "bm25",
+      "ranked_passage_ids": [
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "nabulsi_f49a6f9a70b005f2addcd557"
+      ],
+      "latency_ms": 0.1599709939910099,
+      "metrics": {
+        "1": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "2": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "humility_description",
+      "mode": "bm25",
+      "ranked_passage_ids": [
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "nabulsi_f49a6f9a70b005f2addcd557"
+      ],
+      "latency_ms": 0.06716599455103278,
+      "metrics": {
+        "1": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "2": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "dragonfly_symbol",
+      "mode": "bm25",
+      "ranked_passage_ids": [
+        "nabulsi_f49a6f9a70b005f2addcd557",
+        "nabulsi_39911c626cb881cbbcf1b457"
+      ],
+      "latency_ms": 0.05728799442294985,
+      "metrics": {
+        "1": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "2": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "dragonfly_description",
+      "mode": "bm25",
+      "ranked_passage_ids": [
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "nabulsi_f49a6f9a70b005f2addcd557"
+      ],
+      "latency_ms": 0.051727009122259915,
+      "metrics": {
+        "1": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "2": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 0.5
+        }
+      }
+    },
+    {
+      "id": "humility_symbol",
+      "mode": "dense",
+      "ranked_passage_ids": [
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "nabulsi_f49a6f9a70b005f2addcd557"
+      ],
+      "latency_ms": 42.54441800003406,
+      "metrics": {
+        "1": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "2": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "humility_description",
+      "mode": "dense",
+      "ranked_passage_ids": [
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "nabulsi_f49a6f9a70b005f2addcd557"
+      ],
+      "latency_ms": 49.20369599130936,
+      "metrics": {
+        "1": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "2": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "dragonfly_symbol",
+      "mode": "dense",
+      "ranked_passage_ids": [
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "nabulsi_f49a6f9a70b005f2addcd557"
+      ],
+      "latency_ms": 39.4290020049084,
+      "metrics": {
+        "1": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "2": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 0.5
+        }
+      }
+    },
+    {
+      "id": "dragonfly_description",
+      "mode": "dense",
+      "ranked_passage_ids": [
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "nabulsi_f49a6f9a70b005f2addcd557"
+      ],
+      "latency_ms": 46.30405599891674,
+      "metrics": {
+        "1": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "2": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 0.5
+        }
+      }
+    },
+    {
+      "id": "humility_symbol",
+      "mode": "hybrid",
+      "ranked_passage_ids": [
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "nabulsi_f49a6f9a70b005f2addcd557"
+      ],
+      "latency_ms": 39.300831995205954,
+      "metrics": {
+        "1": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "2": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "humility_description",
+      "mode": "hybrid",
+      "ranked_passage_ids": [
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "nabulsi_f49a6f9a70b005f2addcd557"
+      ],
+      "latency_ms": 41.56566600431688,
+      "metrics": {
+        "1": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "2": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "dragonfly_symbol",
+      "mode": "hybrid",
+      "ranked_passage_ids": [
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "nabulsi_f49a6f9a70b005f2addcd557"
+      ],
+      "latency_ms": 49.851595002110116,
+      "metrics": {
+        "1": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "2": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 0.5
+        }
+      }
+    },
+    {
+      "id": "dragonfly_description",
+      "mode": "hybrid",
+      "ranked_passage_ids": [
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "nabulsi_f49a6f9a70b005f2addcd557"
+      ],
+      "latency_ms": 53.81360399769619,
+      "metrics": {
+        "1": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "2": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 0.5
+        }
+      }
+    }
+  ],
+  "dataset_sha256": "a0dc3d00ece5215fe96f6b3670a0f77a07e753f1c455363830f58374a66686ed"
+}

@@ -1,0 +1,25 @@
+{
+  "book_counts": {
+    "ibn-Shahin": 27,
+    "nabulsi": 2624
+  },
+  "chunks": 2651,
+  "excluded_by_reason": {
+    "needs_review": 281,
+    "quality:known_font_encoding_artifact": 546,
+    "quality:known_font_encoding_artifact,low_text_page_in_span": 19,
+    "quality:known_font_encoding_artifact,nonmonotonic_arabic_glyph_order": 202,
+    "quality:known_font_encoding_artifact,nonmonotonic_arabic_glyph_order,unnamed_section": 4,
+    "quality:low_text_page_in_span": 13,
+    "quality:nonmonotonic_arabic_glyph_order": 68,
+    "quality:very_little_arabic": 2
+  },
+  "passages_admitted": 1639,
+  "passages_input": 2774,
+  "policy": "experimental",
+  "validation_counts": {
+    "unreviewed": 2649,
+    "verified": 2
+  },
+  "warning": "Experimental candidates are not source-verified."
+}

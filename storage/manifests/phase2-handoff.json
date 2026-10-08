@@ -1,0 +1,13 @@
+{
+  "approved_index_chunks": 0,
+  "candidate_manifest_sha256": "d90e9da5464c370ea42e7f92a975e85ed5de8979ac2fe9db2ada02d5fd5b328b",
+  "candidate_run": "data/processed/ingestion/b0217c73dfa8a89464281d47",
+  "phase": 2,
+  "review_decisions": "data/evaluation/phase2-review-decisions.json",
+  "reviewed_manifest_sha256": "1a4bb15018fd4bce9a7f6f5e544c24f62317c82e73100ecc3d4d1969c746daa2",
+  "reviewed_run": "data/processed/reviewed/576bd911d9e8cb2946d9cd1b",
+  "status": "AWAITING_PHASE_3_CONFIRMATION",
+  "verified_method": "assisted_pdf_comparison",
+  "verified_passages": 2,
+  "warning": "Select this run explicitly. Other immutable run directories are development history, not additional corpus partitions."
+}

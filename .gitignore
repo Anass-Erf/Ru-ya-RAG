@@ -1,0 +1,42 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.egg-info/
+build/
+dist/
+.env
+.env.*
+!.env.example
+.aws/
+node_modules/
+.next/
+*.log
+# Original documents stay on disk; ignoring them is not a backup.
+data/raw/*
+!data/raw/README.md
+data/extracted/*
+data/processed/*
+data/quarantine/*
+!data/quarantine/README.md
+storage/indexes/*
+*.npy
+*.npz
+*.faiss
+*.safetensors
+*.pt
+*.pth
+models/
+.cache/
+
+# Regenerable local retrieval inspection exports
+storage/inspection/
+
+# Frontend generated artifacts
+*.tsbuildinfo
+frontend/test-results/
+frontend/playwright-report/

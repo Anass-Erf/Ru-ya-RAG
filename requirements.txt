@@ -1,0 +1,13 @@
+# Core ingestion, retrieval and API dependencies (Python 3.12+).
+# Keep aligned with [project.dependencies] in pyproject.toml.
+PyMuPDF==1.28.2
+pydantic==2.14.0
+numpy==2.5.3
+sentence-transformers==6.1.0
+faiss-cpu==1.15.1
+fastapi==0.143.0
+uvicorn==0.54.0
+httpx==0.28.1
+python-dotenv==1.2.4
+
+# Optional archived search lessons: pip install -e '.[lessons]'

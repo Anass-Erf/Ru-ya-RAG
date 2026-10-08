@@ -1,0 +1,25 @@
+{
+  "default_policy": "reviewed",
+  "experimental_chunks": 2651,
+  "experimental_evaluation": "data/evaluation/experimental-smoke-report.json",
+  "experimental_index": "storage/indexes/eb1ce35559f7087a3b4c3fe4",
+  "experimental_manifest_sha256": "9846fc604a501dabfc4d53469eb152012ef913199ae7b8e74292faea5bdef612",
+  "experimental_parent_passages": 1639,
+  "inspection_reports": [
+    "storage/inspection/experimental-symbol.html",
+    "storage/inspection/experimental-paraphrase.html"
+  ],
+  "limitations": [
+    "Only two AI-assisted source-verified passages; no human scholarly approval.",
+    "Four assistant-authored queries are a smoke test, not a representative benchmark.",
+    "Dense and hybrid rankings need improvement; experimental text remains unverified.",
+    "Ibn Sirin remains OCR_PENDING and excluded."
+  ],
+  "phase": 3,
+  "reviewed_chunks": 2,
+  "reviewed_evaluation": "data/evaluation/retrieval-smoke-report.json",
+  "reviewed_index": "storage/indexes/97578da88bda54f4322ffe55",
+  "reviewed_manifest_sha256": "b9d0c3ec71050447c9f6f6580759dd0a36662365954fff72c744fd1d84299b3b",
+  "status": "AWAITING_PHASE_4_CONFIRMATION",
+  "unscored_draft": "data/evaluation/retrieval-review-draft.json"
+}

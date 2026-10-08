@@ -1,0 +1,61 @@
+{
+  "decisions": [
+    {
+      "checked_pdf_pages": [
+        462
+      ],
+      "evidence": "Compared both candidate lines with the rendered original PDF page 462. The preceding material continues the ذبح entry; ذل has its own quoted/dashed heading at the bottom. Page 463 starts the distinct ذل عن الأعراض entry. Text and boundaries match after whitespace normalization; this is an AI-assisted transcription check only.",
+      "method": "assisted_pdf_comparison",
+      "passage_id": "nabulsi_39911c626cb881cbbcf1b457",
+      "reviewed_at": "2026-10-08T16:34:50Z",
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "scope": "full_passage_and_boundaries",
+      "source_sha256": "f19ae1359524a3223646b59fdf021239f4d1c792f7392983d8b722db13c68e05",
+      "status": "verified",
+      "text_sha256": "522321901dbc2e7c1ce06aa9644e66df04500ce4bb1e6b6b6d261b0dec38eb20"
+    },
+    {
+      "checked_pdf_pages": [
+        463
+      ],
+      "evidence": "Compared the two-line entry with rendered PDF page 463 and surrounding ذل عن الأعراض and ذر entries. Boundary is supported, but االله differs from the rendered word. Preserve candidate text and request correction/review before verification.",
+      "method": "assisted_pdf_comparison",
+      "passage_id": "nabulsi_0612b34a46fef7237a60eb4d",
+      "reviewed_at": "2026-10-08T16:34:50Z",
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "scope": "full_passage_and_boundaries",
+      "source_sha256": "f19ae1359524a3223646b59fdf021239f4d1c792f7392983d8b722db13c68e05",
+      "status": "needs_review",
+      "text_sha256": "057d776ef9e0ede5a1e53d9b7cc0cd2f45b5f9bffbca4046c6c46b29d7a1448b"
+    },
+    {
+      "checked_pdf_pages": [
+        1357
+      ],
+      "evidence": "Compared the three-line entry and adjacent وضوء heading with rendered PDF page 1357. The boundary is supported, but candidate text contains the font artifact االله. Retained the extracted form and needs_review; no speculative text correction or full verification.",
+      "method": "assisted_pdf_comparison",
+      "passage_id": "nabulsi_0ac1a785c03367e892cfbfab",
+      "reviewed_at": "2026-10-08T16:34:50Z",
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "scope": "full_passage_and_boundaries",
+      "source_sha256": "f19ae1359524a3223646b59fdf021239f4d1c792f7392983d8b722db13c68e05",
+      "status": "needs_review",
+      "text_sha256": "374a273e3c93726df0d6694c4464cfd55f975611304c62a5fc22b1b5211c34ba"
+    },
+    {
+      "checked_pdf_pages": [
+        1405
+      ],
+      "evidence": "Compared the complete three-line entry with rendered PDF page 1405. It follows يربوع and ends at أغنياء. The author transition وحيث انتهى begins the next paragraph and is excluded; page 1406 confirms the conclusion. Candidate words and boundary match the image; this is an AI-assisted transcription check only.",
+      "method": "assisted_pdf_comparison",
+      "passage_id": "nabulsi_f49a6f9a70b005f2addcd557",
+      "reviewed_at": "2026-10-08T16:34:50Z",
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "scope": "full_passage_and_boundaries",
+      "source_sha256": "f19ae1359524a3223646b59fdf021239f4d1c792f7392983d8b722db13c68e05",
+      "status": "verified",
+      "text_sha256": "ecff411d2796e3c28574808c6c6209367f631e4daa7b3b1393bfd51bf0916076"
+    }
+  ],
+  "run_id": "b0217c73dfa8a89464281d47"
+}

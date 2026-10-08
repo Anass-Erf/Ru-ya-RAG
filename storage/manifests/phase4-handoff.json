@@ -1,0 +1,31 @@
+{
+  "phase": 4,
+  "status": "AWAITING_PHASE_5_CONFIRMATION",
+  "app": "backend.app.main:app",
+  "openapi": "storage/manifests/phase4-openapi.json",
+  "openapi_sha256": "53fa6561895ed6aa850075c4056378682684b8d29482926f7ea29baf480bbb81",
+  "corpus_handoff": "storage/manifests/phase3-handoff.json",
+  "corpus_handoff_sha256": "02418bbec854a237681843eb9d9e455d3c738d0fc46202ecfa9bc82c696f9595",
+  "default_policy": "reviewed",
+  "generation_default": false,
+  "live_provider_tested": false,
+  "validation": {
+    "full_suite_before_final_logging_test": {
+      "passed": 51,
+      "seconds": 27.627
+    },
+    "final_api_provider_suite": {
+      "passed": 17
+    },
+    "unique_tests_passed": 52,
+    "local_http_smoke": "passed: health, cached-model hybrid search, retrieval-only interpretation with page 1405 citation, docs, OpenAPI",
+    "dependency_check": "pip check passed"
+  },
+  "limitations": [
+    "Only two AI-assisted reviewed passages; no human scholarly approval or representative benchmark.",
+    "Live DeepSeek credentials and model behavior untested.",
+    "Quote matching does not prove semantic faithfulness or complete injection resistance.",
+    "No authentication; generation budgets are process-local.",
+    "Ibn Sirin remains OCR_PENDING."
+  ]
+}

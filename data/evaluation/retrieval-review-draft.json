@@ -1,0 +1,84 @@
+{
+  "id": "phase3-broader-review-draft-v1",
+  "judgment_status": "draft",
+  "limitation": "Proposed relevance links from symbol names only. Neither full source fidelity nor completeness of relevance judgments has been checked. Do not score this draft.",
+  "queries": [
+    {
+      "id": "draft_1",
+      "query": "رأيت تفاحا في المنام",
+      "relevant_passage_ids": [
+        "nabulsi_98ad6cd26e21ee1267fd9c40"
+      ],
+      "book_id": "nabulsi",
+      "symbol": "تفاح",
+      "pdf_page": 165,
+      "review_task": "Compare full source passage and query; find additional relevant passages and negatives before approving this judgment."
+    },
+    {
+      "id": "draft_2",
+      "query": "حلمت بالتمر",
+      "relevant_passage_ids": [
+        "nabulsi_ca350111a1b86aa54cef1f29"
+      ],
+      "book_id": "nabulsi",
+      "symbol": "تمر",
+      "pdf_page": 167,
+      "review_task": "Compare full source passage and query; find additional relevant passages and negatives before approving this judgment."
+    },
+    {
+      "id": "draft_3",
+      "query": "رأيت أنني أسافر في المنام",
+      "relevant_passage_ids": [
+        "nabulsi_ad2eaf3299836c14ccd1d758"
+      ],
+      "book_id": "nabulsi",
+      "symbol": "سفر",
+      "pdf_page": 637,
+      "review_task": "Compare full source passage and query; find additional relevant passages and negatives before approving this judgment."
+    },
+    {
+      "id": "draft_4",
+      "query": "رأيت قطا في المنام",
+      "relevant_passage_ids": [
+        "nabulsi_8a0aa96ffb543e2cb0f4eddc"
+      ],
+      "book_id": "nabulsi",
+      "symbol": "قط",
+      "pdf_page": 1031,
+      "review_task": "Compare full source passage and query; find additional relevant passages and negatives before approving this judgment."
+    },
+    {
+      "id": "draft_5",
+      "query": "حلمت بأنني أمسك قلما",
+      "relevant_passage_ids": [
+        "nabulsi_1c980b1c69c57a9ce16b8d41"
+      ],
+      "book_id": "nabulsi",
+      "symbol": "قلم",
+      "pdf_page": 1051,
+      "review_task": "Compare full source passage and query; find additional relevant passages and negatives before approving this judgment."
+    },
+    {
+      "id": "draft_6",
+      "query": "رأيت كتابا في المنام",
+      "relevant_passage_ids": [
+        "nabulsi_31d8501c788333500f9a39e0"
+      ],
+      "book_id": "nabulsi",
+      "symbol": "كتاب",
+      "pdf_page": 1069,
+      "review_task": "Compare full source passage and query; find additional relevant passages and negatives before approving this judgment."
+    },
+    {
+      "id": "draft_7",
+      "query": "حلمت بالورد",
+      "relevant_passage_ids": [
+        "nabulsi_19611c2390e0fd02d49d1389"
+      ],
+      "book_id": "nabulsi",
+      "symbol": "ورد",
+      "pdf_page": 1369,
+      "review_task": "Compare full source passage and query; find additional relevant passages and negatives before approving this judgment."
+    }
+  ]
+}

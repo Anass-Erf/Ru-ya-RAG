@@ -1,0 +1,39 @@
+{
+  "id": "phase3-two-passage-smoke-v1",
+  "judgment_status": "assisted_source_review",
+  "limitation": "Four assistant-authored queries against only two AI-assisted source-checked passages. Smoke test, not an independently human-judged corpus benchmark. No claim of general retrieval quality.",
+  "queries": [
+    {
+      "id": "humility_symbol",
+      "query": "رأيت الذل في المنام",
+      "relevant_passage_ids": [
+        "nabulsi_39911c626cb881cbbcf1b457"
+      ],
+      "evidence": "Symbol/description corresponds to the complete source-checked entry; see docs/source-review.md. Labels are assistant-assigned for human review."
+    },
+    {
+      "id": "humility_description",
+      "query": "رأيت في المنام أنني ذليل",
+      "relevant_passage_ids": [
+        "nabulsi_39911c626cb881cbbcf1b457"
+      ],
+      "evidence": "Symbol/description corresponds to the complete source-checked entry; see docs/source-review.md. Labels are assistant-assigned for human review."
+    },
+    {
+      "id": "dragonfly_symbol",
+      "query": "رأيت يعسوب في المنام",
+      "relevant_passage_ids": [
+        "nabulsi_f49a6f9a70b005f2addcd557"
+      ],
+      "evidence": "Symbol/description corresponds to the complete source-checked entry; see docs/source-review.md. Labels are assistant-assigned for human review."
+    },
+    {
+      "id": "dragonfly_description",
+      "query": "حلمت بأنني ملكت كثيرا من اليعاسيب",
+      "relevant_passage_ids": [
+        "nabulsi_f49a6f9a70b005f2addcd557"
+      ],
+      "evidence": "Symbol/description corresponds to the complete source-checked entry; see docs/source-review.md. Labels are assistant-assigned for human review."
+    }
+  ]
+}

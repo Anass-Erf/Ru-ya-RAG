@@ -1,0 +1,23 @@
+{
+  "book_counts": {
+    "nabulsi": 2
+  },
+  "chunks": 2,
+  "excluded_by_reason": {
+    "not_verified": 1918,
+    "quality:known_font_encoding_artifact": 546,
+    "quality:known_font_encoding_artifact,low_text_page_in_span": 19,
+    "quality:known_font_encoding_artifact,nonmonotonic_arabic_glyph_order": 202,
+    "quality:known_font_encoding_artifact,nonmonotonic_arabic_glyph_order,unnamed_section": 4,
+    "quality:low_text_page_in_span": 13,
+    "quality:nonmonotonic_arabic_glyph_order": 68,
+    "quality:very_little_arabic": 2
+  },
+  "passages_admitted": 2,
+  "passages_input": 2774,
+  "policy": "reviewed",
+  "validation_counts": {
+    "verified": 2
+  },
+  "warning": "Source review was AI-assisted, not scholarly approval."
+}
