@@ -3,15 +3,24 @@
 Arabic retrieval over traditional dream interpretations in historical texts.
 These texts are not facts, predictions, or definitive religious rulings.
 
-**Current state: Phase 4 FastAPI backend implemented.** BM25, dense and hybrid
-retrieval feed an optional DeepSeek adapter with checked citations and bounded calls.
-Retrieval works without an API key. The default reviewed corpus still contains only
-two AI-assisted source-checked passages; broad interpretation quality is not established.
-Next.js and Docker remain for later phases.
+**Current state: Phase 5 Arabic RTL frontend implemented.** Five Next.js pages
+connect to the FastAPI backend: interpretation, source search, digital library,
+engineering dashboard and project methodology. Light/dark modes, PDF citations,
+source inspection and actual quality metrics are available. The reviewed corpus
+still contains only two AI-assisted source-checked passages; broad interpretation
+quality is not established. Docker packaging remains for Phase 6.
 
-Run `.venv/bin/python -m uvicorn backend.app.main:app --host 127.0.0.1 --port 8000 --no-access-log`
-and open http://127.0.0.1:8000/docs. See [backend setup and endpoints](docs/backend.md),
-[generation limits](docs/generation.md), and [Phase 4 results](docs/phase4-report.md).
+Start the backend and frontend in separate terminals:
+
+```bash
+.venv/bin/python -m uvicorn backend.app.main:app --host 127.0.0.1 --port 8000 --no-access-log
+npm --prefix frontend ci
+npm --prefix frontend run dev
+```
+
+Open http://127.0.0.1:3000. API docs: http://127.0.0.1:8000/docs.
+See [frontend setup](docs/frontend.md), [backend setup](docs/backend.md),
+[generation limits](docs/generation.md), and [Phase 5 results](docs/phase5-report.md).
 
 Sources: *تعطير الأنام في تعبير المنام* by عبد الغني النابلسي;
 *الإشارات في علم العبارات* by ابن شاهين الظاهري; and
@@ -96,6 +105,7 @@ Evaluation scores are limited smoke tests, not a corpus-wide quality claim.
 · [Architecture](docs/architecture.md) · [Learning guide](docs/learning-guide.md)
 · [Phase 1 audit](docs/repository-audit.md) · [Phase 1 cleanup](docs/cleanup-report.md)
 
-Phase 4 is implemented; Phase 5 (Next.js frontend) awaits confirmation. There are no mock
-interpretations, and retrieval results alone are not dream predictions.
+Phase 5 is implemented; Phase 6 (testing and packaging) awaits confirmation. Product
+results come from the API; simulated provider responses exist only in clearly labeled
+automated tests. Retrieval results alone are not dream predictions.
 Keep independent PDF backups: Git ignores source data, and checksums cannot restore it.

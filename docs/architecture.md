@@ -31,8 +31,11 @@ The reviewed index admits only verified passages without blocking quality flags.
 separate experimental index retains unreviewed status and is excluded from any
 claim of source verification.
 
-FastAPI and bounded DeepSeek synthesis are implemented. Planned after confirmation:
-an Arabic RTL Next.js application. Historical quotations
+FastAPI, bounded DeepSeek synthesis, and the Arabic RTL Next.js application are
+implemented. The browser calls the API directly through an explicitly configured
+public origin; provider credentials remain on the backend. Fonts are bundled locally.
+The UI separates source excerpts, generated claims, retrieval scores and corpus
+readiness. Only the theme preference is persisted in browser storage. Historical quotations
 and generated synthesis must remain distinguishable, with traceable PDF citations.
 
 Archived educational code demonstrates TF-IDF and MiniLM on five artificial examples.

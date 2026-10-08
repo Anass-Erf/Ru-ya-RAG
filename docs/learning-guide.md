@@ -145,3 +145,28 @@ Test with `python -m unittest backend.tests.test_provider -v` and the generation
 cases in `test_api`. A live model still needs a separately judged faithfulness set.
 Interview explanation: “I can trace every accepted citation to a retrieved chunk,
 while explicitly distinguishing citation validity from semantic faithfulness.”
+
+## Arabic RTL frontend (Phase 5)
+
+The frontend makes provenance and limitations usable: five Next.js routes present
+interpretation, retrieval, books, engineering metrics and methodology. The HTML root
+sets Arabic and RTL; logical CSS properties keep navigation, spacing and text direction
+consistent. Fonts are local assets. Native controls/details and a shadcn/ui Button
+keep interaction simple, keyboard-accessible and reusable. Light/dark design tokens
+are shared across pages, and reduced-motion preferences are respected.
+
+A typed API module centralizes timeouts, sanitized Arabic errors, origin configuration
+and approved PDF URL patterns. Resource hooks cancel obsolete reads. Model output is
+rendered as text, not HTML. The client never sees provider credentials. Generation
+requires a visible opt-in, while quotes and generated summaries have separate sections.
+Unavailable services produce retry states rather than substitute corpus results.
+
+Failure modes include stale build-time API origins, CORS mismatches, unsupported
+Arabic morphology, exact chapter filters and misunderstood ranking scores. The small
+reviewed corpus remains visible so interface polish cannot imply broad coverage.
+Run the production build, TypeScript checks, and Playwright tests described in
+`frontend.md`. Browser tests use real local corpus APIs; one explicitly labeled
+provider fixture checks generated/failure UI states without a paid call. Axe checks
+can find contrast and semantic issues but do not replace manual assistive-technology
+review. Interview explanation: “The UI preserves the distinction between finding a
+passage, verifying its source, and proving that generated prose follows from it.”

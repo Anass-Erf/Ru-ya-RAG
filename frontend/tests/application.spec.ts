@@ -1,7 +1,10 @@
 import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 
-test('reviewed interpretation, parent passage, and real PDF citation', async ({ page, request }) => {
+test('reviewed interpretation, parent passage, and real PDF citation', async ({
+  page,
+  request,
+}) => {
   await page.goto('/');
   await expect(page.locator('html')).toHaveAttribute('dir', 'rtl');
   await page.getByRole('button', { name: 'يعسوب', exact: true }).click();
@@ -10,8 +13,13 @@ test('reviewed interpretation, parent passage, and real PDF citation', async ({ 
   await page.getByRole('button', { name: 'ابحث عن الشواهد' }).click();
   await expect(page.getByRole('heading', { name: 'الشواهد الأصلية' })).toBeVisible();
   const pdf = page.getByRole('link', { name: /صفحة PDF/ }).first();
-  await expect(pdf).toHaveAttribute('href', 'http://127.0.0.1:8000/api/books/nabulsi/source#page=1405');
-  const response = await request.get((await pdf.getAttribute('href'))!, { headers: { Range: 'bytes=0-7' } });
+  await expect(pdf).toHaveAttribute(
+    'href',
+    'http://127.0.0.1:8000/api/books/nabulsi/source#page=1405',
+  );
+  const response = await request.get((await pdf.getAttribute('href'))!, {
+    headers: { Range: 'bytes=0-7' },
+  });
   expect(response.status()).toBe(206);
   expect((await response.body()).toString().startsWith('%PDF')).toBeTruthy();
   await page.getByRole('button', { name: 'عرض النص الأصلي وبياناته' }).first().click();
@@ -52,14 +60,21 @@ test('real library statuses and dashboard metrics match backend', async ({ page,
   await expect(page.getByText('متاح جزئيا', { exact: true })).toBeVisible();
   await page.goto('/dashboard');
   await expect(page.locator('.stat-card')).toHaveCount(4);
-  const verified = stats.books.reduce((n: number, b: { verified_passages: number }) => n + b.verified_passages, 0);
-  await expect(page.locator('.stat-card').filter({ hasText: 'نصوص مراجعة' }).locator('strong')).toHaveText(new Intl.NumberFormat('ar').format(verified));
+  const verified = stats.books.reduce(
+    (n: number, b: { verified_passages: number }) => n + b.verified_passages,
+    0,
+  );
+  await expect(
+    page.locator('.stat-card').filter({ hasText: 'نصوص مراجعة' }).locator('strong'),
+  ).toHaveText(new Intl.NumberFormat('ar').format(verified));
   await expect(page.getByRole('columnheader', { name: 'Recall@k' })).toBeVisible();
-  await expect(page.getByText('sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2', { exact: true })).toBeVisible();
+  await expect(
+    page.getByText('sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2', { exact: true }),
+  ).toBeVisible();
 });
 
 test('offline error and retry; no fabricated books', async ({ page }) => {
-  await page.route('**/api/books', route => route.abort());
+  await page.route('**/api/books', (route) => route.abort());
   await page.goto('/library');
   await expect(page.locator('.notice[role=alert]')).toContainText('تعذر الاتصال بالخدمة');
   await expect(page.locator('.book-card')).toHaveCount(0);
@@ -74,7 +89,9 @@ test('mobile navigation, dark preference, overflow, and screenshots', async ({ p
   await page.getByRole('button', { name: 'فتح القائمة' }).click();
   await page.getByRole('link', { name: /المكتبة الرقمية/ }).click();
   await expect(page.locator('.book-card')).toHaveCount(3);
-  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBeTruthy();
+  expect(
+    await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth),
+  ).toBeTruthy();
   await page.getByRole('button', { name: 'تفعيل الوضع الداكن' }).click();
   await page.reload();
   await expect(page.locator('html')).toHaveClass('dark');
@@ -85,12 +102,23 @@ test('mobile navigation, dark preference, overflow, and screenshots', async ({ p
 });
 
 test('desktop accessibility across all pages and light/dark contrast', async ({ page }) => {
+  await page.goto('/');
+  expect(
+    await page
+      .locator('.sidebar-bottom')
+      .evaluate((el) => el.getBoundingClientRect().bottom <= window.innerHeight),
+  ).toBeTruthy();
+  await page.setViewportSize({ width: 1280, height: 900 });
   for (const path of ['/', '/search', '/library', '/dashboard', '/about']) {
     await page.goto(path);
     await page.waitForLoadState('networkidle');
-    const results = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa']).analyze();
+    const results = await new AxeBuilder({ page })
+      .withTags(['wcag2a', 'wcag2aa', 'wcag21aa'])
+      .analyze();
     expect(results.violations, JSON.stringify(results.violations, null, 2)).toEqual([]);
-    expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBeTruthy();
+    expect(
+      await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth),
+    ).toBeTruthy();
   }
   await page.goto('/');
   await page.waitForLoadState('networkidle');
@@ -99,4 +127,70 @@ test('desktop accessibility across all pages and light/dark contrast', async ({ 
   const dark = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa']).analyze();
   expect(dark.violations, JSON.stringify(dark.violations, null, 2)).toEqual([]);
   await page.screenshot({ path: 'test-results/home-desktop-dark.png', fullPage: true });
+});
+
+test('clearly labeled test fixture checks synthesis separation and failure recovery', async ({
+  page,
+  request,
+}) => {
+  // Provider output is simulated ONLY in this browser test; no product fixture or paid call.
+  const real = await (
+    await request.post('http://127.0.0.1:8000/api/interpret', {
+      data: { query: 'يعسوب', mode: 'bm25', generate: false },
+    })
+  ).json();
+  const source = real.sources[0];
+  await page.route('**/health', async (route) => {
+    const response = await route.fetch();
+    await route.fulfill({
+      response,
+      json: { ...(await response.json()), generation_configured: true },
+    });
+  });
+  let fail = false;
+  await page.route('**/api/interpret', async (route) => {
+    expect(route.request().postDataJSON().generate).toBe(true);
+    await route.fulfill({
+      json: {
+        ...real,
+        status: fail ? 'generation_failed' : 'generated',
+        message: 'استجابة تجريبية لاختبار الواجهة فقط',
+        synthesis: fail
+          ? []
+          : [
+              {
+                text: 'تلخيص تجريبي لاختبار الفصل البصري فقط.',
+                citations: [
+                  {
+                    source_id: source.id,
+                    quote: source.quote,
+                    book_title: source.book_title,
+                    author: source.author,
+                    page_start: source.page_start,
+                    page_end: source.page_end,
+                    pdf_url: source.pdf_url,
+                  },
+                ],
+              },
+            ],
+        generation_issue: fail
+          ? { code: 'provider_timeout', message: 'انتهت مهلة التوليد التجريبية.', retryable: true }
+          : null,
+      },
+    });
+  });
+  await page.goto('/');
+  await page.getByRole('button', { name: 'يعسوب', exact: true }).click();
+  await page.getByRole('checkbox').check();
+  await expect(page.getByText(/يُرسل النص والشواهد المختارة إلى DeepSeek/)).toBeVisible();
+  await page.getByRole('button', { name: 'ابحث عن الشواهد' }).click();
+  await expect(page.getByRole('region', { name: 'التلخيص الآلي' })).toContainText('تلخيص تجريبي');
+  await expect(page.getByRole('heading', { name: 'الشواهد الأصلية' })).toBeVisible();
+  await page.getByText('الشواهد التي يستند إليها هذا التلخيص').click();
+  await expect(page.locator('.synthesis blockquote')).toHaveText(source.quote);
+  fail = true;
+  await page.getByRole('button', { name: 'ابحث عن الشواهد' }).click();
+  await expect(page.getByText(/انتهت مهلة التوليد التجريبية/)).toBeVisible();
+  await expect(page.locator('.synthesis')).toHaveCount(0);
+  await expect(page.getByRole('heading', { name: 'الشواهد الأصلية' })).toBeVisible();
 });

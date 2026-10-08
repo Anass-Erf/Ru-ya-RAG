@@ -27,6 +27,7 @@ npm --prefix frontend run build
 npm --prefix frontend run start
 # Compile-time checks
 npm --prefix frontend run typecheck
+npm --prefix frontend run format:check
 # Browser checks: stop any servers on ports 3000/8000 first.
 npx --prefix frontend playwright install chromium
 npm --prefix frontend run test:e2e
