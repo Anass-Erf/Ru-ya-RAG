@@ -1,0 +1,115 @@
+{
+  "candidate_run": "data/processed/ingestion/b0217c73dfa8a89464281d47",
+  "reviewed_run": "data/processed/reviewed/d0a5e537367cec060ccc230b",
+  "scope": "Batch 01: 35 additional complete passages visually compared; 29 approved, 6 held. Not a complete corpus audit or random quality sample.",
+  "books": {
+    "nabulsi": {
+      "candidate_passages": 2455,
+      "validation_counts": {
+        "needs_review": 836,
+        "unreviewed": 1595,
+        "verified": 24
+      },
+      "candidate_quality_flags": {
+        "known_font_encoding_artifact": 543,
+        "long_page_span_review": 70,
+        "short_text_review": 268,
+        "low_text_page_in_span": 32,
+        "very_little_arabic": 2,
+        "long_text_review": 5,
+        "nonmonotonic_arabic_glyph_order": 1
+      },
+      "unflagged_candidates": 1621,
+      "ocr_pending": false
+    },
+    "ibn-Shahin": {
+      "candidate_passages": 319,
+      "validation_counts": {
+        "needs_review": 302,
+        "verified": 7,
+        "unreviewed": 10
+      },
+      "candidate_quality_flags": {
+        "known_font_encoding_artifact": 228,
+        "nonmonotonic_arabic_glyph_order": 273,
+        "unnamed_section": 4,
+        "long_page_span_review": 31,
+        "long_text_review": 16,
+        "chapter_preamble_review": 38
+      },
+      "unflagged_candidates": 18,
+      "ocr_pending": false
+    },
+    "ibn-sirin": {
+      "candidate_passages": 0,
+      "validation_counts": {},
+      "candidate_quality_flags": {},
+      "unflagged_candidates": 0,
+      "ocr_pending": true
+    }
+  },
+  "remaining_work": [
+    "Source-bound repair of word splits, joined words and misplaced glyphs; rebuild candidates and obtain fresh reviews for corrected text.",
+    "Review further complete Nabulsi entries and Ibn Shahin sections; clean extraction flags do not establish fidelity.",
+    "OCR and visual review of Ibn Sirin remain outstanding."
+  ],
+  "held_passages": [
+    {
+      "passage_id": "ibn-Shahin_623d06d8aef7a28d6bef7bba",
+      "original_flags": [],
+      "evidence": "Compared the complete candidate with the rendered original PDF page 10 and adjacent boundaries. The rendered source reads ابن سيرين: من رأى but candidate has ابن سيرينم : ن رأى. Complete section compared through حق العلماء before الباب الثالث; word/glyph order requires repair. This checks transcription only, not historical accuracy or scholarly approval."
+    },
+    {
+      "passage_id": "nabulsi_1e655403c3b9fab0029bb053",
+      "original_flags": [],
+      "evidence": "Compared the complete candidate with the rendered original PDF page 334 and adjacent boundaries. The PDF renders الهموم as one word; candidate contains ال هموم. Boundary is correct but transcription requires repair. This checks transcription only, not historical accuracy or scholarly approval."
+    },
+    {
+      "passage_id": "nabulsi_577b62c101dc179d1db3edd5",
+      "original_flags": [],
+      "evidence": "Compared the complete candidate with the rendered original PDF page 334 and adjacent boundaries. The candidate reads يجزم in the first line. The middle glyph cannot be confidently certified from this visual comparison; retain for higher-resolution glyph review rather than approval. This checks transcription only, not historical accuracy or scholarly approval."
+    },
+    {
+      "passage_id": "nabulsi_035bc2f9a87afb495da5136a",
+      "original_flags": [
+        "short_text_review"
+      ],
+      "evidence": "Compared the complete candidate with the rendered original PDF page 520 and adjacent boundaries. The PDF separates المداراة وبلوغ; candidate joins المداراةوبلوغ. Complete boundary is visible, but word spacing requires repair. This checks transcription only, not historical accuracy or scholarly approval."
+    },
+    {
+      "passage_id": "nabulsi_a19193f16c28d94766a244be",
+      "original_flags": [],
+      "evidence": "Compared the complete candidate with the rendered original PDF page 533 and adjacent boundaries. The PDF renders تعب as one word; candidate contains تع ب. Full entry and boundaries compared; hold for transcription repair. This checks transcription only, not historical accuracy or scholarly approval."
+    },
+    {
+      "passage_id": "nabulsi_e2d4432eccb9d5f2d9692bc4",
+      "original_flags": [],
+      "evidence": "Compared the complete candidate with the rendered original PDF page 533 and adjacent boundaries. The PDF renders رؤيته as one word; candidate contains رؤي ته. The complete entry ends at صلاح and PDF 534 begins زراد. Hold for transcription repair. This checks transcription only, not historical accuracy or scholarly approval."
+    }
+  ],
+  "rendered_evidence": {
+    "scale": 1.6,
+    "note": "Full candidate pages and cropped adjacent boundary context, rendered locally from unchanged originals. Images are regenerable ignored inspection artifacts.",
+    "sha256": {
+      "storage/inspection/corpus-batch-01/batch-nabulsi-334.png": "67bef19462266e5174227708c762895114eedb4093e19a22231d91f9f9b1d620",
+      "storage/inspection/corpus-batch-01/batch-nabulsi-1023.png": "f51951a8d9b4417e41dfc9aabe999aa01e2f6b8548080118faf243613ecd0ca9",
+      "storage/inspection/corpus-batch-01/batch-nabulsi-533.png": "86de2d0be02ce6d19abc9d68285fb84efa542e8e768d79d54cf397d37cc9e118",
+      "storage/inspection/corpus-batch-01/batch-nabulsi-520.png": "afa4bb36af5c7a5cbdd99538b96abe3a0f74971f8affc88c5d8fd45ec7aad962",
+      "storage/inspection/corpus-batch-01/batch-ibn-Shahin-26.png": "e6dfa51d5c3e406b26dcce9b2b4d7ebad2c6a82847c96db25a0bdb967e1bd058",
+      "storage/inspection/corpus-batch-01/batch-ibn-Shahin-19.png": "9d938026e7eb1dc185e969afb372d29f6ca1264da54125e4c5508f332acae341",
+      "storage/inspection/corpus-batch-01/batch-ibn-Shahin-57.png": "126e655e377586bc41aca275eabf19d69218d875ec0b50ee706d1e38de3daa16",
+      "storage/inspection/corpus-batch-01/batch-ibn-Shahin-66.png": "eca97cbfa97746cb539a42cb21496cc6e68c129c8957ab032cf2ae48bf9f1605",
+      "storage/inspection/corpus-batch-01/batch-ibn-Shahin-10.png": "e996d4df8d5f267643ee38c9a2fd8ba1d76b49e7170dfc027c9dbce29abf1fd3",
+      "storage/inspection/corpus-batch-01/batch-ibn-Shahin-99.png": "8aef547a724af9b130cfa3c4934e5e8abae0b46b31c607677a8007942e23eb32",
+      "storage/inspection/corpus-batch-01/batch-ibn-Shahin-22.png": "325b65d2ec8f91fa2b3ce8488867eca0c7afd0b32fdc1194ff89c8da30448380",
+      "storage/inspection/corpus-batch-01/boundary-nabulsi-534.png": "00fb8644438129ad651234eaa083b8a42d9ffd79a05ed886277c49f63e7b0994",
+      "storage/inspection/corpus-batch-01/boundary-nabulsi-532.png": "95a8cfdf79d440dd075021fb7e3b5beb858f43e7c3cf17e51cf4dd9ff87ab72c",
+      "storage/inspection/corpus-batch-01/boundary-nabulsi-519.png": "32e0e9a54fc75dff5bcae91f0844e2a76971233933f2317dec71ff1abc816a02",
+      "storage/inspection/corpus-batch-01/boundary-nabulsi-521.png": "eba68f113121668f89216e624c8e8fa88fc983bf2814d8c7a287e7f5cf8bbe7b",
+      "storage/inspection/corpus-batch-01/boundary-nabulsi-335.png": "193186d4f3c357df41794854bec56878380b67579c2edcbd350efc60213bb894",
+      "storage/inspection/corpus-batch-01/boundary-nabulsi-1022.png": "b7918dec9feddf1cbed459cdd3279f387528b9f10b65c98597b8dc8e13f0048e",
+      "storage/inspection/corpus-batch-01/boundary-ibn-Shahin-25.png": "60f7efac292ce13a1aa158bfba311d6c72d9e9780597453a56e2d577c2435ea5",
+      "storage/inspection/corpus-batch-01/boundary-nabulsi-1024.png": "64f2e7456866e53c97d26f20a3d90ddae7b642927feaf567cac3ba7c10ce4035"
+    }
+  }
+}

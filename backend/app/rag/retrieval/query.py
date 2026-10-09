@@ -39,3 +39,17 @@ def symbol_matches(query, symbol):
         return 'موج' in terms
     required = [next((v for v in forms(w) if v != w), w) for w in search_normalize(symbol).split()]
     return bool(required) and all(word in terms for word in required)
+
+
+def source_topics(symbol, section):
+    """Use explicit source headings, including Ibn Shahin's section headings.
+
+    Do not infer a topic from body text or split compound headings on conjunctions.
+    The source's explicit 'وهو' gloss can name the same topic (الطل وهو الندى).
+    """
+    if symbol:
+        return [symbol]
+    prefix = 'فصل في رؤيا '
+    if not section or not section.startswith(prefix):
+        return []
+    return [part.strip() for part in section[len(prefix):].split(' وهو ') if part.strip()]

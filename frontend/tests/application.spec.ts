@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
+const apiUrl = `http://127.0.0.1:${Number(process.env.RUYA_E2E_API_PORT ?? 18000)}`;
 
 test('reviewed interpretation, parent passage, and real PDF citation', async ({
   page,
@@ -13,10 +14,7 @@ test('reviewed interpretation, parent passage, and real PDF citation', async ({
   await page.getByRole('button', { name: 'ابحث عن الشواهد' }).click();
   await expect(page.getByRole('heading', { name: 'الشواهد الأصلية' })).toBeVisible();
   const pdf = page.getByRole('link', { name: /صفحة PDF/ }).first();
-  await expect(pdf).toHaveAttribute(
-    'href',
-    'http://127.0.0.1:8000/api/books/nabulsi/source#page=1405',
-  );
+  await expect(pdf).toHaveAttribute('href', `${apiUrl}/api/books/nabulsi/source#page=1405`);
   const response = await request.get((await pdf.getAttribute('href'))!, {
     headers: { Range: 'bytes=0-7' },
   });
@@ -42,6 +40,21 @@ test('search filters and honest empty results', async ({ page }) => {
   await expect(page.locator('.hit-card')).toHaveCount(0);
 });
 
+test('reviewed Ibn Shahin section appears with its original PDF citation', async ({ page }) => {
+  await page.goto('/');
+  await page.getByLabel('اكتب رؤياك أو الرمز الذي تبحث عنه').fill('رأيت السراب في المنام');
+  await page.getByText('خيارات القراءة', { exact: true }).click();
+  await page.getByLabel('طريقة البحث', { exact: true }).selectOption('bm25');
+  await page.getByRole('button', { name: 'ابحث عن الشواهد' }).click();
+  await expect(page.getByRole('heading', { name: 'الشواهد الأصلية' })).toBeVisible();
+  await expect(page.getByText(/الرموز المطابقة:/)).toContainText('السراب');
+  await expect(page.getByRole('link', { name: /صفحة PDF/ }).first()).toHaveAttribute(
+    'href',
+    `${apiUrl}/api/books/ibn-Shahin/source#page=22`,
+  );
+  await expect(page.locator('.synthesis')).toHaveCount(0);
+});
+
 test('unrelated dream abstains without synthesis', async ({ page }) => {
   await page.goto('/');
   await page.getByLabel('اكتب رؤياك أو الرمز الذي تبحث عنه').fill('كلمةمعدومة');
@@ -53,11 +66,21 @@ test('unrelated dream abstains without synthesis', async ({ page }) => {
 });
 
 test('real library statuses and dashboard metrics match backend', async ({ page, request }) => {
-  const stats = await (await request.get('http://127.0.0.1:8000/api/stats')).json();
+  const stats = await (await request.get(`${apiUrl}/api/stats`)).json();
   await page.goto('/library');
   await expect(page.locator('.book-card')).toHaveCount(stats.books.length);
   await expect(page.getByText('بانتظار استخراج بصري · OCR', { exact: true })).toBeVisible();
-  await expect(page.getByText('متاح جزئيا', { exact: true })).toBeVisible();
+  await expect(page.getByText('متاح جزئيا', { exact: true })).toHaveCount(
+    stats.books.filter((book: { status: string }) => book.status === 'partially_available').length,
+  );
+  for (const book of stats.books) {
+    const card = page
+      .locator('.book-card')
+      .filter({ has: page.getByRole('heading', { name: book.title }) });
+    await expect(card.locator('.book-stats b').nth(1)).toHaveText(
+      new Intl.NumberFormat('ar').format(book.verified_passages),
+    );
+  }
   await page.goto('/dashboard');
   await expect(page.locator('.stat-card')).toHaveCount(4);
   const verified = stats.books.reduce(
@@ -135,7 +158,7 @@ test('clearly labeled test fixture checks synthesis separation and failure recov
 }) => {
   // Provider output is simulated ONLY in this browser test; no product fixture or paid call.
   const real = await (
-    await request.post('http://127.0.0.1:8000/api/interpret', {
+    await request.post(`${apiUrl}/api/interpret`, {
       data: { query: 'يعسوب', mode: 'bm25', generate: false },
     })
   ).json();

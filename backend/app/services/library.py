@@ -39,6 +39,9 @@ class Library:
                 raise ValueError('Index handoff checksum differs')
             self.indexes[policy] = SearchIndex(directory)
         source_handoff = json.loads((root / 'storage/manifests/phase2-handoff.json').read_text())
+        if any(index.config['source_manifest_checksum'] != source_handoff['reviewed_manifest_sha256']
+               for index in self.indexes.values()):
+            raise ValueError('Reviewed source ledger/index mismatch')
         if source_handoff.get('excerpt_reviews'):
             checksum = file_sha256(root / source_handoff['excerpt_reviews'])
             if checksum != source_handoff['excerpt_reviews_sha256'] or any(index.config.get('excerpt_reviews_sha256') != checksum for index in self.indexes.values()):

@@ -4,9 +4,16 @@
 
 The default `reviewed` policy admits only verified passages with adequate Arabic and
 no blocking extraction flags. Current verification is AI-assisted, as recorded in
-Phase 2. It is not human scholarly approval. There are two completely reviewed passages plus six explicitly reviewed exact excerpts
+Phase 2 and subsequent review batches. It is not human scholarly approval. There are
+31 completely reviewed passages (24 Nabulsi, 7 Ibn Shahin) plus six reviewed exact excerpts
 from four additional parents. The excerpt ledger records offsets, checksums and
 PDF review scope; it never promotes the full parent. Coverage remains very limited.
+
+Ibn Shahin's explicit `فصل في رؤيا ...` section headings also supply topics for
+lexical ranking and interpretation evidence selection. An explicit `وهو` gloss
+can name the same topic, such as `الطل وهو الندى`. Body text never supplies an
+inferred symbol, and compound headings are not split into unrelated topics.
+Source passage metadata and quoted text remain unchanged.
 
 `experimental` is an explicit opt-in for unreviewed candidates that meet the same
 text-quality checks. It does not change validation status. Neither policy admits Ibn Sirin or automatically admits font-corrupt/replacement

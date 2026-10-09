@@ -15,6 +15,7 @@ dist/
 .aws/
 node_modules/
 .next/
+.next-e2e/
 *.log
 # Original documents stay on disk; ignoring them is not a backup.
 data/raw/*

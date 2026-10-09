@@ -1,0 +1,551 @@
+{
+  "run_id": "b0217c73dfa8a89464281d47",
+  "decisions": [
+    {
+      "checked_pdf_pages": [
+        462
+      ],
+      "evidence": "Compared both candidate lines with the rendered original PDF page 462. The preceding material continues the ذبح entry; ذل has its own quoted/dashed heading at the bottom. Page 463 starts the distinct ذل عن الأعراض entry. Text and boundaries match after whitespace normalization; this is an AI-assisted transcription check only.",
+      "method": "assisted_pdf_comparison",
+      "passage_id": "nabulsi_39911c626cb881cbbcf1b457",
+      "reviewed_at": "2026-10-08T16:34:50Z",
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "scope": "full_passage_and_boundaries",
+      "source_sha256": "f19ae1359524a3223646b59fdf021239f4d1c792f7392983d8b722db13c68e05",
+      "status": "verified",
+      "text_sha256": "522321901dbc2e7c1ce06aa9644e66df04500ce4bb1e6b6b6d261b0dec38eb20"
+    },
+    {
+      "checked_pdf_pages": [
+        463
+      ],
+      "evidence": "Compared the two-line entry with rendered PDF page 463 and surrounding ذل عن الأعراض and ذر entries. Boundary is supported, but االله differs from the rendered word. Preserve candidate text and request correction/review before verification.",
+      "method": "assisted_pdf_comparison",
+      "passage_id": "nabulsi_0612b34a46fef7237a60eb4d",
+      "reviewed_at": "2026-10-08T16:34:50Z",
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "scope": "full_passage_and_boundaries",
+      "source_sha256": "f19ae1359524a3223646b59fdf021239f4d1c792f7392983d8b722db13c68e05",
+      "status": "needs_review",
+      "text_sha256": "057d776ef9e0ede5a1e53d9b7cc0cd2f45b5f9bffbca4046c6c46b29d7a1448b"
+    },
+    {
+      "checked_pdf_pages": [
+        1357
+      ],
+      "evidence": "Compared the three-line entry and adjacent وضوء heading with rendered PDF page 1357. The boundary is supported, but candidate text contains the font artifact االله. Retained the extracted form and needs_review; no speculative text correction or full verification.",
+      "method": "assisted_pdf_comparison",
+      "passage_id": "nabulsi_0ac1a785c03367e892cfbfab",
+      "reviewed_at": "2026-10-08T16:34:50Z",
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "scope": "full_passage_and_boundaries",
+      "source_sha256": "f19ae1359524a3223646b59fdf021239f4d1c792f7392983d8b722db13c68e05",
+      "status": "needs_review",
+      "text_sha256": "374a273e3c93726df0d6694c4464cfd55f975611304c62a5fc22b1b5211c34ba"
+    },
+    {
+      "checked_pdf_pages": [
+        1405
+      ],
+      "evidence": "Compared the complete three-line entry with rendered PDF page 1405. It follows يربوع and ends at أغنياء. The author transition وحيث انتهى begins the next paragraph and is excluded; page 1406 confirms the conclusion. Candidate words and boundary match the image; this is an AI-assisted transcription check only.",
+      "method": "assisted_pdf_comparison",
+      "passage_id": "nabulsi_f49a6f9a70b005f2addcd557",
+      "reviewed_at": "2026-10-08T16:34:50Z",
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "scope": "full_passage_and_boundaries",
+      "source_sha256": "f19ae1359524a3223646b59fdf021239f4d1c792f7392983d8b722db13c68e05",
+      "status": "verified",
+      "text_sha256": "ecff411d2796e3c28574808c6c6209367f631e4daa7b3b1393bfd51bf0916076"
+    },
+    {
+      "passage_id": "ibn-Shahin_6bf41ba7ab4a4c54307550c7",
+      "source_sha256": "cf1a9175ffc9aadb5c266a489528cb132c5fa013493fa8be83447d6e1bbb0989",
+      "text_sha256": "ad7e1d87d42879bcf6db5d51b30bcb93f1ca9f64e1d60ac859a8165528250d3e",
+      "status": "verified",
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "method": "assisted_pdf_comparison",
+      "reviewed_at": "2026-10-08T23:42:51Z",
+      "scope": "full_passage_and_boundaries",
+      "checked_pdf_pages": [
+        10
+      ],
+      "evidence": "Compared the complete candidate with the rendered original PDF page 10 and adjacent boundaries. The blue الأفلاك heading and all three body lines match. The preceding sky passage ends at بعينه; the next blue heading is البيت المعمور. This checks transcription only, not historical accuracy or scholarly approval."
+    },
+    {
+      "passage_id": "ibn-Shahin_623d06d8aef7a28d6bef7bba",
+      "source_sha256": "cf1a9175ffc9aadb5c266a489528cb132c5fa013493fa8be83447d6e1bbb0989",
+      "text_sha256": "272a5ad5a088d7a104321035f9833871ebad6cdb4d3787c775afcc994e0e730a",
+      "status": "needs_review",
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "method": "assisted_pdf_comparison",
+      "reviewed_at": "2026-10-08T23:42:51Z",
+      "scope": "full_passage_and_boundaries",
+      "checked_pdf_pages": [
+        10
+      ],
+      "evidence": "Compared the complete candidate with the rendered original PDF page 10 and adjacent boundaries. The rendered source reads ابن سيرين: من رأى but candidate has ابن سيرينم : ن رأى. Complete section compared through حق العلماء before الباب الثالث; word/glyph order requires repair. This checks transcription only, not historical accuracy or scholarly approval."
+    },
+    {
+      "passage_id": "ibn-Shahin_88ca9900b8ab1ddb50255f7e",
+      "source_sha256": "cf1a9175ffc9aadb5c266a489528cb132c5fa013493fa8be83447d6e1bbb0989",
+      "text_sha256": "0f74d20a6d2bd778fbf3215267d6062dc09c74f277c3a2ab0a265b157641b163",
+      "status": "verified",
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "method": "assisted_pdf_comparison",
+      "reviewed_at": "2026-10-08T23:42:51Z",
+      "scope": "full_passage_and_boundaries",
+      "checked_pdf_pages": [
+        19
+      ],
+      "evidence": "Compared the complete candidate with the rendered original PDF page 19 and adjacent boundaries. The blue الطل وهو الندى heading and its complete one-line body match, between الثلج and البرد. This checks transcription only, not historical accuracy or scholarly approval."
+    },
+    {
+      "passage_id": "ibn-Shahin_957081d03c9ec0585473666f",
+      "source_sha256": "cf1a9175ffc9aadb5c266a489528cb132c5fa013493fa8be83447d6e1bbb0989",
+      "text_sha256": "9881290af1e214410c142e6d0c1eb8af24d175b3f4ec9b7f0c86df17499d98c3",
+      "status": "verified",
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "method": "assisted_pdf_comparison",
+      "reviewed_at": "2026-10-08T23:42:51Z",
+      "scope": "full_passage_and_boundaries",
+      "checked_pdf_pages": [
+        22
+      ],
+      "evidence": "Compared the complete candidate with the rendered original PDF page 22 and adjacent boundaries. The blue السراب heading, complete quotation and final punctuation match; the next chapter heading starts الباب السابع. This checks transcription only, not historical accuracy or scholarly approval."
+    },
+    {
+      "passage_id": "ibn-Shahin_102ca7044ee79dc0930c8ad6",
+      "source_sha256": "cf1a9175ffc9aadb5c266a489528cb132c5fa013493fa8be83447d6e1bbb0989",
+      "text_sha256": "87d0d600943a2f692abf5c134cfad824ba4b7c6d9952c8244077f58c99951674",
+      "status": "verified",
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "method": "assisted_pdf_comparison",
+      "reviewed_at": "2026-10-08T23:42:51Z",
+      "scope": "full_passage_and_boundaries",
+      "checked_pdf_pages": [
+        26
+      ],
+      "evidence": "Compared the complete candidate with the rendered original PDF page 26 and adjacent boundaries. The blue التابعين heading and both body lines match, ending at طريق الخير before الخلفاء. PDF 25 ends the preceding الصحابة discussion. This checks transcription only, not historical accuracy or scholarly approval."
+    },
+    {
+      "passage_id": "ibn-Shahin_cf6f57d6fb1a31c5c7449561",
+      "source_sha256": "cf1a9175ffc9aadb5c266a489528cb132c5fa013493fa8be83447d6e1bbb0989",
+      "text_sha256": "aecff704a7175b989fdeee7837c1e4f63ed03ceae734e39ff4bf23b7e6417936",
+      "status": "verified",
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "method": "assisted_pdf_comparison",
+      "reviewed_at": "2026-10-08T23:42:51Z",
+      "scope": "full_passage_and_boundaries",
+      "checked_pdf_pages": [
+        57
+      ],
+      "evidence": "Compared the complete candidate with the rendered original PDF page 57 and adjacent boundaries. The blue التحول عن الإسلام heading and both body lines match, ending at دينه before عبادة النار والأصنام. This checks transcription only, not historical accuracy or scholarly approval."
+    },
+    {
+      "passage_id": "ibn-Shahin_94f98751174d1ce06c7edaae",
+      "source_sha256": "cf1a9175ffc9aadb5c266a489528cb132c5fa013493fa8be83447d6e1bbb0989",
+      "text_sha256": "af9d2dd7a7448d1a447a4b26fa5706982ac4730cc962e644d8ac1828e0284f06",
+      "status": "verified",
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "method": "assisted_pdf_comparison",
+      "reviewed_at": "2026-10-08T23:42:51Z",
+      "scope": "full_passage_and_boundaries",
+      "checked_pdf_pages": [
+        66
+      ],
+      "evidence": "Compared the complete candidate with the rendered original PDF page 66 and adjacent boundaries. The blue الصغار heading and all eight body lines match, ending at تكدر خاطر before صغار البنات. This checks transcription only, not historical accuracy or scholarly approval."
+    },
+    {
+      "passage_id": "ibn-Shahin_7a8952226a2fea059a497199",
+      "source_sha256": "cf1a9175ffc9aadb5c266a489528cb132c5fa013493fa8be83447d6e1bbb0989",
+      "text_sha256": "d74d3681a4221a9b17383eb19e3676775863ea7b68705711747ca96cd3ee2623",
+      "status": "verified",
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "method": "assisted_pdf_comparison",
+      "reviewed_at": "2026-10-08T23:42:51Z",
+      "scope": "full_passage_and_boundaries",
+      "checked_pdf_pages": [
+        99
+      ],
+      "evidence": "Compared the complete candidate with the rendered original PDF page 99 and adjacent boundaries. The blue القيح والصديد heading and all six body lines match, ending at لا خير فيه before السم. This checks transcription only, not historical accuracy or scholarly approval."
+    },
+    {
+      "passage_id": "nabulsi_1e655403c3b9fab0029bb053",
+      "source_sha256": "f19ae1359524a3223646b59fdf021239f4d1c792f7392983d8b722db13c68e05",
+      "text_sha256": "65861583d2934cb5386a3b476ba917cd05e307b05b4a7508e2ca517e28259e8f",
+      "status": "needs_review",
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "method": "assisted_pdf_comparison",
+      "reviewed_at": "2026-10-08T23:42:51Z",
+      "scope": "full_passage_and_boundaries",
+      "checked_pdf_pages": [
+        334
+      ],
+      "evidence": "Compared the complete candidate with the rendered original PDF page 334 and adjacent boundaries. The PDF renders الهموم as one word; candidate contains ال هموم. Boundary is correct but transcription requires repair. This checks transcription only, not historical accuracy or scholarly approval."
+    },
+    {
+      "passage_id": "nabulsi_577b62c101dc179d1db3edd5",
+      "source_sha256": "f19ae1359524a3223646b59fdf021239f4d1c792f7392983d8b722db13c68e05",
+      "text_sha256": "f8970351ea9ab63fc9445ec2ddab44568274a796c515d51509c0700ef65a5390",
+      "status": "needs_review",
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "method": "assisted_pdf_comparison",
+      "reviewed_at": "2026-10-08T23:42:51Z",
+      "scope": "full_passage_and_boundaries",
+      "checked_pdf_pages": [
+        334
+      ],
+      "evidence": "Compared the complete candidate with the rendered original PDF page 334 and adjacent boundaries. The candidate reads يجزم in the first line. The middle glyph cannot be confidently certified from this visual comparison; retain for higher-resolution glyph review rather than approval. This checks transcription only, not historical accuracy or scholarly approval."
+    },
+    {
+      "passage_id": "nabulsi_db26beef65434b575a596de2",
+      "source_sha256": "f19ae1359524a3223646b59fdf021239f4d1c792f7392983d8b722db13c68e05",
+      "text_sha256": "7f91ddcab7488cb4957f07289476b156914b12d825cf360ed30e5f7815c84f84",
+      "status": "verified",
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "method": "assisted_pdf_comparison",
+      "reviewed_at": "2026-10-08T23:42:51Z",
+      "scope": "full_passage_and_boundaries",
+      "checked_pdf_pages": [
+        334
+      ],
+      "evidence": "Compared the complete candidate with the rendered original PDF page 334 and adjacent boundaries. Both lines match, from the separate حلاب heading through رجل صالح; حنائي starts the next entry. This checks transcription only, not historical accuracy or scholarly approval."
+    },
+    {
+      "passage_id": "nabulsi_0be8a2747f70f2bcc42d56b5",
+      "source_sha256": "f19ae1359524a3223646b59fdf021239f4d1c792f7392983d8b722db13c68e05",
+      "text_sha256": "ea210ce5537ec7247c784d3443ce7c8747b0dd77b2f4b6233ce9ed5bd8869cb5",
+      "status": "verified",
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "method": "assisted_pdf_comparison",
+      "reviewed_at": "2026-10-08T23:42:51Z",
+      "scope": "full_passage_and_boundaries",
+      "checked_pdf_pages": [
+        334
+      ],
+      "evidence": "Compared the complete candidate with the rendered original PDF page 334 and adjacent boundaries. Both lines match and end at الإشفاق before حبار. The unusual source spelling غفي is visible in the PDF and retained, not silently corrected. This checks transcription only, not historical accuracy or scholarly approval."
+    },
+    {
+      "passage_id": "nabulsi_57a4316d11725c3a37aed7f7",
+      "source_sha256": "f19ae1359524a3223646b59fdf021239f4d1c792f7392983d8b722db13c68e05",
+      "text_sha256": "27e2a8e9bdc883b8db0373d0b494229a983b99af924db87b9647f3f8dce4c74f",
+      "status": "verified",
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "method": "assisted_pdf_comparison",
+      "reviewed_at": "2026-10-08T23:42:51Z",
+      "scope": "full_passage_and_boundaries",
+      "checked_pdf_pages": [
+        334
+      ],
+      "evidence": "Compared the complete candidate with the rendered original PDF page 334 and adjacent boundaries. The complete single-line entry ends at التجبر before حصير. This checks transcription only, not historical accuracy or scholarly approval."
+    },
+    {
+      "passage_id": "nabulsi_5dea434535acda307d164fb8",
+      "source_sha256": "f19ae1359524a3223646b59fdf021239f4d1c792f7392983d8b722db13c68e05",
+      "text_sha256": "4e30c9e49aa3f23f7de6530697b10a8122fd663ba2f92cceca38b36b2cef71f5",
+      "status": "verified",
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "method": "assisted_pdf_comparison",
+      "reviewed_at": "2026-10-08T23:42:51Z",
+      "scope": "full_passage_and_boundaries",
+      "checked_pdf_pages": [
+        334
+      ],
+      "evidence": "Compared the complete candidate with the rendered original PDF page 334 and adjacent boundaries. All four lines, including both ومن رأى clauses, match. The entry ends at البساط; PDF 335 begins the distinct حصري entry. This checks transcription only, not historical accuracy or scholarly approval."
+    },
+    {
+      "passage_id": "nabulsi_6d43c6025da51c4125342f26",
+      "source_sha256": "f19ae1359524a3223646b59fdf021239f4d1c792f7392983d8b722db13c68e05",
+      "text_sha256": "d22ee61a3e248718ea9bf891938e8c70a7e30405d6152ff31a7b34791fd6bdfb",
+      "status": "verified",
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "method": "assisted_pdf_comparison",
+      "reviewed_at": "2026-10-08T23:42:51Z",
+      "scope": "full_passage_and_boundaries",
+      "checked_pdf_pages": [
+        520
+      ],
+      "evidence": "Compared the complete candidate with the rendered original PDF page 520 and adjacent boundaries. Both lines match and end at مهندسا, before رافي. The preceding page has no trailing continuation into this heading. This checks transcription only, not historical accuracy or scholarly approval."
+    },
+    {
+      "passage_id": "nabulsi_7a7d3036f7ae9992e7c1bb17",
+      "source_sha256": "f19ae1359524a3223646b59fdf021239f4d1c792f7392983d8b722db13c68e05",
+      "text_sha256": "e782beb9f1cbda3e81edcb6ba1a9ef967eec8f1e352c845a216bf73d3a97a8e9",
+      "status": "verified",
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "method": "assisted_pdf_comparison",
+      "reviewed_at": "2026-10-08T23:42:51Z",
+      "scope": "full_passage_and_boundaries",
+      "checked_pdf_pages": [
+        520
+      ],
+      "evidence": "Compared the complete candidate with the rendered original PDF page 520 and adjacent boundaries. The short single-line entry is complete, ending at الرزق before ربان; short length alone is not a defect. This checks transcription only, not historical accuracy or scholarly approval."
+    },
+    {
+      "passage_id": "nabulsi_5882ed50c2fdc1abf79f49b3",
+      "source_sha256": "f19ae1359524a3223646b59fdf021239f4d1c792f7392983d8b722db13c68e05",
+      "text_sha256": "4726033f7e3b173ebe565d5a0deb6cd90e6d8dfceb24f771d6a1320ce4d5c2ae",
+      "status": "verified",
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "method": "assisted_pdf_comparison",
+      "reviewed_at": "2026-10-08T23:42:51Z",
+      "scope": "full_passage_and_boundaries",
+      "checked_pdf_pages": [
+        520
+      ],
+      "evidence": "Compared the complete candidate with the rendered original PDF page 520 and adjacent boundaries. Both lines match and end at ملكهم before رحال. Historical wording is preserved without endorsing its claims. This checks transcription only, not historical accuracy or scholarly approval."
+    },
+    {
+      "passage_id": "nabulsi_f388f504458196670f073b4d",
+      "source_sha256": "f19ae1359524a3223646b59fdf021239f4d1c792f7392983d8b722db13c68e05",
+      "text_sha256": "12ed3885106e206cf2e662aba22240b32e3c60b54150c46d79d70a4a10fcadc1",
+      "status": "verified",
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "method": "assisted_pdf_comparison",
+      "reviewed_at": "2026-10-08T23:42:51Z",
+      "scope": "full_passage_and_boundaries",
+      "checked_pdf_pages": [
+        520
+      ],
+      "evidence": "Compared the complete candidate with the rendered original PDF page 520 and adjacent boundaries. Both lines match, ending at القيادة before رداد. This checks transcription only, not historical accuracy or scholarly approval."
+    },
+    {
+      "passage_id": "nabulsi_efaf1f8968120e29643b5980",
+      "source_sha256": "f19ae1359524a3223646b59fdf021239f4d1c792f7392983d8b722db13c68e05",
+      "text_sha256": "816637ca655b5a1b107f64ad8a2fdaec34b7bd3ed900316041b95dcfa0a3c188",
+      "status": "verified",
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "method": "assisted_pdf_comparison",
+      "reviewed_at": "2026-10-08T23:42:51Z",
+      "scope": "full_passage_and_boundaries",
+      "checked_pdf_pages": [
+        520
+      ],
+      "evidence": "Compared the complete candidate with the rendered original PDF page 520 and adjacent boundaries. Both lines match, ending at المخلفات before رشاش; source wording is preserved. This checks transcription only, not historical accuracy or scholarly approval."
+    },
+    {
+      "passage_id": "nabulsi_15a5ecac5a10828914cf6bf1",
+      "source_sha256": "f19ae1359524a3223646b59fdf021239f4d1c792f7392983d8b722db13c68e05",
+      "text_sha256": "262df29f5224d4ca7cb6626c8a7077791cfb86f3fd2944ed11828afe3003b137",
+      "status": "verified",
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "method": "assisted_pdf_comparison",
+      "reviewed_at": "2026-10-08T23:42:51Z",
+      "scope": "full_passage_and_boundaries",
+      "checked_pdf_pages": [
+        520
+      ],
+      "evidence": "Compared the complete candidate with the rendered original PDF page 520 and adjacent boundaries. Both lines match, ending at الأنكاد before ركاب. The source reads النوم, which is retained. This checks transcription only, not historical accuracy or scholarly approval."
+    },
+    {
+      "passage_id": "nabulsi_035bc2f9a87afb495da5136a",
+      "source_sha256": "f19ae1359524a3223646b59fdf021239f4d1c792f7392983d8b722db13c68e05",
+      "text_sha256": "f0b026187e14561e5b3913ae956333634ccc6de2e4ecf4729d17687f0f6808af",
+      "status": "needs_review",
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "method": "assisted_pdf_comparison",
+      "reviewed_at": "2026-10-08T23:42:51Z",
+      "scope": "full_passage_and_boundaries",
+      "checked_pdf_pages": [
+        520
+      ],
+      "evidence": "Compared the complete candidate with the rendered original PDF page 520 and adjacent boundaries. The PDF separates المداراة وبلوغ; candidate joins المداراةوبلوغ. Complete boundary is visible, but word spacing requires repair. This checks transcription only, not historical accuracy or scholarly approval."
+    },
+    {
+      "passage_id": "nabulsi_e12f57b845a6ca34c2340b9f",
+      "source_sha256": "f19ae1359524a3223646b59fdf021239f4d1c792f7392983d8b722db13c68e05",
+      "text_sha256": "43979a5c8a0d7309d7fd84184015720dd788816c688476df64c543f0ce93f697",
+      "status": "verified",
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "method": "assisted_pdf_comparison",
+      "reviewed_at": "2026-10-08T23:42:51Z",
+      "scope": "full_passage_and_boundaries",
+      "checked_pdf_pages": [
+        520
+      ],
+      "evidence": "Compared the complete candidate with the rendered original PDF page 520 and adjacent boundaries. Both lines match, ending at الأمراض. PDF 521 begins the separate رمال entry. This checks transcription only, not historical accuracy or scholarly approval."
+    },
+    {
+      "passage_id": "nabulsi_2687dd42f80003cb111035c9",
+      "source_sha256": "f19ae1359524a3223646b59fdf021239f4d1c792f7392983d8b722db13c68e05",
+      "text_sha256": "b56b64dc263dd8fb4d4ba688b632e597dc10b9cd278d2911d35a49b71bc085ff",
+      "status": "verified",
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "method": "assisted_pdf_comparison",
+      "reviewed_at": "2026-10-08T23:42:51Z",
+      "scope": "full_passage_and_boundaries",
+      "checked_pdf_pages": [
+        533
+      ],
+      "evidence": "Compared the complete candidate with the rendered original PDF page 533 and adjacent boundaries. Both lines match and end at صفرة before زلابية; the separate heading starts after the preceding page. This checks transcription only, not historical accuracy or scholarly approval."
+    },
+    {
+      "passage_id": "nabulsi_2f4976b0019a353c6bd6100c",
+      "source_sha256": "f19ae1359524a3223646b59fdf021239f4d1c792f7392983d8b722db13c68e05",
+      "text_sha256": "4d9161b295d0ce6053dd28d52d03e79599869341b4d2cf6bed1039e367f28154",
+      "status": "verified",
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "method": "assisted_pdf_comparison",
+      "reviewed_at": "2026-10-08T23:42:51Z",
+      "scope": "full_passage_and_boundaries",
+      "checked_pdf_pages": [
+        533
+      ],
+      "evidence": "Compared the complete candidate with the rendered original PDF page 533 and adjacent boundaries. Both lines match and end at المسرات before زلبانى. This checks transcription only, not historical accuracy or scholarly approval."
+    },
+    {
+      "passage_id": "nabulsi_2b7771973eff85dde84038ea",
+      "source_sha256": "f19ae1359524a3223646b59fdf021239f4d1c792f7392983d8b722db13c68e05",
+      "text_sha256": "70a7e3a871a40cf6186a8e631e8f0aba2027198ddc15526f23f7ba1a3cac12e3",
+      "status": "verified",
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "method": "assisted_pdf_comparison",
+      "reviewed_at": "2026-10-08T23:42:51Z",
+      "scope": "full_passage_and_boundaries",
+      "checked_pdf_pages": [
+        533
+      ],
+      "evidence": "Compared the complete candidate with the rendered original PDF page 533 and adjacent boundaries. Both lines match and end at الأنكاد before زيات; the source heading spelling is retained. This checks transcription only, not historical accuracy or scholarly approval."
+    },
+    {
+      "passage_id": "nabulsi_d8b4fa4c7acf7b78db0eb893",
+      "source_sha256": "f19ae1359524a3223646b59fdf021239f4d1c792f7392983d8b722db13c68e05",
+      "text_sha256": "2f9a0ef05458d778366abd490fefcdbe57a4f513c08fca83c593eb7601158786",
+      "status": "verified",
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "method": "assisted_pdf_comparison",
+      "reviewed_at": "2026-10-08T23:42:51Z",
+      "scope": "full_passage_and_boundaries",
+      "checked_pdf_pages": [
+        533
+      ],
+      "evidence": "Compared the complete candidate with the rendered original PDF page 533 and adjacent boundaries. Both lines match and end at الملوك before زبال. This checks transcription only, not historical accuracy or scholarly approval."
+    },
+    {
+      "passage_id": "nabulsi_a19193f16c28d94766a244be",
+      "source_sha256": "f19ae1359524a3223646b59fdf021239f4d1c792f7392983d8b722db13c68e05",
+      "text_sha256": "17936ff937db6a69e2329789846a2607f2066b21009ace9f4db2d781bf087f6c",
+      "status": "needs_review",
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "method": "assisted_pdf_comparison",
+      "reviewed_at": "2026-10-08T23:42:51Z",
+      "scope": "full_passage_and_boundaries",
+      "checked_pdf_pages": [
+        533
+      ],
+      "evidence": "Compared the complete candidate with the rendered original PDF page 533 and adjacent boundaries. The PDF renders تعب as one word; candidate contains تع ب. Full entry and boundaries compared; hold for transcription repair. This checks transcription only, not historical accuracy or scholarly approval."
+    },
+    {
+      "passage_id": "nabulsi_5af9237aaf61345a8f15add8",
+      "source_sha256": "f19ae1359524a3223646b59fdf021239f4d1c792f7392983d8b722db13c68e05",
+      "text_sha256": "85332bb262b9321603ab3d5f1733300cda6f15c08f22de93e6fc751abd9b51ef",
+      "status": "verified",
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "method": "assisted_pdf_comparison",
+      "reviewed_at": "2026-10-08T23:42:51Z",
+      "scope": "full_passage_and_boundaries",
+      "checked_pdf_pages": [
+        533
+      ],
+      "evidence": "Compared the complete candidate with the rendered original PDF page 533 and adjacent boundaries. The complete short entry ends at الردئية before زامر. The unusual printed spelling is retained. This checks transcription only, not historical accuracy or scholarly approval."
+    },
+    {
+      "passage_id": "nabulsi_e2d4432eccb9d5f2d9692bc4",
+      "source_sha256": "f19ae1359524a3223646b59fdf021239f4d1c792f7392983d8b722db13c68e05",
+      "text_sha256": "c3878f4c37b1b8620e3050210855c5011fbde68f58096b315ad239c2768139b3",
+      "status": "needs_review",
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "method": "assisted_pdf_comparison",
+      "reviewed_at": "2026-10-08T23:42:51Z",
+      "scope": "full_passage_and_boundaries",
+      "checked_pdf_pages": [
+        533
+      ],
+      "evidence": "Compared the complete candidate with the rendered original PDF page 533 and adjacent boundaries. The PDF renders رؤيته as one word; candidate contains رؤي ته. The complete entry ends at صلاح and PDF 534 begins زراد. Hold for transcription repair. This checks transcription only, not historical accuracy or scholarly approval."
+    },
+    {
+      "passage_id": "nabulsi_c55008241f2ab4b69bd19ada",
+      "source_sha256": "f19ae1359524a3223646b59fdf021239f4d1c792f7392983d8b722db13c68e05",
+      "text_sha256": "c85fb93b945f1ff2ddb2ab4d5652685c826369536aafb410141cfed41765b948",
+      "status": "verified",
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "method": "assisted_pdf_comparison",
+      "reviewed_at": "2026-10-08T23:42:51Z",
+      "scope": "full_passage_and_boundaries",
+      "checked_pdf_pages": [
+        1023
+      ],
+      "evidence": "Compared the complete candidate with the rendered original PDF page 1023 and adjacent boundaries. All four lines match, ending at هموم before قاص الأخبار والسير. The separate heading starts after the preceding page. This checks transcription only, not historical accuracy or scholarly approval."
+    },
+    {
+      "passage_id": "nabulsi_f8e282b9be266e51548a9e02",
+      "source_sha256": "f19ae1359524a3223646b59fdf021239f4d1c792f7392983d8b722db13c68e05",
+      "text_sha256": "e8fde5d8d58fc28d11d59315382f7235643df4fb1c3a06952d721a7ee79863d1",
+      "status": "verified",
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "method": "assisted_pdf_comparison",
+      "reviewed_at": "2026-10-08T23:42:51Z",
+      "scope": "full_passage_and_boundaries",
+      "checked_pdf_pages": [
+        1023
+      ],
+      "evidence": "Compared the complete candidate with the rendered original PDF page 1023 and adjacent boundaries. All three lines match, ending at بإخراج المخبآت before قصاص. This checks transcription only, not historical accuracy or scholarly approval."
+    },
+    {
+      "passage_id": "nabulsi_15b8082a448f8a36acaf0373",
+      "source_sha256": "f19ae1359524a3223646b59fdf021239f4d1c792f7392983d8b722db13c68e05",
+      "text_sha256": "88fc227fb1398b777a6e6934c817419a2b45e5b8fbeeb75ab702b469354a1bf3",
+      "status": "verified",
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "method": "assisted_pdf_comparison",
+      "reviewed_at": "2026-10-08T23:42:51Z",
+      "scope": "full_passage_and_boundaries",
+      "checked_pdf_pages": [
+        1023
+      ],
+      "evidence": "Compared the complete candidate with the rendered original PDF page 1023 and adjacent boundaries. The introductory quotation and following two lines match; the paragraph ends at الزكاة before قصاص الأثر. This checks transcription only, not historical accuracy or scholarly approval."
+    },
+    {
+      "passage_id": "nabulsi_713292e4b47f0e607a2a0a7b",
+      "source_sha256": "f19ae1359524a3223646b59fdf021239f4d1c792f7392983d8b722db13c68e05",
+      "text_sha256": "77a95a70307f8058798eec5cf37c0a4511a66e579af67e1e9aabb6e7097c3aee",
+      "status": "verified",
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "method": "assisted_pdf_comparison",
+      "reviewed_at": "2026-10-08T23:42:51Z",
+      "scope": "full_passage_and_boundaries",
+      "checked_pdf_pages": [
+        1023
+      ],
+      "evidence": "Compared the complete candidate with the rendered original PDF page 1023 and adjacent boundaries. Both lines match and end at العلماء before قصاص الدواب. This checks transcription only, not historical accuracy or scholarly approval."
+    },
+    {
+      "passage_id": "nabulsi_cf6f55e234be2893c6618ed3",
+      "source_sha256": "f19ae1359524a3223646b59fdf021239f4d1c792f7392983d8b722db13c68e05",
+      "text_sha256": "0341c80f09e63f1ba1e40c69aa04fc35d603ecc8ddef0dfb6c50990923134e2f",
+      "status": "verified",
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "method": "assisted_pdf_comparison",
+      "reviewed_at": "2026-10-08T23:42:51Z",
+      "scope": "full_passage_and_boundaries",
+      "checked_pdf_pages": [
+        1023
+      ],
+      "evidence": "Compared the complete candidate with the rendered original PDF page 1023 and adjacent boundaries. Both lines match and end at التبذير before قزاز. This checks transcription only, not historical accuracy or scholarly approval."
+    },
+    {
+      "passage_id": "nabulsi_03251369e8bb38f2c6401b70",
+      "source_sha256": "f19ae1359524a3223646b59fdf021239f4d1c792f7392983d8b722db13c68e05",
+      "text_sha256": "fe1cbe366e077b06cfbb1a18d70f3294a70e4474c8a2f61453fa4f4b8a318972",
+      "status": "verified",
+      "reviewer": "Codex (AI-assisted visual source comparison)",
+      "method": "assisted_pdf_comparison",
+      "reviewed_at": "2026-10-08T23:42:51Z",
+      "scope": "full_passage_and_boundaries",
+      "checked_pdf_pages": [
+        1023
+      ],
+      "evidence": "Compared the complete candidate with the rendered original PDF page 1023 and adjacent boundaries. Both lines match and end at للأعزب; PDF 1024 begins the separate قواس entry. This checks transcription only, not historical accuracy or scholarly approval."
+    }
+  ]
+}

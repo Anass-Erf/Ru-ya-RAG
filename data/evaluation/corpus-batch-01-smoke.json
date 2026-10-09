@@ -1,0 +1,123 @@
+{
+  "id": "corpus-batch-01-smoke",
+  "judgment_status": "assisted_source_review",
+  "limitation": "Assistant-authored regression queries over 31 complete AI-assisted reviewed passages and six reviewed excerpts. Not independent judgments, a representative benchmark, or proof of whole-dream answerability.",
+  "queries": [
+    {
+      "id": "humility_symbol",
+      "query": "رأيت الذل في المنام",
+      "relevant_passage_ids": [
+        "nabulsi_39911c626cb881cbbcf1b457"
+      ],
+      "evidence": "Symbol/description corresponds to the complete source-checked entry; see docs/source-review.md. Labels are assistant-assigned for human review."
+    },
+    {
+      "id": "humility_description",
+      "query": "رأيت في المنام أنني ذليل",
+      "relevant_passage_ids": [
+        "nabulsi_39911c626cb881cbbcf1b457"
+      ],
+      "evidence": "Symbol/description corresponds to the complete source-checked entry; see docs/source-review.md. Labels are assistant-assigned for human review."
+    },
+    {
+      "id": "dragonfly_symbol",
+      "query": "رأيت يعسوب في المنام",
+      "relevant_passage_ids": [
+        "nabulsi_f49a6f9a70b005f2addcd557"
+      ],
+      "evidence": "Symbol/description corresponds to the complete source-checked entry; see docs/source-review.md. Labels are assistant-assigned for human review."
+    },
+    {
+      "id": "dragonfly_description",
+      "query": "حلمت بأنني ملكت كثيرا من اليعاسيب",
+      "relevant_passage_ids": [
+        "nabulsi_f49a6f9a70b005f2addcd557"
+      ],
+      "evidence": "Symbol/description corresponds to the complete source-checked entry; see docs/source-review.md. Labels are assistant-assigned for human review."
+    },
+    {
+      "id": "user_sea_ship_dream",
+      "query": "رأيت في المنام أنني أسافر في سفينة وسط البحر، وكانت الأمواج عالية، لكنني وصلت إلى الشاطئ بسلام.",
+      "relevant_passage_ids": [
+        "nabulsi_5c613595f73b95e1751ad278",
+        "nabulsi_d2e68a65ce2e42b3dd73c576",
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_142751ac171b30ef4cff84ae"
+      ],
+      "evidence": "Relevance only to corresponding symbols/clauses in exact reviewed excerpts; does not validate a complete interpretation. See source-excerpt-reviews-2026-10-09.json."
+    },
+    {
+      "id": "travel_verb",
+      "query": "رأيت أنني أسافر",
+      "relevant_passage_ids": [
+        "nabulsi_ad2eaf3299836c14ccd1d758"
+      ],
+      "evidence": "Relevance only to corresponding symbols/clauses in exact reviewed excerpts; does not validate a complete interpretation. See source-excerpt-reviews-2026-10-09.json."
+    },
+    {
+      "id": "ships_plural",
+      "query": "رأيت السفن في المنام",
+      "relevant_passage_ids": [
+        "nabulsi_5c613595f73b95e1751ad278"
+      ],
+      "evidence": "Relevance only to corresponding symbols/clauses in exact reviewed excerpts; does not validate a complete interpretation. See source-excerpt-reviews-2026-10-09.json."
+    },
+    {
+      "id": "waves_plural",
+      "query": "رأيت الأمواج عالية في البحر",
+      "relevant_passage_ids": [
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "nabulsi_d2e68a65ce2e42b3dd73c576"
+      ],
+      "evidence": "Relevance only to corresponding symbols/clauses in exact reviewed excerpts; does not validate a complete interpretation. See source-excerpt-reviews-2026-10-09.json."
+    },
+    {
+      "id": "shahin_mirage",
+      "query": "رأيت السراب في المنام",
+      "relevant_passage_ids": [
+        "ibn-Shahin_957081d03c9ec0585473666f"
+      ],
+      "evidence": "Explicit symbol or section heading in the complete PDF-compared passage; see corpus-batch-01-review-decisions.json. Assistant-assigned label."
+    },
+    {
+      "id": "shahin_dew_gloss",
+      "query": "رأيت الندى على الأشجار",
+      "relevant_passage_ids": [
+        "ibn-Shahin_88ca9900b8ab1ddb50255f7e"
+      ],
+      "evidence": "Explicit symbol or section heading in the complete PDF-compared passage; see corpus-batch-01-review-decisions.json. Assistant-assigned label."
+    },
+    {
+      "id": "shahin_spheres",
+      "query": "رأيت الأفلاك تدور",
+      "relevant_passage_ids": [
+        "ibn-Shahin_6bf41ba7ab4a4c54307550c7"
+      ],
+      "evidence": "Explicit symbol or section heading in the complete PDF-compared passage; see corpus-batch-01-review-decisions.json. Assistant-assigned label."
+    },
+    {
+      "id": "nabulsi_mat",
+      "query": "رأيت حصير في المنام",
+      "relevant_passage_ids": [
+        "nabulsi_5dea434535acda307d164fb8"
+      ],
+      "evidence": "Explicit symbol or section heading in the complete PDF-compared passage; see corpus-batch-01-review-decisions.json. Assistant-assigned label."
+    },
+    {
+      "id": "nabulsi_captain",
+      "query": "رأيت ربان السفن",
+      "relevant_passage_ids": [
+        "nabulsi_5882ed50c2fdc1abf79f49b3"
+      ],
+      "evidence": "Explicit symbol or section heading in the complete PDF-compared passage; see corpus-batch-01-review-decisions.json. Assistant-assigned label."
+    },
+    {
+      "id": "nabulsi_silk_maker",
+      "query": "رأيت قزاز في المنام",
+      "relevant_passage_ids": [
+        "nabulsi_03251369e8bb38f2c6401b70"
+      ],
+      "evidence": "Explicit symbol or section heading in the complete PDF-compared passage; see corpus-batch-01-review-decisions.json. Assistant-assigned label."
+    }
+  ]
+}

@@ -4,7 +4,7 @@ from pathlib import Path
 import tempfile
 import unittest
 from backend.app.rag.retrieval.index import read_corpus
-from backend.app.rag.retrieval.query import symbol_matches
+from backend.app.rag.retrieval.query import symbol_matches, source_topics
 from backend.app.rag.chunking.excerpts import reviewed_excerpts
 from backend.app.core.config import Settings
 from backend.app.main import create_app
@@ -29,6 +29,15 @@ class ExcerptCoverageTests(unittest.TestCase):
         self.assertFalse(symbol_matches('سفرجل','سفر'))
         self.assertFalse(symbol_matches('سفرة','سفر'))
         self.assertFalse(symbol_matches('بحر','سفينة'))
+
+    def test_section_topics_require_explicit_headings(self):
+        self.assertEqual(source_topics(None, 'فصل في رؤيا السراب'), ['السراب'])
+        self.assertEqual(source_topics(None, 'فصل في رؤيا الطل وهو الندى'), ['الطل', 'الندى'])
+        self.assertEqual(source_topics(None, 'الباب الثالث'), [])
+        self.assertEqual(source_topics(None, 'قال المؤلف في رؤيا السراب'), [])
+        self.assertEqual(source_topics('سفينة', 'فصل في رؤيا البحر'), ['سفينة'])
+        topics = source_topics(None, 'فصل في رؤيا القيح والصديد')
+        self.assertFalse(any(symbol_matches('رأيت القيح', t) for t in topics))
 
     def test_exact_excerpts_do_not_promote_parent_passages(self):
         chunks=reviewed_excerpts(ROOT,self.passages,self.rows,self.tokenizer,self.handoff,120,'reviewed')

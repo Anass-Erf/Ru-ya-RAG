@@ -38,10 +38,25 @@ class APITests(unittest.TestCase):
     def test_health_books_and_real_counts(self):
         self.assertTrue(self.client.get('/health').json()['ready'])
         books = {b['id']: b for b in self.client.get('/api/books').json()}
-        self.assertEqual(books['nabulsi']['verified_passages'], 2)
+        self.assertEqual(books['nabulsi']['verified_passages'], 24)
+        self.assertEqual(books['ibn-Shahin']['verified_passages'], 7)
+        self.assertEqual(books['ibn-Shahin']['status'], 'partially_available')
         self.assertEqual(books['ibn-Shahin']['candidate_passages'], 319)
         self.assertEqual(books['ibn-sirin']['status'], 'OCR_PENDING')
         self.assertEqual(self.client.get('/api/books/nabulsi').json(), books['nabulsi'])
+
+    def test_reviewed_ibn_shahin_sections_supply_exact_evidence(self):
+        for query, page in [('رأيت السراب في المنام', 22), ('رأيت الندى على الأشجار', 19)]:
+            response = self.client.post('/api/interpret', json={
+                'query': query, 'mode': 'bm25', 'generate': False}).json()
+            sources = [s for s in response['sources'] if s['book_id'] == 'ibn-Shahin']
+            self.assertTrue(sources, response)
+            for source in sources:
+                self.assertEqual(source['page_start'], page)
+                self.assertEqual(source['review_scope'], 'full_passage')
+                parent = self.library.passages[source['passage_id']]
+                self.assertIsNone(parent.symbol)
+                self.assertIn(source['quote'], parent.text)
 
     def test_search_passage_and_pdf_source(self):
         r = self.client.post('/api/search', json={'query': 'يعسوب', 'mode': 'bm25'})
@@ -119,6 +134,20 @@ class APITests(unittest.TestCase):
             with TestClient(create_app(Settings(project_root=Path(root)))) as c:
                 self.assertFalse(c.get('/health').json()['ready'])
                 self.assertEqual(c.post('/api/search',json={'query':'يعسوب'}).status_code,503)
+
+    def test_stale_index_cannot_serve_a_different_review_ledger(self):
+        root = self.settings.project_root
+        with tempfile.TemporaryDirectory() as directory:
+            stage = Path(directory)
+            manifests = stage / 'storage/manifests'
+            manifests.mkdir(parents=True)
+            (stage / 'storage/indexes').symlink_to(root / 'storage/indexes', target_is_directory=True)
+            (manifests / 'phase3-handoff.json').write_bytes((root / 'storage/manifests/phase3-handoff.json').read_bytes())
+            handoff = json.loads((root / 'storage/manifests/phase2-handoff.json').read_text())
+            handoff['reviewed_manifest_sha256'] = '0' * 64
+            (manifests / 'phase2-handoff.json').write_text(json.dumps(handoff))
+            with self.assertRaisesRegex(ValueError, 'Reviewed source ledger/index mismatch'):
+                Library(Settings(project_root=stage)).load()
 
     def test_generation_citations_budget_and_invalid_quote(self):
         settings = Settings(enable_generation=True, deepseek_api_key='test-only',generation_calls_per_minute=1)

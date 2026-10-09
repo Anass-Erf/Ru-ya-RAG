@@ -114,7 +114,12 @@ This publishes `passages.jsonl`, the full decisions and checksums in a separate
 review directory. Stale, duplicate, unknown and incomplete verified decisions are
 rejected. Warnings remain visible after verification. Corrections require a new
 candidate/version and fresh review; this command never rewrites source text.
-There is no approved index yet, including for individually verified passages.
+The active reviewed index is selected by `storage/manifests/phase3-handoff.json`.
+After publishing a new review derivative, rebuild both index policies and their
+evaluations before updating the active handoffs. The backend rejects indexes tied
+to a different reviewed manifest. Successful extraction without quality flags is
+not approval: visual comparison has also found split words and misplaced letters
+in nominally clean candidates. See [the latest review batch](corpus-batch-01.md).
 
 ## Historical reproduction
 

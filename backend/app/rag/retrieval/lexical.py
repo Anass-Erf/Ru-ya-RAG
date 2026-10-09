@@ -1,4 +1,4 @@
-from .query import query_terms, symbol_matches
+from .query import query_terms, symbol_matches, source_topics
 from collections import Counter
 import math
 import re
@@ -28,8 +28,8 @@ class BM25:
                 if tf:
                     idf = math.log(1 + (len(self.documents) - self.df[term] + .5) / (self.df[term] + .5))
                     score += idf * tf * (self.k1 + 1) / (tf + self.k1 * (1 - self.b + self.b * self.lengths[i] / max(self.average, 1)))
-            symbol_terms = tokens(self.chunks[i].symbol or '')
-            exact = symbol_matches(query, self.chunks[i].symbol)
+            chunk = self.chunks[i]
+            exact = any(symbol_matches(query, topic) for topic in source_topics(chunk.symbol, chunk.section))
             if exact:
                 score += 2.0  # Explicit, inspectable exact-symbol bonus; not a probability.
             if score > 0:

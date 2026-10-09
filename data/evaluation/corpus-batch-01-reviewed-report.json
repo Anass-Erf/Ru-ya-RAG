@@ -1,0 +1,2095 @@
+{
+  "dataset_id": "corpus-batch-01-smoke",
+  "judgment_status": "assisted_source_review",
+  "limitation": "Assistant-authored regression queries over 31 complete AI-assisted reviewed passages and six reviewed excerpts. Not independent judgments, a representative benchmark, or proof of whole-dream answerability.",
+  "corpus_policy": "reviewed",
+  "corpus_checksum": "317def6e7bca8e3138a20b2337063972a48ce45593b6b3817aa3b3b1d967e614",
+  "latency_scope": "warm query only; excludes model/index loading",
+  "aggregate": {
+    "bm25": {
+      "query_count": 14,
+      "mean_latency_ms": 3.2735230727537004,
+      "max_latency_ms": 6.819547998020425,
+      "at_k": {
+        "1": {
+          "recall": 0.8214285714285714,
+          "precision": 0.8571428571428571,
+          "reciprocal_rank": 0.8571428571428571
+        },
+        "2": {
+          "recall": 0.9107142857142857,
+          "precision": 0.5,
+          "reciprocal_rank": 0.9285714285714286
+        },
+        "4": {
+          "recall": 0.9821428571428571,
+          "precision": 0.30357142857142855,
+          "reciprocal_rank": 0.9285714285714286
+        }
+      }
+    },
+    "dense": {
+      "query_count": 14,
+      "mean_latency_ms": 158.7741887872523,
+      "max_latency_ms": 258.534247011994,
+      "at_k": {
+        "1": {
+          "recall": 0.3392857142857143,
+          "precision": 0.42857142857142855,
+          "reciprocal_rank": 0.42857142857142855
+        },
+        "2": {
+          "recall": 0.39285714285714285,
+          "precision": 0.2857142857142857,
+          "reciprocal_rank": 0.42857142857142855
+        },
+        "4": {
+          "recall": 0.4642857142857143,
+          "precision": 0.16071428571428573,
+          "reciprocal_rank": 0.4523809523809524
+        }
+      }
+    },
+    "hybrid": {
+      "query_count": 14,
+      "mean_latency_ms": 131.59681950076316,
+      "max_latency_ms": 169.26460299873725,
+      "at_k": {
+        "1": {
+          "recall": 0.8392857142857143,
+          "precision": 0.9285714285714286,
+          "reciprocal_rank": 0.9285714285714286
+        },
+        "2": {
+          "recall": 0.9107142857142857,
+          "precision": 0.5,
+          "reciprocal_rank": 0.9642857142857143
+        },
+        "4": {
+          "recall": 0.9821428571428571,
+          "precision": 0.30357142857142855,
+          "reciprocal_rank": 0.9642857142857143
+        }
+      }
+    }
+  },
+  "queries": [
+    {
+      "id": "humility_symbol",
+      "mode": "bm25",
+      "ranked_passage_ids": [
+        "nabulsi_39911c626cb881cbbcf1b457"
+      ],
+      "latency_ms": 3.043251999770291,
+      "metrics": {
+        "1": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "2": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.25,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "humility_description",
+      "mode": "bm25",
+      "ranked_passage_ids": [
+        "nabulsi_39911c626cb881cbbcf1b457"
+      ],
+      "latency_ms": 3.0466369935311377,
+      "metrics": {
+        "1": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "2": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.25,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "dragonfly_symbol",
+      "mode": "bm25",
+      "ranked_passage_ids": [
+        "nabulsi_f49a6f9a70b005f2addcd557"
+      ],
+      "latency_ms": 2.816243009874597,
+      "metrics": {
+        "1": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "2": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.25,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "dragonfly_description",
+      "mode": "bm25",
+      "ranked_passage_ids": [
+        "nabulsi_f49a6f9a70b005f2addcd557"
+      ],
+      "latency_ms": 4.714170005172491,
+      "metrics": {
+        "1": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "2": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.25,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "user_sea_ship_dream",
+      "mode": "bm25",
+      "ranked_passage_ids": [
+        "nabulsi_5882ed50c2fdc1abf79f49b3",
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_5c613595f73b95e1751ad278",
+        "nabulsi_d2e68a65ce2e42b3dd73c576",
+        "nabulsi_efaf1f8968120e29643b5980",
+        "nabulsi_e12f57b845a6ca34c2340b9f",
+        "ibn-Shahin_6bf41ba7ab4a4c54307550c7"
+      ],
+      "latency_ms": 6.819547998020425,
+      "metrics": {
+        "1": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "2": {
+          "recall": 0.25,
+          "precision": 0.5,
+          "reciprocal_rank": 0.5
+        },
+        "4": {
+          "recall": 0.75,
+          "precision": 0.75,
+          "reciprocal_rank": 0.5
+        }
+      }
+    },
+    {
+      "id": "travel_verb",
+      "mode": "bm25",
+      "ranked_passage_ids": [
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_efaf1f8968120e29643b5980",
+        "ibn-Shahin_6bf41ba7ab4a4c54307550c7"
+      ],
+      "latency_ms": 2.724278994719498,
+      "metrics": {
+        "1": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "2": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.25,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "ships_plural",
+      "mode": "bm25",
+      "ranked_passage_ids": [
+        "nabulsi_5882ed50c2fdc1abf79f49b3",
+        "nabulsi_5c613595f73b95e1751ad278"
+      ],
+      "latency_ms": 2.928875997895375,
+      "metrics": {
+        "1": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "2": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 0.5
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.25,
+          "reciprocal_rank": 0.5
+        }
+      }
+    },
+    {
+      "id": "waves_plural",
+      "mode": "bm25",
+      "ranked_passage_ids": [
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "nabulsi_5882ed50c2fdc1abf79f49b3",
+        "nabulsi_d2e68a65ce2e42b3dd73c576",
+        "nabulsi_e12f57b845a6ca34c2340b9f"
+      ],
+      "latency_ms": 3.395834006369114,
+      "metrics": {
+        "1": {
+          "recall": 0.5,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "2": {
+          "recall": 0.5,
+          "precision": 0.5,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "shahin_mirage",
+      "mode": "bm25",
+      "ranked_passage_ids": [
+        "ibn-Shahin_957081d03c9ec0585473666f"
+      ],
+      "latency_ms": 2.812618011375889,
+      "metrics": {
+        "1": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "2": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.25,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "shahin_dew_gloss",
+      "mode": "bm25",
+      "ranked_passage_ids": [
+        "ibn-Shahin_88ca9900b8ab1ddb50255f7e"
+      ],
+      "latency_ms": 2.860232998500578,
+      "metrics": {
+        "1": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "2": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.25,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "shahin_spheres",
+      "mode": "bm25",
+      "ranked_passage_ids": [
+        "ibn-Shahin_6bf41ba7ab4a4c54307550c7"
+      ],
+      "latency_ms": 2.5820239970926195,
+      "metrics": {
+        "1": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "2": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.25,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "nabulsi_mat",
+      "mode": "bm25",
+      "ranked_passage_ids": [
+        "nabulsi_5dea434535acda307d164fb8"
+      ],
+      "latency_ms": 2.7627880044747144,
+      "metrics": {
+        "1": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "2": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.25,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "nabulsi_captain",
+      "mode": "bm25",
+      "ranked_passage_ids": [
+        "nabulsi_5882ed50c2fdc1abf79f49b3",
+        "nabulsi_5c613595f73b95e1751ad278"
+      ],
+      "latency_ms": 2.6059460069518536,
+      "metrics": {
+        "1": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "2": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.25,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "nabulsi_silk_maker",
+      "mode": "bm25",
+      "ranked_passage_ids": [
+        "nabulsi_03251369e8bb38f2c6401b70"
+      ],
+      "latency_ms": 2.71687499480322,
+      "metrics": {
+        "1": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "2": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.25,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "humility_symbol",
+      "mode": "dense",
+      "ranked_passage_ids": [
+        "nabulsi_15a5ecac5a10828914cf6bf1",
+        "nabulsi_5af9237aaf61345a8f15add8",
+        "nabulsi_cf6f55e234be2893c6618ed3",
+        "nabulsi_57a4316d11725c3a37aed7f7",
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "nabulsi_d2e68a65ce2e42b3dd73c576",
+        "nabulsi_f388f504458196670f073b4d",
+        "nabulsi_5dea434535acda307d164fb8",
+        "nabulsi_713292e4b47f0e607a2a0a7b",
+        "nabulsi_0be8a2747f70f2bcc42d56b5",
+        "ibn-Shahin_88ca9900b8ab1ddb50255f7e",
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_2b7771973eff85dde84038ea",
+        "ibn-Shahin_7a8952226a2fea059a497199",
+        "nabulsi_5c613595f73b95e1751ad278",
+        "nabulsi_e12f57b845a6ca34c2340b9f",
+        "nabulsi_efaf1f8968120e29643b5980",
+        "nabulsi_c55008241f2ab4b69bd19ada",
+        "nabulsi_7a7d3036f7ae9992e7c1bb17",
+        "ibn-Shahin_6bf41ba7ab4a4c54307550c7",
+        "ibn-Shahin_957081d03c9ec0585473666f",
+        "nabulsi_03251369e8bb38f2c6401b70",
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "nabulsi_15b8082a448f8a36acaf0373",
+        "nabulsi_2f4976b0019a353c6bd6100c",
+        "nabulsi_d8b4fa4c7acf7b78db0eb893",
+        "nabulsi_5882ed50c2fdc1abf79f49b3",
+        "ibn-Shahin_102ca7044ee79dc0930c8ad6",
+        "nabulsi_f8e282b9be266e51548a9e02",
+        "nabulsi_6d43c6025da51c4125342f26",
+        "ibn-Shahin_cf6f57d6fb1a31c5c7449561",
+        "nabulsi_db26beef65434b575a596de2",
+        "nabulsi_2687dd42f80003cb111035c9",
+        "nabulsi_f49a6f9a70b005f2addcd557",
+        "ibn-Shahin_94f98751174d1ce06c7edaae"
+      ],
+      "latency_ms": 199.05401600408368,
+      "metrics": {
+        "1": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "2": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "4": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "reciprocal_rank": 0.0
+        }
+      }
+    },
+    {
+      "id": "humility_description",
+      "mode": "dense",
+      "ranked_passage_ids": [
+        "nabulsi_15a5ecac5a10828914cf6bf1",
+        "nabulsi_5af9237aaf61345a8f15add8",
+        "nabulsi_f388f504458196670f073b4d",
+        "nabulsi_cf6f55e234be2893c6618ed3",
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_57a4316d11725c3a37aed7f7",
+        "nabulsi_d2e68a65ce2e42b3dd73c576",
+        "nabulsi_0be8a2747f70f2bcc42d56b5",
+        "nabulsi_5dea434535acda307d164fb8",
+        "ibn-Shahin_88ca9900b8ab1ddb50255f7e",
+        "nabulsi_efaf1f8968120e29643b5980",
+        "nabulsi_03251369e8bb38f2c6401b70",
+        "nabulsi_2b7771973eff85dde84038ea",
+        "nabulsi_5c613595f73b95e1751ad278",
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "nabulsi_7a7d3036f7ae9992e7c1bb17",
+        "ibn-Shahin_7a8952226a2fea059a497199",
+        "nabulsi_c55008241f2ab4b69bd19ada",
+        "nabulsi_2f4976b0019a353c6bd6100c",
+        "nabulsi_713292e4b47f0e607a2a0a7b",
+        "nabulsi_e12f57b845a6ca34c2340b9f",
+        "nabulsi_f8e282b9be266e51548a9e02",
+        "ibn-Shahin_957081d03c9ec0585473666f",
+        "nabulsi_15b8082a448f8a36acaf0373",
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "ibn-Shahin_102ca7044ee79dc0930c8ad6",
+        "nabulsi_d8b4fa4c7acf7b78db0eb893",
+        "ibn-Shahin_6bf41ba7ab4a4c54307550c7",
+        "nabulsi_5882ed50c2fdc1abf79f49b3",
+        "nabulsi_db26beef65434b575a596de2",
+        "nabulsi_6d43c6025da51c4125342f26",
+        "ibn-Shahin_cf6f57d6fb1a31c5c7449561",
+        "nabulsi_2687dd42f80003cb111035c9",
+        "nabulsi_f49a6f9a70b005f2addcd557",
+        "ibn-Shahin_94f98751174d1ce06c7edaae"
+      ],
+      "latency_ms": 258.534247011994,
+      "metrics": {
+        "1": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "2": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "4": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "reciprocal_rank": 0.0
+        }
+      }
+    },
+    {
+      "id": "dragonfly_symbol",
+      "mode": "dense",
+      "ranked_passage_ids": [
+        "nabulsi_cf6f55e234be2893c6618ed3",
+        "nabulsi_5af9237aaf61345a8f15add8",
+        "nabulsi_15a5ecac5a10828914cf6bf1",
+        "nabulsi_57a4316d11725c3a37aed7f7",
+        "nabulsi_f388f504458196670f073b4d",
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "nabulsi_0be8a2747f70f2bcc42d56b5",
+        "nabulsi_5dea434535acda307d164fb8",
+        "nabulsi_03251369e8bb38f2c6401b70",
+        "nabulsi_d2e68a65ce2e42b3dd73c576",
+        "nabulsi_713292e4b47f0e607a2a0a7b",
+        "ibn-Shahin_88ca9900b8ab1ddb50255f7e",
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_efaf1f8968120e29643b5980",
+        "nabulsi_2b7771973eff85dde84038ea",
+        "nabulsi_5c613595f73b95e1751ad278",
+        "ibn-Shahin_7a8952226a2fea059a497199",
+        "nabulsi_2f4976b0019a353c6bd6100c",
+        "nabulsi_c55008241f2ab4b69bd19ada",
+        "nabulsi_e12f57b845a6ca34c2340b9f",
+        "nabulsi_7a7d3036f7ae9992e7c1bb17",
+        "nabulsi_15b8082a448f8a36acaf0373",
+        "ibn-Shahin_6bf41ba7ab4a4c54307550c7",
+        "ibn-Shahin_957081d03c9ec0585473666f",
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "nabulsi_f8e282b9be266e51548a9e02",
+        "nabulsi_5882ed50c2fdc1abf79f49b3",
+        "ibn-Shahin_102ca7044ee79dc0930c8ad6",
+        "nabulsi_d8b4fa4c7acf7b78db0eb893",
+        "nabulsi_db26beef65434b575a596de2",
+        "nabulsi_2687dd42f80003cb111035c9",
+        "nabulsi_6d43c6025da51c4125342f26",
+        "ibn-Shahin_cf6f57d6fb1a31c5c7449561",
+        "nabulsi_f49a6f9a70b005f2addcd557",
+        "ibn-Shahin_94f98751174d1ce06c7edaae"
+      ],
+      "latency_ms": 212.13967799849343,
+      "metrics": {
+        "1": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "2": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "4": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "reciprocal_rank": 0.0
+        }
+      }
+    },
+    {
+      "id": "dragonfly_description",
+      "mode": "dense",
+      "ranked_passage_ids": [
+        "nabulsi_cf6f55e234be2893c6618ed3",
+        "nabulsi_15a5ecac5a10828914cf6bf1",
+        "nabulsi_5af9237aaf61345a8f15add8",
+        "nabulsi_0be8a2747f70f2bcc42d56b5",
+        "nabulsi_f388f504458196670f073b4d",
+        "nabulsi_57a4316d11725c3a37aed7f7",
+        "nabulsi_2b7771973eff85dde84038ea",
+        "ibn-Shahin_88ca9900b8ab1ddb50255f7e",
+        "nabulsi_03251369e8bb38f2c6401b70",
+        "nabulsi_15b8082a448f8a36acaf0373",
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_2f4976b0019a353c6bd6100c",
+        "nabulsi_d2e68a65ce2e42b3dd73c576",
+        "nabulsi_e12f57b845a6ca34c2340b9f",
+        "nabulsi_5dea434535acda307d164fb8",
+        "ibn-Shahin_6bf41ba7ab4a4c54307550c7",
+        "nabulsi_713292e4b47f0e607a2a0a7b",
+        "ibn-Shahin_7a8952226a2fea059a497199",
+        "ibn-Shahin_957081d03c9ec0585473666f",
+        "nabulsi_5882ed50c2fdc1abf79f49b3",
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "nabulsi_efaf1f8968120e29643b5980",
+        "nabulsi_5c613595f73b95e1751ad278",
+        "nabulsi_7a7d3036f7ae9992e7c1bb17",
+        "ibn-Shahin_102ca7044ee79dc0930c8ad6",
+        "nabulsi_c55008241f2ab4b69bd19ada",
+        "nabulsi_d8b4fa4c7acf7b78db0eb893",
+        "nabulsi_6d43c6025da51c4125342f26",
+        "nabulsi_2687dd42f80003cb111035c9",
+        "nabulsi_db26beef65434b575a596de2",
+        "nabulsi_f8e282b9be266e51548a9e02",
+        "ibn-Shahin_cf6f57d6fb1a31c5c7449561",
+        "nabulsi_f49a6f9a70b005f2addcd557",
+        "ibn-Shahin_94f98751174d1ce06c7edaae"
+      ],
+      "latency_ms": 200.52183300140314,
+      "metrics": {
+        "1": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "2": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "4": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "reciprocal_rank": 0.0
+        }
+      }
+    },
+    {
+      "id": "user_sea_ship_dream",
+      "mode": "dense",
+      "ranked_passage_ids": [
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "nabulsi_5c613595f73b95e1751ad278",
+        "nabulsi_e12f57b845a6ca34c2340b9f",
+        "nabulsi_5882ed50c2fdc1abf79f49b3",
+        "nabulsi_d2e68a65ce2e42b3dd73c576",
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_15a5ecac5a10828914cf6bf1",
+        "nabulsi_2b7771973eff85dde84038ea",
+        "nabulsi_5af9237aaf61345a8f15add8",
+        "ibn-Shahin_102ca7044ee79dc0930c8ad6",
+        "ibn-Shahin_88ca9900b8ab1ddb50255f7e",
+        "nabulsi_c55008241f2ab4b69bd19ada",
+        "nabulsi_efaf1f8968120e29643b5980",
+        "nabulsi_d8b4fa4c7acf7b78db0eb893",
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "nabulsi_15b8082a448f8a36acaf0373",
+        "ibn-Shahin_957081d03c9ec0585473666f",
+        "nabulsi_f388f504458196670f073b4d",
+        "nabulsi_57a4316d11725c3a37aed7f7",
+        "nabulsi_2f4976b0019a353c6bd6100c",
+        "nabulsi_cf6f55e234be2893c6618ed3",
+        "nabulsi_0be8a2747f70f2bcc42d56b5",
+        "ibn-Shahin_7a8952226a2fea059a497199",
+        "nabulsi_7a7d3036f7ae9992e7c1bb17",
+        "nabulsi_f8e282b9be266e51548a9e02",
+        "nabulsi_03251369e8bb38f2c6401b70",
+        "ibn-Shahin_cf6f57d6fb1a31c5c7449561",
+        "nabulsi_713292e4b47f0e607a2a0a7b",
+        "nabulsi_5dea434535acda307d164fb8",
+        "nabulsi_2687dd42f80003cb111035c9",
+        "ibn-Shahin_94f98751174d1ce06c7edaae",
+        "nabulsi_f49a6f9a70b005f2addcd557",
+        "ibn-Shahin_6bf41ba7ab4a4c54307550c7",
+        "nabulsi_db26beef65434b575a596de2",
+        "nabulsi_6d43c6025da51c4125342f26"
+      ],
+      "latency_ms": 218.32897800777573,
+      "metrics": {
+        "1": {
+          "recall": 0.25,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "2": {
+          "recall": 0.5,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 0.5,
+          "precision": 0.5,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "travel_verb",
+      "mode": "dense",
+      "ranked_passage_ids": [
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_15a5ecac5a10828914cf6bf1",
+        "nabulsi_f388f504458196670f073b4d",
+        "nabulsi_5af9237aaf61345a8f15add8",
+        "nabulsi_efaf1f8968120e29643b5980",
+        "ibn-Shahin_88ca9900b8ab1ddb50255f7e",
+        "nabulsi_e12f57b845a6ca34c2340b9f",
+        "nabulsi_7a7d3036f7ae9992e7c1bb17",
+        "nabulsi_57a4316d11725c3a37aed7f7",
+        "nabulsi_cf6f55e234be2893c6618ed3",
+        "nabulsi_5c613595f73b95e1751ad278",
+        "nabulsi_0be8a2747f70f2bcc42d56b5",
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "nabulsi_d2e68a65ce2e42b3dd73c576",
+        "nabulsi_2b7771973eff85dde84038ea",
+        "nabulsi_5dea434535acda307d164fb8",
+        "nabulsi_03251369e8bb38f2c6401b70",
+        "nabulsi_5882ed50c2fdc1abf79f49b3",
+        "nabulsi_c55008241f2ab4b69bd19ada",
+        "ibn-Shahin_6bf41ba7ab4a4c54307550c7",
+        "nabulsi_713292e4b47f0e607a2a0a7b",
+        "nabulsi_d8b4fa4c7acf7b78db0eb893",
+        "ibn-Shahin_102ca7044ee79dc0930c8ad6",
+        "nabulsi_f8e282b9be266e51548a9e02",
+        "nabulsi_2f4976b0019a353c6bd6100c",
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "nabulsi_15b8082a448f8a36acaf0373",
+        "nabulsi_db26beef65434b575a596de2",
+        "ibn-Shahin_7a8952226a2fea059a497199",
+        "ibn-Shahin_957081d03c9ec0585473666f",
+        "nabulsi_6d43c6025da51c4125342f26",
+        "ibn-Shahin_cf6f57d6fb1a31c5c7449561",
+        "nabulsi_f49a6f9a70b005f2addcd557",
+        "ibn-Shahin_94f98751174d1ce06c7edaae",
+        "nabulsi_2687dd42f80003cb111035c9"
+      ],
+      "latency_ms": 127.95258501137141,
+      "metrics": {
+        "1": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "2": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.25,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "ships_plural",
+      "mode": "dense",
+      "ranked_passage_ids": [
+        "nabulsi_5c613595f73b95e1751ad278",
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "nabulsi_5882ed50c2fdc1abf79f49b3",
+        "nabulsi_5af9237aaf61345a8f15add8",
+        "nabulsi_e12f57b845a6ca34c2340b9f",
+        "nabulsi_d2e68a65ce2e42b3dd73c576",
+        "nabulsi_15a5ecac5a10828914cf6bf1",
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_57a4316d11725c3a37aed7f7",
+        "nabulsi_cf6f55e234be2893c6618ed3",
+        "nabulsi_f388f504458196670f073b4d",
+        "nabulsi_5dea434535acda307d164fb8",
+        "nabulsi_0be8a2747f70f2bcc42d56b5",
+        "nabulsi_c55008241f2ab4b69bd19ada",
+        "nabulsi_2b7771973eff85dde84038ea",
+        "nabulsi_efaf1f8968120e29643b5980",
+        "ibn-Shahin_88ca9900b8ab1ddb50255f7e",
+        "nabulsi_7a7d3036f7ae9992e7c1bb17",
+        "nabulsi_713292e4b47f0e607a2a0a7b",
+        "nabulsi_03251369e8bb38f2c6401b70",
+        "nabulsi_2f4976b0019a353c6bd6100c",
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "nabulsi_15b8082a448f8a36acaf0373",
+        "nabulsi_d8b4fa4c7acf7b78db0eb893",
+        "ibn-Shahin_7a8952226a2fea059a497199",
+        "ibn-Shahin_957081d03c9ec0585473666f",
+        "nabulsi_db26beef65434b575a596de2",
+        "ibn-Shahin_6bf41ba7ab4a4c54307550c7",
+        "nabulsi_f8e282b9be266e51548a9e02",
+        "ibn-Shahin_102ca7044ee79dc0930c8ad6",
+        "nabulsi_6d43c6025da51c4125342f26",
+        "nabulsi_2687dd42f80003cb111035c9",
+        "ibn-Shahin_cf6f57d6fb1a31c5c7449561",
+        "nabulsi_f49a6f9a70b005f2addcd557",
+        "ibn-Shahin_94f98751174d1ce06c7edaae"
+      ],
+      "latency_ms": 128.55917400156613,
+      "metrics": {
+        "1": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "2": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.25,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "waves_plural",
+      "mode": "dense",
+      "ranked_passage_ids": [
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "nabulsi_d2e68a65ce2e42b3dd73c576",
+        "nabulsi_5882ed50c2fdc1abf79f49b3",
+        "nabulsi_15a5ecac5a10828914cf6bf1",
+        "nabulsi_e12f57b845a6ca34c2340b9f",
+        "nabulsi_5c613595f73b95e1751ad278",
+        "nabulsi_5af9237aaf61345a8f15add8",
+        "nabulsi_57a4316d11725c3a37aed7f7",
+        "nabulsi_cf6f55e234be2893c6618ed3",
+        "nabulsi_713292e4b47f0e607a2a0a7b",
+        "nabulsi_2b7771973eff85dde84038ea",
+        "nabulsi_0be8a2747f70f2bcc42d56b5",
+        "ibn-Shahin_88ca9900b8ab1ddb50255f7e",
+        "nabulsi_f388f504458196670f073b4d",
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_d8b4fa4c7acf7b78db0eb893",
+        "ibn-Shahin_957081d03c9ec0585473666f",
+        "ibn-Shahin_102ca7044ee79dc0930c8ad6",
+        "nabulsi_7a7d3036f7ae9992e7c1bb17",
+        "nabulsi_c55008241f2ab4b69bd19ada",
+        "ibn-Shahin_6bf41ba7ab4a4c54307550c7",
+        "nabulsi_15b8082a448f8a36acaf0373",
+        "nabulsi_03251369e8bb38f2c6401b70",
+        "nabulsi_5dea434535acda307d164fb8",
+        "nabulsi_efaf1f8968120e29643b5980",
+        "nabulsi_f8e282b9be266e51548a9e02",
+        "ibn-Shahin_7a8952226a2fea059a497199",
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "nabulsi_2f4976b0019a353c6bd6100c",
+        "ibn-Shahin_cf6f57d6fb1a31c5c7449561",
+        "nabulsi_f49a6f9a70b005f2addcd557",
+        "nabulsi_db26beef65434b575a596de2",
+        "ibn-Shahin_94f98751174d1ce06c7edaae",
+        "nabulsi_6d43c6025da51c4125342f26",
+        "nabulsi_2687dd42f80003cb111035c9"
+      ],
+      "latency_ms": 127.69090700021479,
+      "metrics": {
+        "1": {
+          "recall": 0.5,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "2": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "shahin_mirage",
+      "mode": "dense",
+      "ranked_passage_ids": [
+        "nabulsi_cf6f55e234be2893c6618ed3",
+        "nabulsi_15a5ecac5a10828914cf6bf1",
+        "nabulsi_5af9237aaf61345a8f15add8",
+        "nabulsi_57a4316d11725c3a37aed7f7",
+        "nabulsi_f388f504458196670f073b4d",
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "nabulsi_5dea434535acda307d164fb8",
+        "ibn-Shahin_88ca9900b8ab1ddb50255f7e",
+        "nabulsi_d2e68a65ce2e42b3dd73c576",
+        "nabulsi_0be8a2747f70f2bcc42d56b5",
+        "nabulsi_03251369e8bb38f2c6401b70",
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_713292e4b47f0e607a2a0a7b",
+        "nabulsi_5c613595f73b95e1751ad278",
+        "nabulsi_2b7771973eff85dde84038ea",
+        "nabulsi_e12f57b845a6ca34c2340b9f",
+        "nabulsi_efaf1f8968120e29643b5980",
+        "ibn-Shahin_7a8952226a2fea059a497199",
+        "nabulsi_c55008241f2ab4b69bd19ada",
+        "nabulsi_7a7d3036f7ae9992e7c1bb17",
+        "nabulsi_2f4976b0019a353c6bd6100c",
+        "nabulsi_15b8082a448f8a36acaf0373",
+        "ibn-Shahin_957081d03c9ec0585473666f",
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "nabulsi_5882ed50c2fdc1abf79f49b3",
+        "ibn-Shahin_6bf41ba7ab4a4c54307550c7",
+        "nabulsi_d8b4fa4c7acf7b78db0eb893",
+        "ibn-Shahin_102ca7044ee79dc0930c8ad6",
+        "nabulsi_db26beef65434b575a596de2",
+        "nabulsi_f8e282b9be266e51548a9e02",
+        "nabulsi_2687dd42f80003cb111035c9",
+        "nabulsi_6d43c6025da51c4125342f26",
+        "ibn-Shahin_cf6f57d6fb1a31c5c7449561",
+        "nabulsi_f49a6f9a70b005f2addcd557",
+        "ibn-Shahin_94f98751174d1ce06c7edaae"
+      ],
+      "latency_ms": 146.7731929878937,
+      "metrics": {
+        "1": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "2": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "4": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "reciprocal_rank": 0.0
+        }
+      }
+    },
+    {
+      "id": "shahin_dew_gloss",
+      "mode": "dense",
+      "ranked_passage_ids": [
+        "ibn-Shahin_88ca9900b8ab1ddb50255f7e",
+        "nabulsi_15a5ecac5a10828914cf6bf1",
+        "nabulsi_cf6f55e234be2893c6618ed3",
+        "nabulsi_5af9237aaf61345a8f15add8",
+        "nabulsi_5dea434535acda307d164fb8",
+        "nabulsi_57a4316d11725c3a37aed7f7",
+        "nabulsi_f388f504458196670f073b4d",
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "nabulsi_2b7771973eff85dde84038ea",
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_d2e68a65ce2e42b3dd73c576",
+        "nabulsi_713292e4b47f0e607a2a0a7b",
+        "nabulsi_0be8a2747f70f2bcc42d56b5",
+        "nabulsi_7a7d3036f7ae9992e7c1bb17",
+        "ibn-Shahin_6bf41ba7ab4a4c54307550c7",
+        "nabulsi_efaf1f8968120e29643b5980",
+        "nabulsi_15b8082a448f8a36acaf0373",
+        "nabulsi_e12f57b845a6ca34c2340b9f",
+        "nabulsi_c55008241f2ab4b69bd19ada",
+        "ibn-Shahin_102ca7044ee79dc0930c8ad6",
+        "nabulsi_5c613595f73b95e1751ad278",
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "ibn-Shahin_957081d03c9ec0585473666f",
+        "ibn-Shahin_7a8952226a2fea059a497199",
+        "nabulsi_03251369e8bb38f2c6401b70",
+        "nabulsi_d8b4fa4c7acf7b78db0eb893",
+        "nabulsi_db26beef65434b575a596de2",
+        "nabulsi_2f4976b0019a353c6bd6100c",
+        "nabulsi_f8e282b9be266e51548a9e02",
+        "nabulsi_5882ed50c2fdc1abf79f49b3",
+        "nabulsi_6d43c6025da51c4125342f26",
+        "nabulsi_2687dd42f80003cb111035c9",
+        "ibn-Shahin_cf6f57d6fb1a31c5c7449561",
+        "ibn-Shahin_94f98751174d1ce06c7edaae",
+        "nabulsi_f49a6f9a70b005f2addcd557"
+      ],
+      "latency_ms": 145.3501369978767,
+      "metrics": {
+        "1": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "2": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.25,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "shahin_spheres",
+      "mode": "dense",
+      "ranked_passage_ids": [
+        "ibn-Shahin_6bf41ba7ab4a4c54307550c7",
+        "nabulsi_57a4316d11725c3a37aed7f7",
+        "nabulsi_5af9237aaf61345a8f15add8",
+        "nabulsi_cf6f55e234be2893c6618ed3",
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_15a5ecac5a10828914cf6bf1",
+        "nabulsi_f388f504458196670f073b4d",
+        "nabulsi_5dea434535acda307d164fb8",
+        "nabulsi_d2e68a65ce2e42b3dd73c576",
+        "nabulsi_efaf1f8968120e29643b5980",
+        "nabulsi_0be8a2747f70f2bcc42d56b5",
+        "nabulsi_713292e4b47f0e607a2a0a7b",
+        "ibn-Shahin_88ca9900b8ab1ddb50255f7e",
+        "nabulsi_03251369e8bb38f2c6401b70",
+        "nabulsi_5c613595f73b95e1751ad278",
+        "nabulsi_7a7d3036f7ae9992e7c1bb17",
+        "nabulsi_c55008241f2ab4b69bd19ada",
+        "nabulsi_2b7771973eff85dde84038ea",
+        "nabulsi_e12f57b845a6ca34c2340b9f",
+        "ibn-Shahin_957081d03c9ec0585473666f",
+        "nabulsi_15b8082a448f8a36acaf0373",
+        "ibn-Shahin_7a8952226a2fea059a497199",
+        "nabulsi_d8b4fa4c7acf7b78db0eb893",
+        "nabulsi_2f4976b0019a353c6bd6100c",
+        "nabulsi_5882ed50c2fdc1abf79f49b3",
+        "nabulsi_f8e282b9be266e51548a9e02",
+        "ibn-Shahin_102ca7044ee79dc0930c8ad6",
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "nabulsi_db26beef65434b575a596de2",
+        "nabulsi_2687dd42f80003cb111035c9",
+        "nabulsi_6d43c6025da51c4125342f26",
+        "ibn-Shahin_cf6f57d6fb1a31c5c7449561",
+        "nabulsi_f49a6f9a70b005f2addcd557",
+        "ibn-Shahin_94f98751174d1ce06c7edaae"
+      ],
+      "latency_ms": 129.9841649888549,
+      "metrics": {
+        "1": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "2": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.25,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "nabulsi_mat",
+      "mode": "dense",
+      "ranked_passage_ids": [
+        "nabulsi_cf6f55e234be2893c6618ed3",
+        "nabulsi_15a5ecac5a10828914cf6bf1",
+        "nabulsi_5af9237aaf61345a8f15add8",
+        "nabulsi_57a4316d11725c3a37aed7f7",
+        "nabulsi_5dea434535acda307d164fb8",
+        "nabulsi_f388f504458196670f073b4d",
+        "ibn-Shahin_88ca9900b8ab1ddb50255f7e",
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "nabulsi_0be8a2747f70f2bcc42d56b5",
+        "nabulsi_d2e68a65ce2e42b3dd73c576",
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_713292e4b47f0e607a2a0a7b",
+        "nabulsi_03251369e8bb38f2c6401b70",
+        "nabulsi_5c613595f73b95e1751ad278",
+        "nabulsi_2b7771973eff85dde84038ea",
+        "ibn-Shahin_7a8952226a2fea059a497199",
+        "nabulsi_efaf1f8968120e29643b5980",
+        "nabulsi_7a7d3036f7ae9992e7c1bb17",
+        "nabulsi_e12f57b845a6ca34c2340b9f",
+        "nabulsi_c55008241f2ab4b69bd19ada",
+        "nabulsi_2f4976b0019a353c6bd6100c",
+        "nabulsi_15b8082a448f8a36acaf0373",
+        "ibn-Shahin_957081d03c9ec0585473666f",
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "ibn-Shahin_6bf41ba7ab4a4c54307550c7",
+        "nabulsi_5882ed50c2fdc1abf79f49b3",
+        "nabulsi_d8b4fa4c7acf7b78db0eb893",
+        "ibn-Shahin_102ca7044ee79dc0930c8ad6",
+        "nabulsi_db26beef65434b575a596de2",
+        "nabulsi_f8e282b9be266e51548a9e02",
+        "nabulsi_6d43c6025da51c4125342f26",
+        "nabulsi_2687dd42f80003cb111035c9",
+        "ibn-Shahin_cf6f57d6fb1a31c5c7449561",
+        "nabulsi_f49a6f9a70b005f2addcd557",
+        "ibn-Shahin_94f98751174d1ce06c7edaae"
+      ],
+      "latency_ms": 112.30454900942277,
+      "metrics": {
+        "1": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "2": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "4": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "reciprocal_rank": 0.0
+        }
+      }
+    },
+    {
+      "id": "nabulsi_captain",
+      "mode": "dense",
+      "ranked_passage_ids": [
+        "nabulsi_5c613595f73b95e1751ad278",
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "nabulsi_5882ed50c2fdc1abf79f49b3",
+        "nabulsi_5af9237aaf61345a8f15add8",
+        "nabulsi_15a5ecac5a10828914cf6bf1",
+        "nabulsi_d2e68a65ce2e42b3dd73c576",
+        "nabulsi_f388f504458196670f073b4d",
+        "nabulsi_cf6f55e234be2893c6618ed3",
+        "nabulsi_e12f57b845a6ca34c2340b9f",
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_57a4316d11725c3a37aed7f7",
+        "nabulsi_5dea434535acda307d164fb8",
+        "nabulsi_0be8a2747f70f2bcc42d56b5",
+        "ibn-Shahin_88ca9900b8ab1ddb50255f7e",
+        "nabulsi_03251369e8bb38f2c6401b70",
+        "nabulsi_2b7771973eff85dde84038ea",
+        "nabulsi_7a7d3036f7ae9992e7c1bb17",
+        "nabulsi_c55008241f2ab4b69bd19ada",
+        "nabulsi_efaf1f8968120e29643b5980",
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "nabulsi_713292e4b47f0e607a2a0a7b",
+        "ibn-Shahin_7a8952226a2fea059a497199",
+        "nabulsi_15b8082a448f8a36acaf0373",
+        "nabulsi_d8b4fa4c7acf7b78db0eb893",
+        "ibn-Shahin_957081d03c9ec0585473666f",
+        "nabulsi_db26beef65434b575a596de2",
+        "nabulsi_2f4976b0019a353c6bd6100c",
+        "ibn-Shahin_102ca7044ee79dc0930c8ad6",
+        "nabulsi_6d43c6025da51c4125342f26",
+        "ibn-Shahin_6bf41ba7ab4a4c54307550c7",
+        "nabulsi_f8e282b9be266e51548a9e02",
+        "nabulsi_2687dd42f80003cb111035c9",
+        "ibn-Shahin_cf6f57d6fb1a31c5c7449561",
+        "nabulsi_f49a6f9a70b005f2addcd557",
+        "ibn-Shahin_94f98751174d1ce06c7edaae"
+      ],
+      "latency_ms": 112.19827800232451,
+      "metrics": {
+        "1": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "2": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.25,
+          "reciprocal_rank": 0.3333333333333333
+        }
+      }
+    },
+    {
+      "id": "nabulsi_silk_maker",
+      "mode": "dense",
+      "ranked_passage_ids": [
+        "nabulsi_5af9237aaf61345a8f15add8",
+        "nabulsi_15a5ecac5a10828914cf6bf1",
+        "nabulsi_cf6f55e234be2893c6618ed3",
+        "nabulsi_f388f504458196670f073b4d",
+        "nabulsi_57a4316d11725c3a37aed7f7",
+        "nabulsi_0be8a2747f70f2bcc42d56b5",
+        "nabulsi_03251369e8bb38f2c6401b70",
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_2b7771973eff85dde84038ea",
+        "nabulsi_d2e68a65ce2e42b3dd73c576",
+        "nabulsi_5dea434535acda307d164fb8",
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "ibn-Shahin_88ca9900b8ab1ddb50255f7e",
+        "nabulsi_5c613595f73b95e1751ad278",
+        "nabulsi_c55008241f2ab4b69bd19ada",
+        "nabulsi_7a7d3036f7ae9992e7c1bb17",
+        "nabulsi_efaf1f8968120e29643b5980",
+        "ibn-Shahin_7a8952226a2fea059a497199",
+        "nabulsi_e12f57b845a6ca34c2340b9f",
+        "nabulsi_713292e4b47f0e607a2a0a7b",
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "ibn-Shahin_957081d03c9ec0585473666f",
+        "nabulsi_2f4976b0019a353c6bd6100c",
+        "nabulsi_d8b4fa4c7acf7b78db0eb893",
+        "nabulsi_15b8082a448f8a36acaf0373",
+        "nabulsi_5882ed50c2fdc1abf79f49b3",
+        "nabulsi_f8e282b9be266e51548a9e02",
+        "ibn-Shahin_102ca7044ee79dc0930c8ad6",
+        "ibn-Shahin_6bf41ba7ab4a4c54307550c7",
+        "nabulsi_db26beef65434b575a596de2",
+        "ibn-Shahin_cf6f57d6fb1a31c5c7449561",
+        "nabulsi_2687dd42f80003cb111035c9",
+        "nabulsi_6d43c6025da51c4125342f26",
+        "nabulsi_f49a6f9a70b005f2addcd557",
+        "ibn-Shahin_94f98751174d1ce06c7edaae"
+      ],
+      "latency_ms": 103.44690299825743,
+      "metrics": {
+        "1": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "2": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "4": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "reciprocal_rank": 0.0
+        }
+      }
+    },
+    {
+      "id": "humility_symbol",
+      "mode": "hybrid",
+      "ranked_passage_ids": [
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "nabulsi_15a5ecac5a10828914cf6bf1",
+        "nabulsi_5af9237aaf61345a8f15add8",
+        "nabulsi_cf6f55e234be2893c6618ed3",
+        "nabulsi_57a4316d11725c3a37aed7f7",
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "nabulsi_d2e68a65ce2e42b3dd73c576",
+        "nabulsi_f388f504458196670f073b4d",
+        "nabulsi_5dea434535acda307d164fb8",
+        "nabulsi_713292e4b47f0e607a2a0a7b",
+        "nabulsi_0be8a2747f70f2bcc42d56b5",
+        "ibn-Shahin_88ca9900b8ab1ddb50255f7e",
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_2b7771973eff85dde84038ea",
+        "ibn-Shahin_7a8952226a2fea059a497199",
+        "nabulsi_5c613595f73b95e1751ad278",
+        "nabulsi_e12f57b845a6ca34c2340b9f",
+        "nabulsi_efaf1f8968120e29643b5980",
+        "nabulsi_c55008241f2ab4b69bd19ada",
+        "nabulsi_7a7d3036f7ae9992e7c1bb17",
+        "ibn-Shahin_6bf41ba7ab4a4c54307550c7",
+        "ibn-Shahin_957081d03c9ec0585473666f",
+        "nabulsi_03251369e8bb38f2c6401b70",
+        "nabulsi_15b8082a448f8a36acaf0373",
+        "nabulsi_2f4976b0019a353c6bd6100c",
+        "nabulsi_d8b4fa4c7acf7b78db0eb893",
+        "nabulsi_5882ed50c2fdc1abf79f49b3",
+        "ibn-Shahin_102ca7044ee79dc0930c8ad6",
+        "nabulsi_f8e282b9be266e51548a9e02",
+        "nabulsi_6d43c6025da51c4125342f26",
+        "ibn-Shahin_cf6f57d6fb1a31c5c7449561",
+        "nabulsi_db26beef65434b575a596de2",
+        "nabulsi_2687dd42f80003cb111035c9",
+        "nabulsi_f49a6f9a70b005f2addcd557",
+        "ibn-Shahin_94f98751174d1ce06c7edaae"
+      ],
+      "latency_ms": 119.22388199309353,
+      "metrics": {
+        "1": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "2": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.25,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "humility_description",
+      "mode": "hybrid",
+      "ranked_passage_ids": [
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "nabulsi_15a5ecac5a10828914cf6bf1",
+        "nabulsi_5af9237aaf61345a8f15add8",
+        "nabulsi_f388f504458196670f073b4d",
+        "nabulsi_cf6f55e234be2893c6618ed3",
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_57a4316d11725c3a37aed7f7",
+        "nabulsi_d2e68a65ce2e42b3dd73c576",
+        "nabulsi_0be8a2747f70f2bcc42d56b5",
+        "nabulsi_5dea434535acda307d164fb8",
+        "ibn-Shahin_88ca9900b8ab1ddb50255f7e",
+        "nabulsi_efaf1f8968120e29643b5980",
+        "nabulsi_03251369e8bb38f2c6401b70",
+        "nabulsi_2b7771973eff85dde84038ea",
+        "nabulsi_5c613595f73b95e1751ad278",
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "nabulsi_7a7d3036f7ae9992e7c1bb17",
+        "ibn-Shahin_7a8952226a2fea059a497199",
+        "nabulsi_c55008241f2ab4b69bd19ada",
+        "nabulsi_2f4976b0019a353c6bd6100c",
+        "nabulsi_713292e4b47f0e607a2a0a7b",
+        "nabulsi_e12f57b845a6ca34c2340b9f",
+        "nabulsi_f8e282b9be266e51548a9e02",
+        "ibn-Shahin_957081d03c9ec0585473666f",
+        "nabulsi_15b8082a448f8a36acaf0373",
+        "ibn-Shahin_102ca7044ee79dc0930c8ad6",
+        "nabulsi_d8b4fa4c7acf7b78db0eb893",
+        "ibn-Shahin_6bf41ba7ab4a4c54307550c7",
+        "nabulsi_5882ed50c2fdc1abf79f49b3",
+        "nabulsi_db26beef65434b575a596de2",
+        "nabulsi_6d43c6025da51c4125342f26",
+        "ibn-Shahin_cf6f57d6fb1a31c5c7449561",
+        "nabulsi_2687dd42f80003cb111035c9",
+        "nabulsi_f49a6f9a70b005f2addcd557",
+        "ibn-Shahin_94f98751174d1ce06c7edaae"
+      ],
+      "latency_ms": 125.68703900615219,
+      "metrics": {
+        "1": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "2": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.25,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "dragonfly_symbol",
+      "mode": "hybrid",
+      "ranked_passage_ids": [
+        "nabulsi_f49a6f9a70b005f2addcd557",
+        "nabulsi_cf6f55e234be2893c6618ed3",
+        "nabulsi_5af9237aaf61345a8f15add8",
+        "nabulsi_15a5ecac5a10828914cf6bf1",
+        "nabulsi_57a4316d11725c3a37aed7f7",
+        "nabulsi_f388f504458196670f073b4d",
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "nabulsi_0be8a2747f70f2bcc42d56b5",
+        "nabulsi_5dea434535acda307d164fb8",
+        "nabulsi_03251369e8bb38f2c6401b70",
+        "nabulsi_d2e68a65ce2e42b3dd73c576",
+        "nabulsi_713292e4b47f0e607a2a0a7b",
+        "ibn-Shahin_88ca9900b8ab1ddb50255f7e",
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_efaf1f8968120e29643b5980",
+        "nabulsi_2b7771973eff85dde84038ea",
+        "nabulsi_5c613595f73b95e1751ad278",
+        "ibn-Shahin_7a8952226a2fea059a497199",
+        "nabulsi_2f4976b0019a353c6bd6100c",
+        "nabulsi_c55008241f2ab4b69bd19ada",
+        "nabulsi_e12f57b845a6ca34c2340b9f",
+        "nabulsi_7a7d3036f7ae9992e7c1bb17",
+        "nabulsi_15b8082a448f8a36acaf0373",
+        "ibn-Shahin_6bf41ba7ab4a4c54307550c7",
+        "ibn-Shahin_957081d03c9ec0585473666f",
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "nabulsi_f8e282b9be266e51548a9e02",
+        "nabulsi_5882ed50c2fdc1abf79f49b3",
+        "ibn-Shahin_102ca7044ee79dc0930c8ad6",
+        "nabulsi_d8b4fa4c7acf7b78db0eb893",
+        "nabulsi_db26beef65434b575a596de2",
+        "nabulsi_2687dd42f80003cb111035c9",
+        "nabulsi_6d43c6025da51c4125342f26",
+        "ibn-Shahin_cf6f57d6fb1a31c5c7449561",
+        "ibn-Shahin_94f98751174d1ce06c7edaae"
+      ],
+      "latency_ms": 137.47508300002664,
+      "metrics": {
+        "1": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "2": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.25,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "dragonfly_description",
+      "mode": "hybrid",
+      "ranked_passage_ids": [
+        "nabulsi_f49a6f9a70b005f2addcd557",
+        "nabulsi_cf6f55e234be2893c6618ed3",
+        "nabulsi_15a5ecac5a10828914cf6bf1",
+        "nabulsi_5af9237aaf61345a8f15add8",
+        "nabulsi_0be8a2747f70f2bcc42d56b5",
+        "nabulsi_f388f504458196670f073b4d",
+        "nabulsi_57a4316d11725c3a37aed7f7",
+        "nabulsi_2b7771973eff85dde84038ea",
+        "ibn-Shahin_88ca9900b8ab1ddb50255f7e",
+        "nabulsi_03251369e8bb38f2c6401b70",
+        "nabulsi_15b8082a448f8a36acaf0373",
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_2f4976b0019a353c6bd6100c",
+        "nabulsi_d2e68a65ce2e42b3dd73c576",
+        "nabulsi_e12f57b845a6ca34c2340b9f",
+        "nabulsi_5dea434535acda307d164fb8",
+        "ibn-Shahin_6bf41ba7ab4a4c54307550c7",
+        "nabulsi_713292e4b47f0e607a2a0a7b",
+        "ibn-Shahin_7a8952226a2fea059a497199",
+        "ibn-Shahin_957081d03c9ec0585473666f",
+        "nabulsi_5882ed50c2fdc1abf79f49b3",
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "nabulsi_efaf1f8968120e29643b5980",
+        "nabulsi_5c613595f73b95e1751ad278",
+        "nabulsi_7a7d3036f7ae9992e7c1bb17",
+        "ibn-Shahin_102ca7044ee79dc0930c8ad6",
+        "nabulsi_c55008241f2ab4b69bd19ada",
+        "nabulsi_d8b4fa4c7acf7b78db0eb893",
+        "nabulsi_6d43c6025da51c4125342f26",
+        "nabulsi_2687dd42f80003cb111035c9",
+        "nabulsi_db26beef65434b575a596de2",
+        "nabulsi_f8e282b9be266e51548a9e02",
+        "ibn-Shahin_cf6f57d6fb1a31c5c7449561",
+        "ibn-Shahin_94f98751174d1ce06c7edaae"
+      ],
+      "latency_ms": 143.0047149915481,
+      "metrics": {
+        "1": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "2": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.25,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "user_sea_ship_dream",
+      "mode": "hybrid",
+      "ranked_passage_ids": [
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "nabulsi_5882ed50c2fdc1abf79f49b3",
+        "nabulsi_5c613595f73b95e1751ad278",
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_e12f57b845a6ca34c2340b9f",
+        "nabulsi_d2e68a65ce2e42b3dd73c576",
+        "nabulsi_efaf1f8968120e29643b5980",
+        "ibn-Shahin_6bf41ba7ab4a4c54307550c7",
+        "nabulsi_15a5ecac5a10828914cf6bf1",
+        "nabulsi_2b7771973eff85dde84038ea",
+        "nabulsi_5af9237aaf61345a8f15add8",
+        "ibn-Shahin_102ca7044ee79dc0930c8ad6",
+        "ibn-Shahin_88ca9900b8ab1ddb50255f7e",
+        "nabulsi_c55008241f2ab4b69bd19ada",
+        "nabulsi_d8b4fa4c7acf7b78db0eb893",
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "nabulsi_15b8082a448f8a36acaf0373",
+        "ibn-Shahin_957081d03c9ec0585473666f",
+        "nabulsi_f388f504458196670f073b4d",
+        "nabulsi_57a4316d11725c3a37aed7f7",
+        "nabulsi_2f4976b0019a353c6bd6100c",
+        "nabulsi_cf6f55e234be2893c6618ed3",
+        "nabulsi_0be8a2747f70f2bcc42d56b5",
+        "ibn-Shahin_7a8952226a2fea059a497199",
+        "nabulsi_7a7d3036f7ae9992e7c1bb17",
+        "nabulsi_f8e282b9be266e51548a9e02",
+        "nabulsi_03251369e8bb38f2c6401b70",
+        "ibn-Shahin_cf6f57d6fb1a31c5c7449561",
+        "nabulsi_713292e4b47f0e607a2a0a7b",
+        "nabulsi_5dea434535acda307d164fb8",
+        "nabulsi_2687dd42f80003cb111035c9",
+        "ibn-Shahin_94f98751174d1ce06c7edaae",
+        "nabulsi_f49a6f9a70b005f2addcd557",
+        "nabulsi_db26beef65434b575a596de2",
+        "nabulsi_6d43c6025da51c4125342f26"
+      ],
+      "latency_ms": 169.26460299873725,
+      "metrics": {
+        "1": {
+          "recall": 0.25,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "2": {
+          "recall": 0.25,
+          "precision": 0.5,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 0.75,
+          "precision": 0.75,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "travel_verb",
+      "mode": "hybrid",
+      "ranked_passage_ids": [
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_efaf1f8968120e29643b5980",
+        "ibn-Shahin_6bf41ba7ab4a4c54307550c7",
+        "nabulsi_15a5ecac5a10828914cf6bf1",
+        "nabulsi_f388f504458196670f073b4d",
+        "nabulsi_5af9237aaf61345a8f15add8",
+        "ibn-Shahin_88ca9900b8ab1ddb50255f7e",
+        "nabulsi_e12f57b845a6ca34c2340b9f",
+        "nabulsi_7a7d3036f7ae9992e7c1bb17",
+        "nabulsi_57a4316d11725c3a37aed7f7",
+        "nabulsi_cf6f55e234be2893c6618ed3",
+        "nabulsi_5c613595f73b95e1751ad278",
+        "nabulsi_0be8a2747f70f2bcc42d56b5",
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "nabulsi_d2e68a65ce2e42b3dd73c576",
+        "nabulsi_2b7771973eff85dde84038ea",
+        "nabulsi_5dea434535acda307d164fb8",
+        "nabulsi_03251369e8bb38f2c6401b70",
+        "nabulsi_5882ed50c2fdc1abf79f49b3",
+        "nabulsi_c55008241f2ab4b69bd19ada",
+        "nabulsi_713292e4b47f0e607a2a0a7b",
+        "nabulsi_d8b4fa4c7acf7b78db0eb893",
+        "ibn-Shahin_102ca7044ee79dc0930c8ad6",
+        "nabulsi_f8e282b9be266e51548a9e02",
+        "nabulsi_2f4976b0019a353c6bd6100c",
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "nabulsi_15b8082a448f8a36acaf0373",
+        "nabulsi_db26beef65434b575a596de2",
+        "ibn-Shahin_7a8952226a2fea059a497199",
+        "ibn-Shahin_957081d03c9ec0585473666f",
+        "nabulsi_6d43c6025da51c4125342f26",
+        "ibn-Shahin_cf6f57d6fb1a31c5c7449561",
+        "nabulsi_f49a6f9a70b005f2addcd557",
+        "ibn-Shahin_94f98751174d1ce06c7edaae",
+        "nabulsi_2687dd42f80003cb111035c9"
+      ],
+      "latency_ms": 141.17761299712583,
+      "metrics": {
+        "1": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "2": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.25,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "ships_plural",
+      "mode": "hybrid",
+      "ranked_passage_ids": [
+        "nabulsi_5c613595f73b95e1751ad278",
+        "nabulsi_5882ed50c2fdc1abf79f49b3",
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "nabulsi_5af9237aaf61345a8f15add8",
+        "nabulsi_e12f57b845a6ca34c2340b9f",
+        "nabulsi_d2e68a65ce2e42b3dd73c576",
+        "nabulsi_15a5ecac5a10828914cf6bf1",
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_57a4316d11725c3a37aed7f7",
+        "nabulsi_cf6f55e234be2893c6618ed3",
+        "nabulsi_f388f504458196670f073b4d",
+        "nabulsi_5dea434535acda307d164fb8",
+        "nabulsi_0be8a2747f70f2bcc42d56b5",
+        "nabulsi_c55008241f2ab4b69bd19ada",
+        "nabulsi_2b7771973eff85dde84038ea",
+        "nabulsi_efaf1f8968120e29643b5980",
+        "ibn-Shahin_88ca9900b8ab1ddb50255f7e",
+        "nabulsi_7a7d3036f7ae9992e7c1bb17",
+        "nabulsi_713292e4b47f0e607a2a0a7b",
+        "nabulsi_03251369e8bb38f2c6401b70",
+        "nabulsi_2f4976b0019a353c6bd6100c",
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "nabulsi_15b8082a448f8a36acaf0373",
+        "nabulsi_d8b4fa4c7acf7b78db0eb893",
+        "ibn-Shahin_7a8952226a2fea059a497199",
+        "ibn-Shahin_957081d03c9ec0585473666f",
+        "nabulsi_db26beef65434b575a596de2",
+        "ibn-Shahin_6bf41ba7ab4a4c54307550c7",
+        "nabulsi_f8e282b9be266e51548a9e02",
+        "ibn-Shahin_102ca7044ee79dc0930c8ad6",
+        "nabulsi_6d43c6025da51c4125342f26",
+        "nabulsi_2687dd42f80003cb111035c9",
+        "ibn-Shahin_cf6f57d6fb1a31c5c7449561",
+        "nabulsi_f49a6f9a70b005f2addcd557",
+        "ibn-Shahin_94f98751174d1ce06c7edaae"
+      ],
+      "latency_ms": 109.30690700479317,
+      "metrics": {
+        "1": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "2": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.25,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "waves_plural",
+      "mode": "hybrid",
+      "ranked_passage_ids": [
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "nabulsi_5882ed50c2fdc1abf79f49b3",
+        "nabulsi_d2e68a65ce2e42b3dd73c576",
+        "nabulsi_e12f57b845a6ca34c2340b9f",
+        "nabulsi_15a5ecac5a10828914cf6bf1",
+        "nabulsi_5c613595f73b95e1751ad278",
+        "nabulsi_5af9237aaf61345a8f15add8",
+        "nabulsi_57a4316d11725c3a37aed7f7",
+        "nabulsi_cf6f55e234be2893c6618ed3",
+        "nabulsi_713292e4b47f0e607a2a0a7b",
+        "nabulsi_2b7771973eff85dde84038ea",
+        "nabulsi_0be8a2747f70f2bcc42d56b5",
+        "ibn-Shahin_88ca9900b8ab1ddb50255f7e",
+        "nabulsi_f388f504458196670f073b4d",
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_d8b4fa4c7acf7b78db0eb893",
+        "ibn-Shahin_957081d03c9ec0585473666f",
+        "ibn-Shahin_102ca7044ee79dc0930c8ad6",
+        "nabulsi_7a7d3036f7ae9992e7c1bb17",
+        "nabulsi_c55008241f2ab4b69bd19ada",
+        "ibn-Shahin_6bf41ba7ab4a4c54307550c7",
+        "nabulsi_15b8082a448f8a36acaf0373",
+        "nabulsi_03251369e8bb38f2c6401b70",
+        "nabulsi_5dea434535acda307d164fb8",
+        "nabulsi_efaf1f8968120e29643b5980",
+        "nabulsi_f8e282b9be266e51548a9e02",
+        "ibn-Shahin_7a8952226a2fea059a497199",
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "nabulsi_2f4976b0019a353c6bd6100c",
+        "ibn-Shahin_cf6f57d6fb1a31c5c7449561",
+        "nabulsi_f49a6f9a70b005f2addcd557",
+        "nabulsi_db26beef65434b575a596de2",
+        "ibn-Shahin_94f98751174d1ce06c7edaae",
+        "nabulsi_6d43c6025da51c4125342f26",
+        "nabulsi_2687dd42f80003cb111035c9"
+      ],
+      "latency_ms": 114.86995599989314,
+      "metrics": {
+        "1": {
+          "recall": 0.5,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "2": {
+          "recall": 0.5,
+          "precision": 0.5,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "shahin_mirage",
+      "mode": "hybrid",
+      "ranked_passage_ids": [
+        "ibn-Shahin_957081d03c9ec0585473666f",
+        "nabulsi_cf6f55e234be2893c6618ed3",
+        "nabulsi_15a5ecac5a10828914cf6bf1",
+        "nabulsi_5af9237aaf61345a8f15add8",
+        "nabulsi_57a4316d11725c3a37aed7f7",
+        "nabulsi_f388f504458196670f073b4d",
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "nabulsi_5dea434535acda307d164fb8",
+        "ibn-Shahin_88ca9900b8ab1ddb50255f7e",
+        "nabulsi_d2e68a65ce2e42b3dd73c576",
+        "nabulsi_0be8a2747f70f2bcc42d56b5",
+        "nabulsi_03251369e8bb38f2c6401b70",
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_713292e4b47f0e607a2a0a7b",
+        "nabulsi_5c613595f73b95e1751ad278",
+        "nabulsi_2b7771973eff85dde84038ea",
+        "nabulsi_e12f57b845a6ca34c2340b9f",
+        "nabulsi_efaf1f8968120e29643b5980",
+        "ibn-Shahin_7a8952226a2fea059a497199",
+        "nabulsi_c55008241f2ab4b69bd19ada",
+        "nabulsi_7a7d3036f7ae9992e7c1bb17",
+        "nabulsi_2f4976b0019a353c6bd6100c",
+        "nabulsi_15b8082a448f8a36acaf0373",
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "nabulsi_5882ed50c2fdc1abf79f49b3",
+        "ibn-Shahin_6bf41ba7ab4a4c54307550c7",
+        "nabulsi_d8b4fa4c7acf7b78db0eb893",
+        "ibn-Shahin_102ca7044ee79dc0930c8ad6",
+        "nabulsi_db26beef65434b575a596de2",
+        "nabulsi_f8e282b9be266e51548a9e02",
+        "nabulsi_2687dd42f80003cb111035c9",
+        "nabulsi_6d43c6025da51c4125342f26",
+        "ibn-Shahin_cf6f57d6fb1a31c5c7449561",
+        "nabulsi_f49a6f9a70b005f2addcd557",
+        "ibn-Shahin_94f98751174d1ce06c7edaae"
+      ],
+      "latency_ms": 150.21787500882056,
+      "metrics": {
+        "1": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "2": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.25,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "shahin_dew_gloss",
+      "mode": "hybrid",
+      "ranked_passage_ids": [
+        "ibn-Shahin_88ca9900b8ab1ddb50255f7e",
+        "nabulsi_15a5ecac5a10828914cf6bf1",
+        "nabulsi_cf6f55e234be2893c6618ed3",
+        "nabulsi_5af9237aaf61345a8f15add8",
+        "nabulsi_5dea434535acda307d164fb8",
+        "nabulsi_57a4316d11725c3a37aed7f7",
+        "nabulsi_f388f504458196670f073b4d",
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "nabulsi_2b7771973eff85dde84038ea",
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_d2e68a65ce2e42b3dd73c576",
+        "nabulsi_713292e4b47f0e607a2a0a7b",
+        "nabulsi_0be8a2747f70f2bcc42d56b5",
+        "nabulsi_7a7d3036f7ae9992e7c1bb17",
+        "ibn-Shahin_6bf41ba7ab4a4c54307550c7",
+        "nabulsi_efaf1f8968120e29643b5980",
+        "nabulsi_15b8082a448f8a36acaf0373",
+        "nabulsi_e12f57b845a6ca34c2340b9f",
+        "nabulsi_c55008241f2ab4b69bd19ada",
+        "ibn-Shahin_102ca7044ee79dc0930c8ad6",
+        "nabulsi_5c613595f73b95e1751ad278",
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "ibn-Shahin_957081d03c9ec0585473666f",
+        "ibn-Shahin_7a8952226a2fea059a497199",
+        "nabulsi_03251369e8bb38f2c6401b70",
+        "nabulsi_d8b4fa4c7acf7b78db0eb893",
+        "nabulsi_db26beef65434b575a596de2",
+        "nabulsi_2f4976b0019a353c6bd6100c",
+        "nabulsi_f8e282b9be266e51548a9e02",
+        "nabulsi_5882ed50c2fdc1abf79f49b3",
+        "nabulsi_6d43c6025da51c4125342f26",
+        "nabulsi_2687dd42f80003cb111035c9",
+        "ibn-Shahin_cf6f57d6fb1a31c5c7449561",
+        "ibn-Shahin_94f98751174d1ce06c7edaae",
+        "nabulsi_f49a6f9a70b005f2addcd557"
+      ],
+      "latency_ms": 109.28784401039593,
+      "metrics": {
+        "1": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "2": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.25,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "shahin_spheres",
+      "mode": "hybrid",
+      "ranked_passage_ids": [
+        "ibn-Shahin_6bf41ba7ab4a4c54307550c7",
+        "nabulsi_57a4316d11725c3a37aed7f7",
+        "nabulsi_5af9237aaf61345a8f15add8",
+        "nabulsi_cf6f55e234be2893c6618ed3",
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_15a5ecac5a10828914cf6bf1",
+        "nabulsi_f388f504458196670f073b4d",
+        "nabulsi_5dea434535acda307d164fb8",
+        "nabulsi_d2e68a65ce2e42b3dd73c576",
+        "nabulsi_efaf1f8968120e29643b5980",
+        "nabulsi_0be8a2747f70f2bcc42d56b5",
+        "nabulsi_713292e4b47f0e607a2a0a7b",
+        "ibn-Shahin_88ca9900b8ab1ddb50255f7e",
+        "nabulsi_03251369e8bb38f2c6401b70",
+        "nabulsi_5c613595f73b95e1751ad278",
+        "nabulsi_7a7d3036f7ae9992e7c1bb17",
+        "nabulsi_c55008241f2ab4b69bd19ada",
+        "nabulsi_2b7771973eff85dde84038ea",
+        "nabulsi_e12f57b845a6ca34c2340b9f",
+        "ibn-Shahin_957081d03c9ec0585473666f",
+        "nabulsi_15b8082a448f8a36acaf0373",
+        "ibn-Shahin_7a8952226a2fea059a497199",
+        "nabulsi_d8b4fa4c7acf7b78db0eb893",
+        "nabulsi_2f4976b0019a353c6bd6100c",
+        "nabulsi_5882ed50c2fdc1abf79f49b3",
+        "nabulsi_f8e282b9be266e51548a9e02",
+        "ibn-Shahin_102ca7044ee79dc0930c8ad6",
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "nabulsi_db26beef65434b575a596de2",
+        "nabulsi_2687dd42f80003cb111035c9",
+        "nabulsi_6d43c6025da51c4125342f26",
+        "ibn-Shahin_cf6f57d6fb1a31c5c7449561",
+        "nabulsi_f49a6f9a70b005f2addcd557",
+        "ibn-Shahin_94f98751174d1ce06c7edaae"
+      ],
+      "latency_ms": 146.4892649964895,
+      "metrics": {
+        "1": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "2": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.25,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "nabulsi_mat",
+      "mode": "hybrid",
+      "ranked_passage_ids": [
+        "nabulsi_5dea434535acda307d164fb8",
+        "nabulsi_cf6f55e234be2893c6618ed3",
+        "nabulsi_15a5ecac5a10828914cf6bf1",
+        "nabulsi_5af9237aaf61345a8f15add8",
+        "nabulsi_57a4316d11725c3a37aed7f7",
+        "nabulsi_f388f504458196670f073b4d",
+        "ibn-Shahin_88ca9900b8ab1ddb50255f7e",
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "nabulsi_0be8a2747f70f2bcc42d56b5",
+        "nabulsi_d2e68a65ce2e42b3dd73c576",
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_713292e4b47f0e607a2a0a7b",
+        "nabulsi_03251369e8bb38f2c6401b70",
+        "nabulsi_5c613595f73b95e1751ad278",
+        "nabulsi_2b7771973eff85dde84038ea",
+        "ibn-Shahin_7a8952226a2fea059a497199",
+        "nabulsi_efaf1f8968120e29643b5980",
+        "nabulsi_7a7d3036f7ae9992e7c1bb17",
+        "nabulsi_e12f57b845a6ca34c2340b9f",
+        "nabulsi_c55008241f2ab4b69bd19ada",
+        "nabulsi_2f4976b0019a353c6bd6100c",
+        "nabulsi_15b8082a448f8a36acaf0373",
+        "ibn-Shahin_957081d03c9ec0585473666f",
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "ibn-Shahin_6bf41ba7ab4a4c54307550c7",
+        "nabulsi_5882ed50c2fdc1abf79f49b3",
+        "nabulsi_d8b4fa4c7acf7b78db0eb893",
+        "ibn-Shahin_102ca7044ee79dc0930c8ad6",
+        "nabulsi_db26beef65434b575a596de2",
+        "nabulsi_f8e282b9be266e51548a9e02",
+        "nabulsi_6d43c6025da51c4125342f26",
+        "nabulsi_2687dd42f80003cb111035c9",
+        "ibn-Shahin_cf6f57d6fb1a31c5c7449561",
+        "nabulsi_f49a6f9a70b005f2addcd557",
+        "ibn-Shahin_94f98751174d1ce06c7edaae"
+      ],
+      "latency_ms": 128.42497900419403,
+      "metrics": {
+        "1": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "2": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.25,
+          "reciprocal_rank": 1.0
+        }
+      }
+    },
+    {
+      "id": "nabulsi_captain",
+      "mode": "hybrid",
+      "ranked_passage_ids": [
+        "nabulsi_5c613595f73b95e1751ad278",
+        "nabulsi_5882ed50c2fdc1abf79f49b3",
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "nabulsi_5af9237aaf61345a8f15add8",
+        "nabulsi_15a5ecac5a10828914cf6bf1",
+        "nabulsi_d2e68a65ce2e42b3dd73c576",
+        "nabulsi_f388f504458196670f073b4d",
+        "nabulsi_cf6f55e234be2893c6618ed3",
+        "nabulsi_e12f57b845a6ca34c2340b9f",
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_57a4316d11725c3a37aed7f7",
+        "nabulsi_5dea434535acda307d164fb8",
+        "nabulsi_0be8a2747f70f2bcc42d56b5",
+        "ibn-Shahin_88ca9900b8ab1ddb50255f7e",
+        "nabulsi_03251369e8bb38f2c6401b70",
+        "nabulsi_2b7771973eff85dde84038ea",
+        "nabulsi_7a7d3036f7ae9992e7c1bb17",
+        "nabulsi_c55008241f2ab4b69bd19ada",
+        "nabulsi_efaf1f8968120e29643b5980",
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "nabulsi_713292e4b47f0e607a2a0a7b",
+        "ibn-Shahin_7a8952226a2fea059a497199",
+        "nabulsi_15b8082a448f8a36acaf0373",
+        "nabulsi_d8b4fa4c7acf7b78db0eb893",
+        "ibn-Shahin_957081d03c9ec0585473666f",
+        "nabulsi_db26beef65434b575a596de2",
+        "nabulsi_2f4976b0019a353c6bd6100c",
+        "ibn-Shahin_102ca7044ee79dc0930c8ad6",
+        "nabulsi_6d43c6025da51c4125342f26",
+        "ibn-Shahin_6bf41ba7ab4a4c54307550c7",
+        "nabulsi_f8e282b9be266e51548a9e02",
+        "nabulsi_2687dd42f80003cb111035c9",
+        "ibn-Shahin_cf6f57d6fb1a31c5c7449561",
+        "nabulsi_f49a6f9a70b005f2addcd557",
+        "ibn-Shahin_94f98751174d1ce06c7edaae"
+      ],
+      "latency_ms": 113.93594500259496,
+      "metrics": {
+        "1": {
+          "recall": 0.0,
+          "precision": 0.0,
+          "reciprocal_rank": 0.0
+        },
+        "2": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 0.5
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.25,
+          "reciprocal_rank": 0.5
+        }
+      }
+    },
+    {
+      "id": "nabulsi_silk_maker",
+      "mode": "hybrid",
+      "ranked_passage_ids": [
+        "nabulsi_03251369e8bb38f2c6401b70",
+        "nabulsi_5af9237aaf61345a8f15add8",
+        "nabulsi_15a5ecac5a10828914cf6bf1",
+        "nabulsi_cf6f55e234be2893c6618ed3",
+        "nabulsi_f388f504458196670f073b4d",
+        "nabulsi_57a4316d11725c3a37aed7f7",
+        "nabulsi_0be8a2747f70f2bcc42d56b5",
+        "nabulsi_ad2eaf3299836c14ccd1d758",
+        "nabulsi_2b7771973eff85dde84038ea",
+        "nabulsi_d2e68a65ce2e42b3dd73c576",
+        "nabulsi_5dea434535acda307d164fb8",
+        "nabulsi_142751ac171b30ef4cff84ae",
+        "ibn-Shahin_88ca9900b8ab1ddb50255f7e",
+        "nabulsi_5c613595f73b95e1751ad278",
+        "nabulsi_c55008241f2ab4b69bd19ada",
+        "nabulsi_7a7d3036f7ae9992e7c1bb17",
+        "nabulsi_efaf1f8968120e29643b5980",
+        "ibn-Shahin_7a8952226a2fea059a497199",
+        "nabulsi_e12f57b845a6ca34c2340b9f",
+        "nabulsi_713292e4b47f0e607a2a0a7b",
+        "nabulsi_39911c626cb881cbbcf1b457",
+        "ibn-Shahin_957081d03c9ec0585473666f",
+        "nabulsi_2f4976b0019a353c6bd6100c",
+        "nabulsi_d8b4fa4c7acf7b78db0eb893",
+        "nabulsi_15b8082a448f8a36acaf0373",
+        "nabulsi_5882ed50c2fdc1abf79f49b3",
+        "nabulsi_f8e282b9be266e51548a9e02",
+        "ibn-Shahin_102ca7044ee79dc0930c8ad6",
+        "ibn-Shahin_6bf41ba7ab4a4c54307550c7",
+        "nabulsi_db26beef65434b575a596de2",
+        "ibn-Shahin_cf6f57d6fb1a31c5c7449561",
+        "nabulsi_2687dd42f80003cb111035c9",
+        "nabulsi_6d43c6025da51c4125342f26",
+        "nabulsi_f49a6f9a70b005f2addcd557",
+        "ibn-Shahin_94f98751174d1ce06c7edaae"
+      ],
+      "latency_ms": 133.98976699681953,
+      "metrics": {
+        "1": {
+          "recall": 1.0,
+          "precision": 1.0,
+          "reciprocal_rank": 1.0
+        },
+        "2": {
+          "recall": 1.0,
+          "precision": 0.5,
+          "reciprocal_rank": 1.0
+        },
+        "4": {
+          "recall": 1.0,
+          "precision": 0.25,
+          "reciprocal_rank": 1.0
+        }
+      }
+    }
+  ],
+  "dataset_sha256": "24275d11a4d729e78c64800d1dbe2fbfe1f3543964ca0eacbca58ff1b107b641"
+}

@@ -1,27 +1,28 @@
 {
   "default_policy": "reviewed",
-  "experimental_chunks": 2657,
-  "experimental_evaluation": "data/evaluation/experimental-expanded-report.json",
-  "experimental_index": "storage/indexes/521acd36161d93e5d71c6c1a",
-  "experimental_manifest_sha256": "c062357cfcc938541332e6550390105a5bb6660a5e6a59182291766443c820e8",
-  "experimental_parent_passages": 1642,
+  "experimental_chunks": 2653,
+  "experimental_evaluation": "data/evaluation/corpus-batch-01-experimental-report.json",
+  "experimental_index": "storage/indexes/3e5c57906719d751ee3a2ffa",
+  "experimental_manifest_sha256": "a68cc79e29a1ade78fa9223560b3642f5b723ef9a6b688b1ead27945b268ce37",
+  "experimental_parent_passages": 1639,
   "inspection_reports": [
     "storage/inspection/experimental-symbol.html",
     "storage/inspection/experimental-paraphrase.html"
   ],
   "limitations": [
-    "Two full AI-assisted reviewed passages plus six scoped reviewed excerpts. Parents of excerpts remain unreviewed/needs_review.",
-    "Eight assistant-authored queries form a limited regression smoke test, not a representative independent benchmark.",
-    "Dense and hybrid rankings need improvement; experimental text remains unverified.",
+    "31 full AI-assisted reviewed passages (24 Nabulsi, 7 Ibn Shahin), plus six scoped reviewed excerpts; coverage remains limited.",
+    "Fourteen assistant-authored regression queries are not a representative independent benchmark.",
+    "Dense retrieval remains weak; expanded coverage adds ranking competition. Experimental candidates remain unverified.",
     "Ibn Sirin remains OCR_PENDING and excluded."
   ],
   "phase": 3,
-  "reviewed_chunks": 8,
-  "reviewed_evaluation": "data/evaluation/retrieval-expanded-report.json",
-  "reviewed_index": "storage/indexes/c497c4f81508fcb20bd75b01",
-  "reviewed_manifest_sha256": "2016b55c2c716cf4c871bcc5c0e1ae32c3ca670128a1cbcce44aea5f7dffc63a",
-  "status": "AWAITING_PHASE_4_CONFIRMATION",
+  "reviewed_chunks": 39,
+  "reviewed_evaluation": "data/evaluation/corpus-batch-01-reviewed-report.json",
+  "reviewed_index": "storage/indexes/0de98166b990421039341172",
+  "reviewed_manifest_sha256": "fa9de4a2df7d6330126f20e413957b1b8a0722a3ec77a3c39a818e30616b937c",
+  "status": "CORPUS_REVIEW_IN_PROGRESS",
   "unscored_draft": "data/evaluation/retrieval-review-draft.json",
   "reviewed_excerpts": 6,
-  "repair": "source-coverage-2026-10-09"
+  "repair": "corpus-batch-01",
+  "reviewed_parent_passages": 35
 }

@@ -3,7 +3,7 @@ import json
 import re
 from pydantic import Field, ValidationError
 from backend.app.rag.ingestion.models import Record
-from backend.app.rag.retrieval.query import symbol_matches
+from backend.app.rag.retrieval.query import symbol_matches, source_topics
 from backend.app.rag.ingestion.normalization import search_normalize, ARABIC
 from backend.app.schemas.api import Source, Citation, InterpretationClaim, SearchResponse
 
@@ -37,12 +37,14 @@ def sources_for(result: SearchResponse, max_chars: int) -> list[Source]:
     sources, parents, used = [], {}, 0
     for hit in result.hits:
         c = hit.chunk
-        if not symbol_matches(result.query, c.symbol) or c.validation_status != 'verified' or parents.get(c.parent_entry_id, 0) >= 2:
+        topic = next((topic for topic in source_topics(c.symbol, c.section)
+                      if symbol_matches(result.query, topic)), None)
+        if topic is None or c.validation_status != 'verified' or parents.get(c.parent_entry_id, 0) >= 2:
             continue
         if used + len(c.text) > max_chars:
             continue
         sources.append(Source(id=c.id, passage_id=c.parent_entry_id, book_id=c.book_id,
-            book_title=c.book_title, author=c.author, symbol=c.symbol, page_start=c.page_start,
+            book_title=c.book_title, author=c.author, symbol=topic, page_start=c.page_start,
             page_end=c.page_end, pdf_url=hit.pdf_url, quote=c.text, validation_status=c.validation_status,
             review_scope='excerpt' if 'excerpt_source_review' in c.review_flags else 'full_passage'))
         parents[c.parent_entry_id] = parents.get(c.parent_entry_id, 0) + 1

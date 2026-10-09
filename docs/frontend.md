@@ -28,15 +28,18 @@ npm --prefix frontend run start
 # Compile-time checks
 npm --prefix frontend run typecheck
 npm --prefix frontend run format:check
-# Browser checks: stop any servers on ports 3000/8000 first.
+# Browser checks use separate servers and build output.
 npx --prefix frontend playwright install chromium
 npm --prefix frontend run test:e2e
 ```
 
-Browser tests start both local servers themselves and stop them afterward. They
-force generation and experimental search off. Tests use retained real corpus
-artifacts and exercise no paid provider calls. The production build must exist
-before browser tests. Screenshots and traces go to ignored `frontend/test-results/`.
+Browser tests build into ignored `.next-e2e/`, start both local servers themselves
+on ports 13000 (frontend) and 18000 (backend), and stop them afterward. They never
+reuse the application servers on ports 3000/8000. Override `RUYA_E2E_WEB_PORT` and
+`RUYA_E2E_API_PORT` if needed. Generation and experimental search are forced off;
+tests use retained real corpus artifacts and make no paid provider calls. No
+previous build is required. Screenshots and traces go to ignored
+`frontend/test-results/`. Next.js may regenerate TypeScript helper files during a build.
 
 | Page | Backend data and behavior |
 | --- | --- |

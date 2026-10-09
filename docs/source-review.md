@@ -1,5 +1,9 @@
 # Phase 2 source review — 2026-10-08
 
+For the current totals and subsequent complete-passage reviews, see
+[corpus batch 01](corpus-batch-01.md). The initial decisions below remain preserved
+as historical evidence; the active ledger now contains 31 complete approvals.
+
 Method: Codex AI-assisted visual comparison of rendered **local original PDF pages**
 with extracted candidate text and detected boundaries. This was not human review,
 religious adjudication, or a complete transcription audit. The dates and source
